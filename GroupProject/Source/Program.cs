@@ -1,4 +1,4 @@
-namespace GroupProject
+namespace GroupProject.Source
 {
     internal static class Program
     {
