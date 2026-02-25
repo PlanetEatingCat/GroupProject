@@ -200,10 +200,11 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### Top contributors:
 
+
+### 👥 Contributors
 <a href="https://github.com/PlanetEatingCat/GroupProject/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=PlanetEatingCat/GroupProject" alt="contrib.rocks image" />
+  <img src="https://contrib.rocks/image?repo=PlanetEatingCat/GroupProject" />
 </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
