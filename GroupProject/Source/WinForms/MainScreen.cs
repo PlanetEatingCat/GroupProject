@@ -39,6 +39,22 @@ namespace BudgetPlanner
             BalanceTxtBx.Text = tempBalance.ToString();
 
             UpdateUI();
+
+
+            // Can print stuff to the DebugConsole form
+            Logger.ConsoleError("Hello!");
+            Logger.ConsoleWarn("Hello!");
+            Logger.ConsoleInfo("Hello!");
+
+            // Just like in the Bank program we can print messages in a gui banner
+            Logger.Warn("GUI Warning");
+
+            // If you want to creat another screen or page to the app 
+            // You can use this to switch easily to it
+            // (Commeted out so it doesn't change the page): 
+            /* 
+             * ScreenManager.SwitchScreens(new MyScreenName());
+             * */
         }
 
         private void UpdateUI()
@@ -58,17 +74,6 @@ namespace BudgetPlanner
             }
         }
 
-        private void WithdrawAddSelect_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void AmountTxtBx_TextChanged(object sender, EventArgs e)
-        {
-
-
-
-        }
-
         private void ConfirmBttn_Click(object sender, EventArgs e)
         {
             if (decimal.TryParse(AmountTxtBx.Text, out decimal number)) //ensures the text box contains a valid number converts to int
@@ -77,15 +82,22 @@ namespace BudgetPlanner
 
                 if (WithdrawAddSelect.Text == "Withdraw") //Withdraws from Balance
                 {
-                    Session.ActiveProfile.Withdraw(number);
+                    try
+                    {
+                        Session.ActiveProfile.Withdraw(number);
+                        decimal tempBalance = Session.ActiveProfile.GetBalance();//edits balance textbox
+                        BalanceTxtBx.Text = tempBalance.ToString();
 
-                    decimal tempBalance = Session.ActiveProfile.GetBalance();//edits balance textbox
-                    BalanceTxtBx.Text = tempBalance.ToString();
-
-                    //Creates a transactions object and adds it to history
-                    Transactions temp = new Transactions(Session.ActiveProfile, m_Amount, "Withdrawal");
-                    Session.ActiveProfile.AddTransaction(temp);
-                    UpdateUI();
+                        //Creates a transactions object and adds it to history
+                        Transactions temp = new Transactions(Session.ActiveProfile, m_Amount, "Withdrawal");
+                        Session.ActiveProfile.AddTransaction(temp);
+                        UpdateUI();
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.Warn("Cannot overdraw");
+                    }
+                  
                 }
                 else if (WithdrawAddSelect.Text == "Deposit") // Adds to Balance
                 {
@@ -101,12 +113,12 @@ namespace BudgetPlanner
                 }
                 else //Ensures Withdraw or Deposit is Selected
                 {
-                    //   ShowErrorMessage("Please Select Deposit or Withdraw.");
+                    Logger.Warn("Please Select Deposit or Withdraw.");
                 }
             }
             else
             {
-                // ShowErrorMessage("Amount Box Must Contain a Number");
+                Logger.Warn("Amount Box Must Contain a Number");
             }
 
         }
@@ -122,9 +134,5 @@ namespace BudgetPlanner
             ScreenManager.SwitchScreens(new SignInScreen());
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

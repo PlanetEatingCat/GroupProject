@@ -31,11 +31,8 @@ namespace BudgetPlanner
 
         private void DebugConsole_Load(object sender, EventArgs e)
         {
-
-
-
             DebugConsoleBox.ItemHeight = TextRenderer.MeasureText("Sample", DebugConsoleBox.Font).Height;
-            DebugConsole.OnLogToGui += Logger_OnLog;
+            Logger.OnLogToConsole += Logger_OnLog;
         }
         private List<string> SplitByPixelWidth(string text, Font font, int maxWidth)
         {

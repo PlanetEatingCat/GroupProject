@@ -55,7 +55,7 @@ namespace BudgetPlanner
             // 
             Transactions.Anchor = AnchorStyles.None;
             Transactions.FormattingEnabled = true;
-            Transactions.Location = new Point(80, 218);
+            Transactions.Location = new Point(209, 280);
             Transactions.Name = "Transactions";
             Transactions.Size = new Size(417, 224);
             Transactions.TabIndex = 7;
@@ -63,7 +63,7 @@ namespace BudgetPlanner
             // ConfirmBttn
             // 
             ConfirmBttn.Anchor = AnchorStyles.None;
-            ConfirmBttn.Location = new Point(483, 167);
+            ConfirmBttn.Location = new Point(612, 229);
             ConfirmBttn.Margin = new Padding(4);
             ConfirmBttn.Name = "ConfirmBttn";
             ConfirmBttn.Size = new Size(118, 36);
@@ -76,7 +76,7 @@ namespace BudgetPlanner
             // 
             AmountLbl.Anchor = AnchorStyles.None;
             AmountLbl.AutoSize = true;
-            AmountLbl.Location = new Point(247, 175);
+            AmountLbl.Location = new Point(376, 237);
             AmountLbl.Margin = new Padding(4, 0, 4, 0);
             AmountLbl.Name = "AmountLbl";
             AmountLbl.Size = new Size(65, 20);
@@ -86,30 +86,28 @@ namespace BudgetPlanner
             // AmountTxtBx
             // 
             AmountTxtBx.Anchor = AnchorStyles.None;
-            AmountTxtBx.Location = new Point(320, 168);
+            AmountTxtBx.Location = new Point(449, 230);
             AmountTxtBx.Margin = new Padding(4);
             AmountTxtBx.Name = "AmountTxtBx";
             AmountTxtBx.Size = new Size(155, 27);
             AmountTxtBx.TabIndex = 4;
-            AmountTxtBx.TextChanged += AmountTxtBx_TextChanged;
             // 
             // WithdrawAddSelect
             // 
             WithdrawAddSelect.Anchor = AnchorStyles.None;
             WithdrawAddSelect.FormattingEnabled = true;
             WithdrawAddSelect.Items.AddRange(new object[] { "Withdraw", "Deposit" });
-            WithdrawAddSelect.Location = new Point(51, 167);
+            WithdrawAddSelect.Location = new Point(180, 229);
             WithdrawAddSelect.Margin = new Padding(4);
             WithdrawAddSelect.Name = "WithdrawAddSelect";
             WithdrawAddSelect.Size = new Size(188, 28);
             WithdrawAddSelect.TabIndex = 3;
-            WithdrawAddSelect.SelectedIndexChanged += WithdrawAddSelect_SelectedIndexChanged;
             // 
             // EditBalanceLbl
             // 
             EditBalanceLbl.Anchor = AnchorStyles.None;
             EditBalanceLbl.AutoSize = true;
-            EditBalanceLbl.Location = new Point(253, 133);
+            EditBalanceLbl.Location = new Point(382, 195);
             EditBalanceLbl.Margin = new Padding(4, 0, 4, 0);
             EditBalanceLbl.Name = "EditBalanceLbl";
             EditBalanceLbl.Size = new Size(95, 20);
@@ -119,7 +117,7 @@ namespace BudgetPlanner
             // BalanceTxtBx
             // 
             BalanceTxtBx.Anchor = AnchorStyles.None;
-            BalanceTxtBx.Location = new Point(272, 34);
+            BalanceTxtBx.Location = new Point(401, 96);
             BalanceTxtBx.Margin = new Padding(4);
             BalanceTxtBx.Name = "BalanceTxtBx";
             BalanceTxtBx.Size = new Size(155, 27);
@@ -130,7 +128,7 @@ namespace BudgetPlanner
             // 
             BalanceLbl.Anchor = AnchorStyles.None;
             BalanceLbl.AutoSize = true;
-            BalanceLbl.Location = new Point(148, 37);
+            BalanceLbl.Location = new Point(277, 99);
             BalanceLbl.Margin = new Padding(4, 0, 4, 0);
             BalanceLbl.Name = "BalanceLbl";
             BalanceLbl.Size = new Size(116, 20);
@@ -140,7 +138,7 @@ namespace BudgetPlanner
             // SavingsProgressBar
             // 
             SavingsProgressBar.Anchor = AnchorStyles.None;
-            SavingsProgressBar.Location = new Point(201, 83);
+            SavingsProgressBar.Location = new Point(330, 145);
             SavingsProgressBar.Margin = new Padding(4);
             SavingsProgressBar.Maximum = 10000;
             SavingsProgressBar.Name = "SavingsProgressBar";
@@ -151,7 +149,7 @@ namespace BudgetPlanner
             // 
             SavingsGoalLbl.Anchor = AnchorStyles.None;
             SavingsGoalLbl.AutoSize = true;
-            SavingsGoalLbl.Location = new Point(51, 94);
+            SavingsGoalLbl.Location = new Point(180, 156);
             SavingsGoalLbl.Margin = new Padding(4, 0, 4, 0);
             SavingsGoalLbl.Name = "SavingsGoalLbl";
             SavingsGoalLbl.Size = new Size(142, 20);
@@ -169,7 +167,6 @@ namespace BudgetPlanner
             // 
             // BankPanel
             // 
-            BankPanel.Anchor = AnchorStyles.None;
             BankPanel.Controls.Add(Transactions);
             BankPanel.Controls.Add(ConfirmBttn);
             BankPanel.Controls.Add(AmountLbl);
@@ -180,9 +177,10 @@ namespace BudgetPlanner
             BankPanel.Controls.Add(BalanceLbl);
             BankPanel.Controls.Add(SavingsProgressBar);
             BankPanel.Controls.Add(SavingsGoalLbl);
-            BankPanel.Location = new Point(264, 127);
+            BankPanel.Dock = DockStyle.Fill;
+            BankPanel.Location = new Point(40, 45);
             BankPanel.Name = "BankPanel";
-            BankPanel.Size = new Size(653, 458);
+            BankPanel.Size = new Size(911, 582);
             BankPanel.TabIndex = 10;
             // 
             // UsernamePanel
@@ -209,20 +207,19 @@ namespace BudgetPlanner
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.0812988F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55.8374023F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 22.0812912F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 3.80710649F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 92.8934F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 3.29949236F));
             tableLayoutPanel1.Controls.Add(BankPanel, 1, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10.3937006F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 89.6063F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 117F));
-            tableLayoutPanel1.Size = new Size(1182, 763);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 6.71140957F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 93.28859F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 17F));
+            tableLayoutPanel1.Size = new Size(988, 648);
             tableLayoutPanel1.TabIndex = 12;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // MainScreen
             // 
@@ -231,7 +228,7 @@ namespace BudgetPlanner
             Controls.Add(UsernamePanel);
             Controls.Add(tableLayoutPanel1);
             Name = "MainScreen";
-            Size = new Size(1182, 763);
+            Size = new Size(988, 648);
             Load += MainScreen_Load;
             BankPanel.ResumeLayout(false);
             BankPanel.PerformLayout();

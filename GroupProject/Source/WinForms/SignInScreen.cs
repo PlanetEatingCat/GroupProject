@@ -33,6 +33,8 @@ namespace BudgetPlanner
 
             UsernameInput.Text = PasswordInput.Text = "";
 
+            Logger.Info($"Sign in as '{user.GetUsername()}' successful!");
+
             ScreenManager.SwitchScreens(new MainScreen());
         }
     }

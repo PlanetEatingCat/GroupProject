@@ -63,6 +63,16 @@ namespace GroupProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ErrorIcon {
+            get {
+                object obj = ResourceManager.GetObject("ErrorIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SignIn {
             get {
                 object obj = ResourceManager.GetObject("SignIn", resourceCulture);
@@ -76,6 +86,26 @@ namespace GroupProject.Properties {
         internal static System.Drawing.Bitmap SignIn1 {
             get {
                 object obj = ResourceManager.GetObject("SignIn1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SuccessIcon {
+            get {
+                object obj = ResourceManager.GetObject("SuccessIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WarnIcon {
+            get {
+                object obj = ResourceManager.GetObject("WarnIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
