@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace BudgetPlanner
 {
+    // THIS IS CURRENTLY THE MAIN PAGE OF THE APP
     public partial class MainScreen : UserControl
     {
         private const string CREATE_ACCOUNT_OPTION_TEXT = "Create New Account";
@@ -38,9 +39,8 @@ namespace BudgetPlanner
             decimal tempBalance = Session.ActiveProfile.GetBalance(); //ensures balance is already displayed
             BalanceTxtBx.Text = tempBalance.ToString();
 
-            UpdateUI();
-
-
+            // SOME USEFUL STUFF
+            /*
             // Can print stuff to the DebugConsole form
             Logger.ConsoleError("Hello!");
             Logger.ConsoleWarn("Hello!");
@@ -50,11 +50,14 @@ namespace BudgetPlanner
             Logger.Warn("GUI Warning");
 
             // If you want to creat another screen or page to the app 
-            // You can use this to switch easily to it
-            // (Commeted out so it doesn't change the page): 
-            /* 
-             * ScreenManager.SwitchScreens(new MyScreenName());
-             * */
+            // You can use this to switch easily to it.
+            // To create another screen/page you can right click on the Winforms folder -> Add -> UserControl
+            // The below replace MyScreenName with the name of the UserControl.
+            // You can edit the UserControl just like a form.
+            
+            ScreenManager.SwitchScreens(new MyScreenName());
+             
+            */
         }
 
         private void UpdateUI()
