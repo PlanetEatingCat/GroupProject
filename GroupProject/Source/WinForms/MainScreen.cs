@@ -1,4 +1,5 @@
 ﻿using BudgetPlanner;
+using GroupProject.Source.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LiveChartsCore.SkiaSharpView.WinForms;
+using SkiaSharp;
+using LiveChartsCore;
+using LiveChartsCore.Measure;
+using LiveChartsCore.SkiaSharpView;
 
 namespace BudgetPlanner
 {
@@ -39,25 +45,67 @@ namespace BudgetPlanner
             decimal tempBalance = Session.ActiveProfile.GetBalance(); //ensures balance is already displayed
             BalanceTxtBx.Text = tempBalance.ToString();
 
-            // SOME USEFUL STUFF
-            /*
-            // Can print stuff to the DebugConsole form
-            Logger.ConsoleError("Hello!");
-            Logger.ConsoleWarn("Hello!");
-            Logger.ConsoleInfo("Hello!");
+            UpdateTheme();
+        }
 
-            // Just like in the Bank program we can print messages in a gui banner
-            Logger.Warn("GUI Warning");
+        private void UpdateTheme()
+        {
+            Theme theme = ThemeManager.GetTheme();
+            UserLabel.BackColor = theme.Accent;
+            UserLabel.ForeColor = theme.ButtonForeground;
 
-            // If you want to creat another screen or page to the app 
-            // You can use this to switch easily to it.
-            // To create another screen/page you can right click on the Winforms folder -> Add -> UserControl
-            // The below replace MyScreenName with the name of the UserControl.
-            // You can edit the UserControl just like a form.
-            
-            ScreenManager.SwitchScreens(new MyScreenName());
-             
-            */
+        
+
+            BalanceLbl.BackColor = theme.ButtonBackground;
+            BalanceLbl.ForeColor = theme.ButtonForeground;
+
+            WithdrawAddSelect.BackColor = theme.ButtonBackground;
+            WithdrawAddSelect.ForeColor = theme.ButtonForeground;
+
+            EditBalanceLbl.BackColor = theme.ButtonBackground;
+            EditBalanceLbl.ForeColor = theme.ButtonForeground;
+
+            BalanceTxtBx.BackColor = theme.ButtonBackground;
+            BalanceTxtBx.ForeColor = theme.ButtonForeground;
+
+            AmountLbl.BackColor = theme.ButtonBackground;
+            AmountLbl.ForeColor = theme.ButtonForeground;
+
+            AmountTxtBx.BackColor = theme.ButtonBackground;
+            AmountTxtBx.ForeColor = theme.ButtonForeground;
+
+            ConfirmBttn.BackColor = theme.ButtonBackground;
+            ConfirmBttn.ForeColor = theme.ButtonForeground;
+
+            Transactions.BackColor = theme.ButtonBackground;
+            Transactions.ForeColor = theme.ButtonForeground;
+
+            SavingsProgressBar.BackColor = theme.ButtonBackground;
+            SavingsProgressBar.ForeColor = theme.ButtonForeground;
+
+            SavingsGoalLbl.BackColor = theme.ButtonBackground;
+            SavingsGoalLbl.ForeColor = theme.ButtonForeground;
+
+            BankPanel.BackColor = theme.ButtonBackground;
+            BankPanel.ForeColor = theme.ButtonForeground;
+
+            UsernamePanel.BackColor = theme.Accent;
+            UsernamePanel.ForeColor = theme.Accent;
+
+            BackToSignInButton.BackColor = theme.ButtonBackground;
+            BackToSignInButton.ForeColor = theme.ButtonForeground;
+
+            tableLayoutPanel1.BackColor = theme.ButtonBackground;
+            tableLayoutPanel1.ForeColor = theme.ButtonForeground;
+                
+            panel1.BackColor = theme.ButtonBackground;
+            panel1.ForeColor = theme.ButtonForeground;
+
+            button2.BackColor = theme.ButtonBackground;
+            button2.ForeColor = theme.ButtonForeground;
+
+            button1.BackColor = theme.ButtonBackground;
+            button1.ForeColor = theme.ButtonForeground;
         }
 
         private void UpdateUI()
@@ -100,19 +148,27 @@ namespace BudgetPlanner
                     {
                         Logger.Warn("Cannot overdraw");
                     }
-                  
+
                 }
                 else if (WithdrawAddSelect.Text == "Deposit") // Adds to Balance
                 {
-                    Session.ActiveProfile.Deposit(number);
+                    try
+                    {
 
-                    decimal tempBalance = Session.ActiveProfile.GetBalance();
-                    BalanceTxtBx.Text = tempBalance.ToString();
+                        Session.ActiveProfile.Deposit(number);
 
-                    //Creates a transactions object and adds it to history
-                    Transactions temp = new Transactions(Session.ActiveProfile, m_Amount, "Deposit");
-                    Session.ActiveProfile.AddTransaction(temp);
-                    UpdateUI();
+                        decimal tempBalance = Session.ActiveProfile.GetBalance();
+                        BalanceTxtBx.Text = tempBalance.ToString();
+
+                        //Creates a transactions object and adds it to history
+                        Transactions temp = new Transactions(Session.ActiveProfile, m_Amount, "Deposit");
+                        Session.ActiveProfile.AddTransaction(temp);
+                        UpdateUI();
+                    }
+                    catch (Exception InException)
+                    {
+                        Logger.Error("Value cannot be so large");
+                    }
                 }
                 else //Ensures Withdraw or Deposit is Selected
                 {
@@ -137,5 +193,9 @@ namespace BudgetPlanner
             ScreenManager.SwitchScreens(new SignInScreen());
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ScreenManager.SwitchScreens(new CalendarScreen());
+        }
     }
 }

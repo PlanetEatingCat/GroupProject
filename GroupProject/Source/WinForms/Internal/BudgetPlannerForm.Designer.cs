@@ -33,6 +33,7 @@
             Message = new Label();
             MessageIcon = new PictureBox();
             TableLayoutPanel = new TableLayoutPanel();
+            panel1 = new Panel();
             MessagePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)MessageIcon).BeginInit();
             TableLayoutPanel.SuspendLayout();
@@ -42,10 +43,12 @@
             // 
             MainPanel.BackColor = SystemColors.GradientInactiveCaption;
             MainPanel.Dock = DockStyle.Fill;
-            MainPanel.Location = new Point(3, 3);
+            MainPanel.Location = new Point(3, 51);
+            MainPanel.Margin = new Padding(3, 2, 3, 2);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(1079, 566);
+            MainPanel.Size = new Size(943, 374);
             MainPanel.TabIndex = 0;
+            MainPanel.Paint += MainPanel_Paint;
             // 
             // MessagePanel
             // 
@@ -53,17 +56,18 @@
             MessagePanel.Controls.Add(Message);
             MessagePanel.Controls.Add(MessageIcon);
             MessagePanel.Dock = DockStyle.Fill;
-            MessagePanel.Location = new Point(3, 575);
+            MessagePanel.Location = new Point(3, 429);
+            MessagePanel.Margin = new Padding(3, 2, 3, 2);
             MessagePanel.Name = "MessagePanel";
-            MessagePanel.Size = new Size(1079, 50);
+            MessagePanel.Size = new Size(943, 40);
             MessagePanel.TabIndex = 1;
             // 
             // Message
             // 
             Message.AutoSize = true;
-            Message.Location = new Point(46, 3);
+            Message.Location = new Point(40, 2);
             Message.Name = "Message";
-            Message.Size = new Size(50, 20);
+            Message.Size = new Size(38, 15);
             Message.TabIndex = 2;
             Message.Text = "label1";
             Message.Click += Message_Click;
@@ -71,9 +75,10 @@
             // MessageIcon
             // 
             MessageIcon.Image = GroupProject.Properties.Resources.WarnIcon;
-            MessageIcon.Location = new Point(3, 3);
+            MessageIcon.Location = new Point(3, 2);
+            MessageIcon.Margin = new Padding(3, 2, 3, 2);
             MessageIcon.Name = "MessageIcon";
-            MessageIcon.Size = new Size(37, 37);
+            MessageIcon.Size = new Size(32, 28);
             MessageIcon.SizeMode = PictureBoxSizeMode.StretchImage;
             MessageIcon.TabIndex = 0;
             MessageIcon.TabStop = false;
@@ -83,25 +88,37 @@
             TableLayoutPanel.AutoSize = true;
             TableLayoutPanel.ColumnCount = 1;
             TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            TableLayoutPanel.Controls.Add(MessagePanel, 0, 1);
-            TableLayoutPanel.Controls.Add(MainPanel, 0, 0);
+            TableLayoutPanel.Controls.Add(MessagePanel, 0, 2);
+            TableLayoutPanel.Controls.Add(MainPanel, 0, 1);
+            TableLayoutPanel.Controls.Add(panel1, 0, 0);
             TableLayoutPanel.Dock = DockStyle.Fill;
             TableLayoutPanel.Location = new Point(0, 0);
+            TableLayoutPanel.Margin = new Padding(3, 2, 3, 2);
             TableLayoutPanel.Name = "TableLayoutPanel";
-            TableLayoutPanel.RowCount = 2;
-            TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 91.2408752F));
-            TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 8.759123F));
-            TableLayoutPanel.Size = new Size(1085, 628);
+            TableLayoutPanel.RowCount = 3;
+            TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10.4033966F));
+            TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 80.254776F));
+            TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 9.129512F));
+            TableLayoutPanel.Size = new Size(949, 471);
             TableLayoutPanel.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.MediumSlateBlue;
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(943, 43);
+            panel1.TabIndex = 2;
+            panel1.Paint += panel1_Paint;
             // 
             // BudgetPlannerForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(1085, 628);
+            ClientSize = new Size(949, 471);
             Controls.Add(TableLayoutPanel);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "BudgetPlannerForm";
             Text = "Budget Planner";
             Load += BudgetPlannerForm_Load;
@@ -120,5 +137,6 @@
         private PictureBox MessageIcon;
         private Label Message;
         private TableLayoutPanel TableLayoutPanel;
+        private Panel panel1;
     }
 }
