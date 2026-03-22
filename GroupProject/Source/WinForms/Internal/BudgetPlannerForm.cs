@@ -21,9 +21,6 @@ namespace BudgetPlanner
         {
             InitializeComponent();
             Logger.OnLogToGUI += Logger_OnLog;
-            Themes.Initialize();
-            ThemeManager.SetTheme(Themes.Dark);
-          //  ThemeManager.ApplyTheme(this);
 
             ScreenManager.Initialize(MainPanel);
         }

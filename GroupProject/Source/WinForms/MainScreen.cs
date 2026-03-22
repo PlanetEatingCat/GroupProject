@@ -47,69 +47,9 @@ namespace BudgetPlanner
             ExpenseTypeTxtBox.Visible = false;
             ExpenseTypeLbl.Visible = false;
 
-            //UpdateTheme();
         }
 
-        private void UpdateTheme()
-        {
-            Theme theme = ThemeManager.GetTheme();
-            UserLabel.BackColor = theme.Accent;
-            UserLabel.ForeColor = theme.ButtonForeground;
-
-
-
-            BalanceLbl.BackColor = theme.ButtonBackground;
-            BalanceLbl.ForeColor = theme.ButtonForeground;
-
-            WithdrawAddSelect.BackColor = theme.ButtonBackground;
-            WithdrawAddSelect.ForeColor = theme.ButtonForeground;
-
-            EditBalanceLbl.BackColor = theme.ButtonBackground;
-            EditBalanceLbl.ForeColor = theme.ButtonForeground;
-
-            BalanceTxtBx.BackColor = theme.ButtonBackground;
-            BalanceTxtBx.ForeColor = theme.ButtonForeground;
-
-            AmountLbl.BackColor = theme.ButtonBackground;
-            AmountLbl.ForeColor = theme.ButtonForeground;
-
-            AmountTxtBx.BackColor = theme.ButtonBackground;
-            AmountTxtBx.ForeColor = theme.ButtonForeground;
-
-            ConfirmBttn.BackColor = theme.ButtonBackground;
-            ConfirmBttn.ForeColor = theme.ButtonForeground;
-
-            Transactions.BackColor = theme.ButtonBackground;
-            Transactions.ForeColor = theme.ButtonForeground;
-
-            SavingsProgressBar.BackColor = theme.ButtonBackground;
-            SavingsProgressBar.ForeColor = theme.ButtonForeground;
-
-            SavingsGoalLbl.BackColor = theme.ButtonBackground;
-            SavingsGoalLbl.ForeColor = theme.ButtonForeground;
-
-            BankPanel.BackColor = theme.ButtonBackground;
-            BankPanel.ForeColor = theme.ButtonForeground;
-
-            UsernamePanel.BackColor = theme.Accent;
-            UsernamePanel.ForeColor = theme.Accent;
-
-            BackToSignInButton.BackColor = theme.ButtonBackground;
-            BackToSignInButton.ForeColor = theme.ButtonForeground;
-
-            tableLayoutPanel1.BackColor = theme.ButtonBackground;
-            tableLayoutPanel1.ForeColor = theme.ButtonForeground;
-
-            /*panel1.BackColor = theme.ButtonBackground;
-            panel1.ForeColor = theme.ButtonForeground;
-
-            button2.BackColor = theme.ButtonBackground;
-            button2.ForeColor = theme.ButtonForeground;
-
-            button1.BackColor = theme.ButtonBackground;
-            button1.ForeColor = theme.ButtonForeground;*/
-        }
-
+      
         private void UpdateUI()
         {
             // Update Progress Bar
