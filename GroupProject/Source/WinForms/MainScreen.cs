@@ -47,7 +47,7 @@ namespace BudgetPlanner
             ExpenseTypeTxtBox.Visible = false;
             ExpenseTypeLbl.Visible = false;
 
-            UpdateTheme();
+            //UpdateTheme();
         }
 
         private void UpdateTheme()
@@ -100,14 +100,14 @@ namespace BudgetPlanner
             tableLayoutPanel1.BackColor = theme.ButtonBackground;
             tableLayoutPanel1.ForeColor = theme.ButtonForeground;
 
-            panel1.BackColor = theme.ButtonBackground;
+            /*panel1.BackColor = theme.ButtonBackground;
             panel1.ForeColor = theme.ButtonForeground;
 
             button2.BackColor = theme.ButtonBackground;
             button2.ForeColor = theme.ButtonForeground;
 
             button1.BackColor = theme.ButtonBackground;
-            button1.ForeColor = theme.ButtonForeground;
+            button1.ForeColor = theme.ButtonForeground;*/
         }
 
         private void UpdateUI()
@@ -231,6 +231,9 @@ namespace BudgetPlanner
 
         }
 
-     
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

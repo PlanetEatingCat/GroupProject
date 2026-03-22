@@ -45,9 +45,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = GroupProject.Properties.Resources.SignIn;
-            pictureBox1.Location = new Point(50, 34);
+            pictureBox1.Location = new Point(62, 42);
+            pictureBox1.Margin = new Padding(4, 4, 4, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(161, 161);
+            pictureBox1.Size = new Size(201, 201);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -55,31 +56,35 @@
             // WelcomeLabel
             // 
             WelcomeLabel.AutoSize = true;
-            WelcomeLabel.Location = new Point(94, 0);
+            WelcomeLabel.Location = new Point(118, 0);
+            WelcomeLabel.Margin = new Padding(4, 0, 4, 0);
             WelcomeLabel.Name = "WelcomeLabel";
-            WelcomeLabel.Size = new Size(71, 20);
+            WelcomeLabel.Size = new Size(85, 25);
             WelcomeLabel.TabIndex = 2;
             WelcomeLabel.Text = "Welcome";
             // 
             // UsernameInput
             // 
-            UsernameInput.Location = new Point(5, 219);
+            UsernameInput.Location = new Point(6, 274);
+            UsernameInput.Margin = new Padding(4, 4, 4, 4);
             UsernameInput.Name = "UsernameInput";
-            UsernameInput.Size = new Size(125, 27);
+            UsernameInput.Size = new Size(155, 31);
             UsernameInput.TabIndex = 3;
             // 
             // PasswordInput
             // 
-            PasswordInput.Location = new Point(136, 219);
+            PasswordInput.Location = new Point(170, 274);
+            PasswordInput.Margin = new Padding(4, 4, 4, 4);
             PasswordInput.Name = "PasswordInput";
-            PasswordInput.Size = new Size(125, 27);
+            PasswordInput.Size = new Size(155, 31);
             PasswordInput.TabIndex = 4;
             // 
             // SignInButton
             // 
-            SignInButton.Location = new Point(84, 272);
+            SignInButton.Location = new Point(105, 340);
+            SignInButton.Margin = new Padding(4, 4, 4, 4);
             SignInButton.Name = "SignInButton";
-            SignInButton.Size = new Size(94, 29);
+            SignInButton.Size = new Size(118, 36);
             SignInButton.TabIndex = 5;
             SignInButton.Text = "Sign In";
             SignInButton.UseVisualStyleBackColor = true;
@@ -88,18 +93,20 @@
             // UsernameInputLabel
             // 
             UsernameInputLabel.AutoSize = true;
-            UsernameInputLabel.Location = new Point(29, 249);
+            UsernameInputLabel.Location = new Point(36, 311);
+            UsernameInputLabel.Margin = new Padding(4, 0, 4, 0);
             UsernameInputLabel.Name = "UsernameInputLabel";
-            UsernameInputLabel.Size = new Size(75, 20);
+            UsernameInputLabel.Size = new Size(91, 25);
             UsernameInputLabel.TabIndex = 6;
             UsernameInputLabel.Text = "Username";
             // 
             // PasswordInputLabel
             // 
             PasswordInputLabel.AutoSize = true;
-            PasswordInputLabel.Location = new Point(156, 249);
+            PasswordInputLabel.Location = new Point(195, 311);
+            PasswordInputLabel.Margin = new Padding(4, 0, 4, 0);
             PasswordInputLabel.Name = "PasswordInputLabel";
-            PasswordInputLabel.Size = new Size(70, 20);
+            PasswordInputLabel.Size = new Size(87, 25);
             PasswordInputLabel.TabIndex = 7;
             PasswordInputLabel.Text = "Password";
             // 
@@ -113,9 +120,10 @@
             SignInPanel.Controls.Add(UsernameInput);
             SignInPanel.Controls.Add(SignInButton);
             SignInPanel.Controls.Add(PasswordInput);
-            SignInPanel.Location = new Point(299, 155);
+            SignInPanel.Location = new Point(375, 194);
+            SignInPanel.Margin = new Padding(4, 4, 4, 4);
             SignInPanel.Name = "SignInPanel";
-            SignInPanel.Size = new Size(290, 358);
+            SignInPanel.Size = new Size(363, 447);
             SignInPanel.TabIndex = 8;
             // 
             // TableLayoutPanel
@@ -123,25 +131,28 @@
             TableLayoutPanel.ColumnCount = 3;
             TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 285F));
+            TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 356F));
             TableLayoutPanel.Controls.Add(SignInPanel, 1, 1);
             TableLayoutPanel.Dock = DockStyle.Fill;
             TableLayoutPanel.Location = new Point(0, 0);
+            TableLayoutPanel.Margin = new Padding(4, 4, 4, 4);
             TableLayoutPanel.Name = "TableLayoutPanel";
             TableLayoutPanel.RowCount = 3;
             TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 24.8366013F));
             TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 59.4771233F));
             TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 15.5228758F));
-            TableLayoutPanel.Size = new Size(878, 612);
+            TableLayoutPanel.Size = new Size(1098, 765);
             TableLayoutPanel.TabIndex = 9;
+            TableLayoutPanel.Paint += TableLayoutPanel_Paint;
             // 
             // SignInScreen
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(TableLayoutPanel);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "SignInScreen";
-            Size = new Size(878, 612);
+            Size = new Size(1098, 765);
             Load += SignInScreen_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             SignInPanel.ResumeLayout(false);

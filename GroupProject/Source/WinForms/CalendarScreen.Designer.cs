@@ -31,7 +31,6 @@
             UserLabel = new Label();
             UsernamePanel = new Panel();
             BackToSignInButton = new PictureBox();
-            monthCalendar1 = new MonthCalendar();
             UsernamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BackToSignInButton).BeginInit();
             SuspendLayout();
@@ -39,9 +38,10 @@
             // UserLabel
             // 
             UserLabel.AutoSize = true;
-            UserLabel.Location = new Point(67, 17);
+            UserLabel.Location = new Point(96, 28);
+            UserLabel.Margin = new Padding(4, 0, 4, 0);
             UserLabel.Name = "UserLabel";
-            UserLabel.Size = new Size(60, 15);
+            UserLabel.Size = new Size(91, 25);
             UserLabel.TabIndex = 0;
             UserLabel.Text = "Username";
             // 
@@ -51,40 +51,29 @@
             UsernamePanel.Controls.Add(BackToSignInButton);
             UsernamePanel.Controls.Add(UserLabel);
             UsernamePanel.Location = new Point(0, 0);
-            UsernamePanel.Margin = new Padding(3, 2, 3, 2);
+            UsernamePanel.Margin = new Padding(4, 3, 4, 3);
             UsernamePanel.Name = "UsernamePanel";
-            UsernamePanel.Size = new Size(151, 47);
+            UsernamePanel.Size = new Size(216, 78);
             UsernamePanel.TabIndex = 13;
             // 
             // BackToSignInButton
             // 
             BackToSignInButton.Image = Properties.Resources.SignIn;
-            BackToSignInButton.Location = new Point(15, 4);
-            BackToSignInButton.Margin = new Padding(3, 2, 3, 2);
+            BackToSignInButton.Location = new Point(21, 7);
+            BackToSignInButton.Margin = new Padding(4, 3, 4, 3);
             BackToSignInButton.Name = "BackToSignInButton";
-            BackToSignInButton.Size = new Size(48, 41);
+            BackToSignInButton.Size = new Size(69, 68);
             BackToSignInButton.SizeMode = PictureBoxSizeMode.StretchImage;
             BackToSignInButton.TabIndex = 1;
             BackToSignInButton.TabStop = false;
             // 
-            // monthCalendar1
-            // 
-            monthCalendar1.CalendarDimensions = new Size(3, 3);
-            monthCalendar1.Dock = DockStyle.Fill;
-            monthCalendar1.Location = new Point(0, 0);
-            monthCalendar1.Margin = new Padding(6, 5, 6, 5);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 14;
-            // 
             // CalendarScreen
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(UsernamePanel);
-            Controls.Add(monthCalendar1);
-            Margin = new Padding(2);
             Name = "CalendarScreen";
-            Size = new Size(881, 464);
+            Size = new Size(1259, 773);
             UsernamePanel.ResumeLayout(false);
             UsernamePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)BackToSignInButton).EndInit();
@@ -95,6 +84,5 @@
         private Label UserLabel;
         private Panel UsernamePanel;
         private PictureBox BackToSignInButton;
-        private MonthCalendar monthCalendar1;
     }
 }

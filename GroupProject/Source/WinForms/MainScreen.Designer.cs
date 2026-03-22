@@ -47,14 +47,10 @@ namespace BudgetPlanner
             UsernamePanel = new Panel();
             BackToSignInButton = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            panel1 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             BankPanel.SuspendLayout();
             UsernamePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BackToSignInButton).BeginInit();
             tableLayoutPanel1.SuspendLayout();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // Transactions
@@ -247,7 +243,6 @@ namespace BudgetPlanner
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 92.8934F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 3.29949236F));
             tableLayoutPanel1.Controls.Add(BankPanel, 1, 1);
-            tableLayoutPanel1.Controls.Add(panel1, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(4);
@@ -258,36 +253,7 @@ namespace BudgetPlanner
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 21F));
             tableLayoutPanel1.Size = new Size(1235, 810);
             tableLayoutPanel1.TabIndex = 12;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.ActiveCaption;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(50, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1141, 46);
-            panel1.TabIndex = 11;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(319, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(129, 40);
-            button2.TabIndex = 11;
-            button2.Text = "Analytics";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(184, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(129, 40);
-            button1.TabIndex = 10;
-            button1.Text = "Calendar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // MainScreen
             // 
@@ -305,7 +271,6 @@ namespace BudgetPlanner
             UsernamePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)BackToSignInButton).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -328,9 +293,6 @@ namespace BudgetPlanner
         private Panel UsernamePanel;
         private PictureBox BackToSignInButton;
         private TableLayoutPanel tableLayoutPanel1;
-        private Panel panel1;
-        private Button button2;
-        private Button button1;
         private TextBox ExpenseTypeTxtBox;
 
     }

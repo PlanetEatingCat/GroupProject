@@ -41,5 +41,10 @@ namespace BudgetPlanner
 
             ScreenManager.SwitchScreens(new MainScreen());
         }
+
+        private void TableLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
