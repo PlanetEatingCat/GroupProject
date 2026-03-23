@@ -13,7 +13,7 @@ Notes: Work in Progress. Authored by Kiefer.
 
 namespace BudgetPlanner
 {
-    public class SubscriptionManager
+    public class SubscriptionManager 
     {
         //Enum to track how often payments are made.
         public enum PaymentCycle

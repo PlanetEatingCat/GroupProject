@@ -1,6 +1,4 @@
-﻿using BudgetPlanner;
-using GroupProject.Source.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LiveChartsCore.SkiaSharpView.WinForms;
-using SkiaSharp;
+using BudgetPlanner;
+using GroupProject;
+using GroupProject.Source.WinForms;
 using LiveChartsCore;
 using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.WinForms;
+using Microsoft.Toolkit.Uwp.Notifications;
+using SkiaSharp;
 
 namespace BudgetPlanner
 {
@@ -94,7 +96,8 @@ namespace BudgetPlanner
                         catch (Exception ex)
                         {
                             Logger.Warn("Cannot overdraw");
-                        }
+							Notifications.Notification("Insufficent Funds", "You're over the spending limit!");
+						}
 
                 }
                 else if (WithdrawAddSelect.Text == "Deposit") // Adds to Balance
