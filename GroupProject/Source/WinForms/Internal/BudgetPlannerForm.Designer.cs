@@ -42,10 +42,12 @@
             // 
             MainPanel.BackColor = SystemColors.GradientInactiveCaption;
             MainPanel.Dock = DockStyle.Fill;
-            MainPanel.Location = new Point(3, 3);
+            MainPanel.Location = new Point(4, 16);
+            MainPanel.Margin = new Padding(4, 3, 4, 3);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(1079, 566);
+            MainPanel.Size = new Size(1348, 694);
             MainPanel.TabIndex = 0;
+            MainPanel.Paint += MainPanel_Paint;
             // 
             // MessagePanel
             // 
@@ -53,17 +55,19 @@
             MessagePanel.Controls.Add(Message);
             MessagePanel.Controls.Add(MessageIcon);
             MessagePanel.Dock = DockStyle.Fill;
-            MessagePanel.Location = new Point(3, 575);
+            MessagePanel.Location = new Point(4, 716);
+            MessagePanel.Margin = new Padding(4, 3, 4, 3);
             MessagePanel.Name = "MessagePanel";
-            MessagePanel.Size = new Size(1079, 50);
+            MessagePanel.Size = new Size(1348, 66);
             MessagePanel.TabIndex = 1;
             // 
             // Message
             // 
             Message.AutoSize = true;
-            Message.Location = new Point(46, 3);
+            Message.Location = new Point(57, 3);
+            Message.Margin = new Padding(4, 0, 4, 0);
             Message.Name = "Message";
-            Message.Size = new Size(50, 20);
+            Message.Size = new Size(59, 25);
             Message.TabIndex = 2;
             Message.Text = "label1";
             Message.Click += Message_Click;
@@ -71,9 +75,10 @@
             // MessageIcon
             // 
             MessageIcon.Image = GroupProject.Properties.Resources.WarnIcon;
-            MessageIcon.Location = new Point(3, 3);
+            MessageIcon.Location = new Point(4, 3);
+            MessageIcon.Margin = new Padding(4, 3, 4, 3);
             MessageIcon.Name = "MessageIcon";
-            MessageIcon.Size = new Size(37, 37);
+            MessageIcon.Size = new Size(46, 47);
             MessageIcon.SizeMode = PictureBoxSizeMode.StretchImage;
             MessageIcon.TabIndex = 0;
             MessageIcon.TabStop = false;
@@ -83,25 +88,27 @@
             TableLayoutPanel.AutoSize = true;
             TableLayoutPanel.ColumnCount = 1;
             TableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            TableLayoutPanel.Controls.Add(MessagePanel, 0, 1);
-            TableLayoutPanel.Controls.Add(MainPanel, 0, 0);
+            TableLayoutPanel.Controls.Add(MessagePanel, 0, 2);
+            TableLayoutPanel.Controls.Add(MainPanel, 0, 1);
             TableLayoutPanel.Dock = DockStyle.Fill;
             TableLayoutPanel.Location = new Point(0, 0);
+            TableLayoutPanel.Margin = new Padding(4, 3, 4, 3);
             TableLayoutPanel.Name = "TableLayoutPanel";
-            TableLayoutPanel.RowCount = 2;
-            TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 91.2408752F));
-            TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 8.759123F));
-            TableLayoutPanel.Size = new Size(1085, 628);
+            TableLayoutPanel.RowCount = 3;
+            TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 1.65605092F));
+            TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 89.1719742F));
+            TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 9.129512F));
+            TableLayoutPanel.Size = new Size(1356, 785);
             TableLayoutPanel.TabIndex = 0;
             // 
             // BudgetPlannerForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(1085, 628);
+            ClientSize = new Size(1356, 785);
             Controls.Add(TableLayoutPanel);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "BudgetPlannerForm";
             Text = "Budget Planner";
             Load += BudgetPlannerForm_Load;

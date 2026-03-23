@@ -1,4 +1,5 @@
 ﻿using BudgetPlanner;
+using GroupProject.Source.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LiveChartsCore.SkiaSharpView.WinForms;
+using SkiaSharp;
+using LiveChartsCore;
+using LiveChartsCore.Measure;
+using LiveChartsCore.SkiaSharpView;
 
 namespace BudgetPlanner
 {
@@ -24,7 +30,7 @@ namespace BudgetPlanner
         private System.Windows.Forms.Timer m_SuccessTimer = new System.Windows.Forms.Timer();
 
         private decimal m_Amount;
-
+        public string ExpenseType;
 
         public MainScreen()
         {
@@ -38,28 +44,12 @@ namespace BudgetPlanner
 
             decimal tempBalance = Session.ActiveProfile.GetBalance(); //ensures balance is already displayed
             BalanceTxtBx.Text = tempBalance.ToString();
+            ExpenseTypeTxtBox.Visible = false;
+            ExpenseTypeLbl.Visible = false;
 
-            // SOME USEFUL STUFF
-            /*
-            // Can print stuff to the DebugConsole form
-            Logger.ConsoleError("Hello!");
-            Logger.ConsoleWarn("Hello!");
-            Logger.ConsoleInfo("Hello!");
-
-            // Just like in the Bank program we can print messages in a gui banner
-            Logger.Warn("GUI Warning");
-
-            // If you want to creat another screen or page to the app 
-            // You can use this to switch easily to it.
-            // To create another screen/page you can right click on the Winforms folder -> Add -> UserControl
-            // The below replace MyScreenName with the name of the UserControl.
-            // You can edit the UserControl just like a form.
-            
-            ScreenManager.SwitchScreens(new MyScreenName());
-             
-            */
         }
 
+      
         private void UpdateUI()
         {
             // Update Progress Bar
@@ -77,33 +67,39 @@ namespace BudgetPlanner
             }
         }
 
+
         private void ConfirmBttn_Click(object sender, EventArgs e)
         {
             if (decimal.TryParse(AmountTxtBx.Text, out decimal number)) //ensures the text box contains a valid number converts to int
             {
                 m_Amount = number;
 
-                if (WithdrawAddSelect.Text == "Withdraw") //Withdraws from Balance
+                if (WithdrawAddSelect.Text == "Add Expense") //Withdraws from Balance
                 {
-                    try
-                    {
-                        Session.ActiveProfile.Withdraw(number);
-                        decimal tempBalance = Session.ActiveProfile.GetBalance();//edits balance textbox
-                        BalanceTxtBx.Text = tempBalance.ToString();
+                    if (ExpenseTypeTxtBox.Text == "")
+                    { Logger.Warn("Please Enter an Expense Type"); }
+                    else
+                        try
+                        {
+                            Session.ActiveProfile.Withdraw(number);
+                            decimal tempBalance = Session.ActiveProfile.GetBalance();//edits balance textbox
+                            BalanceTxtBx.Text = tempBalance.ToString();
+                            ExpenseType = ExpenseTypeTxtBox.Text;
 
-                        //Creates a transactions object and adds it to history
-                        Transactions temp = new Transactions(Session.ActiveProfile, m_Amount, "Withdrawal");
-                        Session.ActiveProfile.AddTransaction(temp);
-                        UpdateUI();
-                    }
-                    catch (Exception ex)
-                    {
-                        Logger.Warn("Cannot overdraw");
-                    }
-                  
+                            //Creates a transactions object and adds it to history
+                            Transactions temp = new Transactions(Session.ActiveProfile, m_Amount, "Withdrawal", ExpenseType);
+                            Session.ActiveProfile.AddTransaction(temp);
+                            UpdateUI();
+                        }
+                        catch (Exception ex)
+                        {
+                            Logger.Warn("Cannot overdraw");
+                        }
+
                 }
                 else if (WithdrawAddSelect.Text == "Deposit") // Adds to Balance
                 {
+
                     Session.ActiveProfile.Deposit(number);
 
                     decimal tempBalance = Session.ActiveProfile.GetBalance();
@@ -116,7 +112,8 @@ namespace BudgetPlanner
                 }
                 else //Ensures Withdraw or Deposit is Selected
                 {
-                    Logger.Warn("Please Select Deposit or Withdraw.");
+                    Logger.Warn("Please Select Deposit or Add Expense.");
+
                 }
             }
             else
@@ -137,5 +134,46 @@ namespace BudgetPlanner
             ScreenManager.SwitchScreens(new SignInScreen());
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ScreenManager.SwitchScreens(new CalendarScreen());
+        }
+
+        private void BankPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void WithdrawAddSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (WithdrawAddSelect.Text == "Add Expense")
+
+            {
+                ExpenseTypeTxtBox.Visible = true;
+                ExpenseTypeLbl.Visible = true;
+            }
+            else
+            {
+                ExpenseTypeTxtBox.Visible = false;
+                ExpenseTypeLbl.Visible = false;
+            }
+        }
+
+        private void ExpenseTypeTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            string ExpenseType;
+            ExpenseType = ExpenseTypeTxtBox.Text;
+
+        }
+
+        private void ExpenseTypeLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

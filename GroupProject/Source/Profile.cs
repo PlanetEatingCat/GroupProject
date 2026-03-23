@@ -1,7 +1,8 @@
 ﻿/********************************************
 Name: class BankAccount
 Purpose: to encapsulate functionality of a bank account
-Notes: (here are any special explanations)
+Notes: Everything that we need to save in a database or serialize can live here; 
+This is where the user data is stored at runtime
 ********************************************/
 
 using System;
@@ -22,6 +23,8 @@ namespace BudgetPlanner
 
         private Transactions[] m_TransactionHistory = new Transactions[100];
         private int m_TransactionCount = 0;
+
+        private Calendar m_Calendar; 
         public Profile() 
         {
             m_User = new User(); 
@@ -64,6 +67,8 @@ namespace BudgetPlanner
 
         public User GetUser() { return m_User; }
 
+        public Calendar GetCalendar() { return m_Calendar; }
+
         public List<Subscription> GetSubscriptions() { return m_Subscriptions; }
 
         public List<IncomeSource> GetIncomeSources() { return m_IncomeSources; }
@@ -104,6 +109,9 @@ namespace BudgetPlanner
 
             if (InAmount <= 0)
                 throw new ArgumentOutOfRangeException(nameof(InAmount), "Deposit amount must be positive.");
+
+            if (InAmount > int.MaxValue)
+                throw new ArgumentOutOfRangeException(nameof(InAmount), "Profile cannot hold such a large amount of money");
 
             m_Balance += InAmount;
           

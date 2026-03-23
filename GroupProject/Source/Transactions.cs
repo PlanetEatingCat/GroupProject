@@ -13,19 +13,29 @@ namespace BudgetPlanner
         public Profile m_Account { get; protected set; }
         public decimal m_Amount;
         public string m_Type;
+        public string ExpenseType = "test"; //****
 
-        public Transactions (Profile Account, decimal Amount, string Type)
+        public Transactions(Profile Account, decimal Amount, string Type)
         {
             this.m_Account = Account;
             this.m_Amount = Amount;
             this.m_Type = Type;
-        }
+            //this.ExpenseType = EType;
 
+        }
+        public Transactions(Profile Account, decimal Amount, string Type, string EType)
+        {
+            this.m_Account = Account;
+            this.m_Amount = Amount;
+            this.m_Type = Type;
+            this.ExpenseType = EType;
+
+        }
         public string Statement(string type)
         {
             if (type == "Withdrawal")
             {
-                return $"{m_Type} from {m_Account.GetUser().GetUsername()}'s account. Amount: ${m_Amount}.";
+                return $"Withdraw {ExpenseType} expense from {m_Account.GetUser().GetUsername()}'s account. Amount: ${m_Amount}.";
             }
             else if (type == "Deposit")
             {

@@ -1,4 +1,5 @@
 ﻿using BudgetPlanner;
+using LiveChartsCore.Themes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,9 @@ namespace BudgetPlanner
 
         private void SignInScreen_Load(object sender, EventArgs e)
         {
+            //ThemeManager.ApplyTheme(this);
+
+
             SignInPanel.Location = new Point(Size.Width / 2, Size.Height / 2);
         }
 
@@ -36,6 +40,11 @@ namespace BudgetPlanner
             Logger.Info($"Sign in as '{user.GetUsername()}' successful!");
 
             ScreenManager.SwitchScreens(new MainScreen());
+        }
+
+        private void TableLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

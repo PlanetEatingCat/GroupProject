@@ -21,6 +21,7 @@ namespace BudgetPlanner
         {
             InitializeComponent();
             Logger.OnLogToGUI += Logger_OnLog;
+
             ScreenManager.Initialize(MainPanel);
         }
 
@@ -105,6 +106,16 @@ namespace BudgetPlanner
         }
 
         private void Message_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

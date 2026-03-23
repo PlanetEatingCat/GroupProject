@@ -23,4 +23,16 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="LiveChartsCore" Version="2.0.0-rc6.1" />
+    <PackageReference Include="LiveChartsCore.SkiaSharpView" Version="2.0.0-rc6.1" />
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WinForms" Version="2.0.0-rc6.1" />
+    <PackageReference Include="ScottPlot.WinForms" Version="5.1.57" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Source\Theme\" />
+  </ItemGroup>
+
 </Project>

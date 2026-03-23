@@ -11,9 +11,9 @@ Purpose: Manages a users subscriptions. Enables adding, removing, and editing of
 Notes: Work in Progress. Authored by Kiefer.
 ********************************************/
 
-namespace BudgetPlanner
+namespace GroupProject.Source.WinForms
 {
-    public class SubscriptionManager
+    internal class SubscriptionManager
     {
         //Enum to track how often payments are made.
         public enum PaymentCycle
