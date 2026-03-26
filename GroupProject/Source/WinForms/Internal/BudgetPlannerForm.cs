@@ -423,7 +423,7 @@ namespace BudgetPlanner
 
         private void SubscriptionMenuButton_Click(object sender, EventArgs e)
         {
-
+            ScreenManager.SwitchScreens(new SubscriptionManagerForm());
         }
 
         private void HomeMenuButton_Click(object sender, EventArgs e)

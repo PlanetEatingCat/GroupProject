@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Toolkit.Uwp.Notifications;
 
-namespace GroupProject
+namespace BudgetPlanner
 {
 
 	public class Notifications

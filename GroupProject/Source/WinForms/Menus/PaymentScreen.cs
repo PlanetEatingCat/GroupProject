@@ -1,12 +1,9 @@
 ﻿using BudgetPlanner;
-<<<<<<< Updated upstream:GroupProject/Source/WinForms/MainScreen.cs
 using GroupProject.Source.WinForms;
-=======
 using GroupProject;
 using GroupProject.Source.WinForms;
 using Microsoft.Toolkit.Uwp.Notifications;
 using ScottPlot;
->>>>>>> Stashed changes:GroupProject/Source/WinForms/Menus/PaymentScreen.cs
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,14 +14,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
-<<<<<<< Updated upstream:GroupProject/Source/WinForms/MainScreen.cs
 using LiveChartsCore.SkiaSharpView.WinForms;
 using SkiaSharp;
 using LiveChartsCore;
 using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
-=======
->>>>>>> Stashed changes:GroupProject/Source/WinForms/Menus/PaymentScreen.cs
+
 
 namespace BudgetPlanner
 {
@@ -108,10 +103,7 @@ namespace BudgetPlanner
                         catch (Exception ex)
                         {
                             Logger.Warn("Cannot overdraw");
-<<<<<<< Updated upstream:GroupProject/Source/WinForms/MainScreen.cs
-=======
                             Notifications.Notification("Insufficent Funds", "You're over the spending limit!");
->>>>>>> Stashed changes:GroupProject/Source/WinForms/Menus/PaymentScreen.cs
                         }
 
                 }

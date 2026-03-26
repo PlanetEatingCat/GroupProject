@@ -11,7 +11,7 @@ namespace BudgetPlanner
         private static Panel m_Host;
         private static Panel m_HostRightMenuBar;
 
-        private static BudgetPlannerForm HostForm;
+        public static BudgetPlannerForm HostForm;
         private static DashboardScreen m_DashboardScreen;
 
         public static DashboardScreen GetDashboardScreen() { return m_DashboardScreen; }
