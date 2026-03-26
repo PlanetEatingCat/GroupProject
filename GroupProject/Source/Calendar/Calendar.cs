@@ -3,25 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static SkiaSharp.HarfBuzz.SKShaper;
+
+using CalendarEventID = System.Guid;
 
 namespace BudgetPlanner
 {
-
     public class Calendar
     {
-        private List<CalendarEvent> m_Events = new List<CalendarEvent>();
+        private Dictionary<CalendarEventID, CalendarEvent> m_Events = new Dictionary<CalendarEventID, CalendarEvent>();
 
         public void Plan(CalendarEvent InEvent)
         {
-            m_Events.Add(InEvent);  
+            m_Events.Add(InEvent.ID, InEvent);  
+        }
+
+        public void Cancel(CalendarEventID InEventID)
+        {
+            m_Events.Remove(InEventID);
         }
 
         public List<CalendarEvent> GetEventsAtDate(DateTime InDateTime)
         {
             List<CalendarEvent> result = new List<CalendarEvent>();
 
-            foreach(var e in m_Events) 
+            foreach(var e in m_Events.Values) 
                 if(e.OccursToday(InDateTime))
                     result.Add(e);
 
@@ -32,7 +37,7 @@ namespace BudgetPlanner
         {
            var result = new Dictionary<DayOfWeek, List<CalendarEvent>>();
 
-            foreach (var e in m_Events)
+            foreach (var e in m_Events.Values)
             {
                 if(e.OccursThisWeek(InDateTime, out var days))
                 {
@@ -51,16 +56,16 @@ namespace BudgetPlanner
 
         public Dictionary<DateTime, List<CalendarEvent>> GetEventThisMonth(DateTime InDateTime)
         {
-            DateTime monthStart = Utils.GetMonthStart(InDateTime);
-            DateTime monthEnd = Utils.GetMonthEnd(InDateTime);
+            DateTime monthStart = CalendarUtils.GetMonthStart(InDateTime);
+            DateTime monthEnd = CalendarUtils.GetMonthEnd(InDateTime);
 
             return GetEventsInRange(monthStart, monthEnd);
         }
 
         public Dictionary<DateTime, List<CalendarEvent>> GetEventThisYear(DateTime InDateTime)
         {
-            DateTime yearStart = Utils.GetYearStart(InDateTime);
-            DateTime yearEnd = Utils.GetYearEnd(InDateTime);
+            DateTime yearStart = CalendarUtils.GetYearStart(InDateTime);
+            DateTime yearEnd = CalendarUtils.GetYearEnd(InDateTime);
 
             return GetEventsInRange(yearStart, yearEnd);
         }
@@ -69,7 +74,7 @@ namespace BudgetPlanner
         {
             var result = new Dictionary<DateTime, List<CalendarEvent>>();
 
-            foreach (var e in m_Events)
+            foreach (var e in m_Events.Values)
             {
                 if (e.OccursInRange(InStartDate, InEndDate, out var days))
                 {

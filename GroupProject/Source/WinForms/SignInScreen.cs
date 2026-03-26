@@ -1,5 +1,4 @@
 ﻿using BudgetPlanner;
-using LiveChartsCore.Themes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,9 +20,8 @@ namespace BudgetPlanner
 
         private void SignInScreen_Load(object sender, EventArgs e)
         {
-            //ThemeManager.ApplyTheme(this);
-
-
+            ScreenManager.HostForm.SetMenuBarActive(false);
+            ScreenManager.UnsetRightMenuBar();
             SignInPanel.Location = new Point(Size.Width / 2, Size.Height / 2);
         }
 
@@ -39,10 +37,37 @@ namespace BudgetPlanner
 
             Logger.Info($"Sign in as '{user.GetUsername()}' successful!");
 
-            ScreenManager.SwitchScreens(new MainScreen());
+            ScreenManager.SwitchScreens(new DashboardScreen());
         }
 
         private void TableLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SignInScreen_Resize(object sender, EventArgs e)
+        {
+            SignInPanel.Left = (this.Width - SignInPanel.Width) / 2;
+            SignInPanel.Top = (this.Height - SignInPanel.Height) / 2;
+        }
+
+        private void SignInScreen_SizeChanged(object sender, EventArgs e)
+        {
+            SignInPanel.Left = (this.Width - SignInPanel.Width) / 2;
+            SignInPanel.Top = (this.Height - SignInPanel.Height) / 2;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordInputLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

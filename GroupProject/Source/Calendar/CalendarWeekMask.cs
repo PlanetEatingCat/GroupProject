@@ -42,14 +42,7 @@ namespace BudgetPlanner
             return (Mask & ToCalendarWeek(day)) != 0;
         }
 
-        public IEnumerable<DayOfWeek> GetEventDays()
-        {
-            foreach (DayOfWeek d in Enum.GetValues(typeof(DayOfWeek)))
-            {
-                if (Contains(d))
-                    yield return d;
-            }
-        }
+   
 
         private CalendarBits ToCalendarWeek(DayOfWeek day)
         {

@@ -5,9 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using CalendarEventID = System.Guid;
+
 namespace BudgetPlanner
 {
-    internal static class Utils
+    internal static class CalendarUtils
     {
         public static DateTime GetWeekStart(DateTime InDateTime)
         {
@@ -46,6 +48,8 @@ namespace BudgetPlanner
 
     public struct CalendarEvent
     {
+        public CalendarEventID ID = new CalendarEventID();
+
         public string Name;
         public string Description;
 
@@ -56,6 +60,8 @@ namespace BudgetPlanner
         public CalendarRepeatType RepeatType; // ... [ex. Week]
 
         public CalendarWeekMask WeekMask;
+
+        public CalendarEvent() { } 
 
         public bool OccursInRange(DateTime InStartTime, DateTime InEndTime, out List<DateTime> OutDays)
         {
@@ -75,8 +81,8 @@ namespace BudgetPlanner
 
         public bool OccursThisYear(DateTime InDateTime, out List<DateTime> OutDays)
         {
-            DateTime yearStart = Utils.GetYearStart(InDateTime);
-            DateTime yearEnd = Utils.GetYearEnd(InDateTime);
+            DateTime yearStart = CalendarUtils.GetYearStart(InDateTime);
+            DateTime yearEnd = CalendarUtils.GetYearEnd(InDateTime);
 
             return OccursInRange(yearStart, yearEnd, out OutDays);
         }
@@ -84,8 +90,8 @@ namespace BudgetPlanner
         public bool OccursThisMonth(DateTime InDateTime, out List<DateTime> OutDays)
         {
             OutDays = new List<DateTime>();
-            DateTime monthStart = Utils.GetMonthStart(InDateTime);
-            DateTime monthEnd = Utils.GetMonthEnd(InDateTime);
+            DateTime monthStart = CalendarUtils.GetMonthStart(InDateTime);
+            DateTime monthEnd = CalendarUtils.GetMonthEnd(InDateTime);
 
             return OccursInRange(monthStart, monthEnd, out OutDays);
         }
@@ -93,7 +99,7 @@ namespace BudgetPlanner
         public bool OccursThisWeek(DateTime InDateTime, out List<DayOfWeek> OutDays)
         {
             OutDays = new List<DayOfWeek>();
-            DateTime weekStart = Utils.GetWeekStart(InDateTime);
+            DateTime weekStart = CalendarUtils.GetWeekStart(InDateTime);
 
             for (int i = 0; i < 7; i++)
             {
@@ -134,7 +140,6 @@ namespace BudgetPlanner
 
             return false;
         }
-
 
         bool OccursTodayYearly(DateTime InToday)
         {
