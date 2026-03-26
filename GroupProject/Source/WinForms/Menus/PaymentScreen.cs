@@ -1,4 +1,13 @@
-﻿using System;
+﻿using BudgetPlanner;
+<<<<<<< Updated upstream:GroupProject/Source/WinForms/MainScreen.cs
+using GroupProject.Source.WinForms;
+=======
+using GroupProject;
+using GroupProject.Source.WinForms;
+using Microsoft.Toolkit.Uwp.Notifications;
+using ScottPlot;
+>>>>>>> Stashed changes:GroupProject/Source/WinForms/Menus/PaymentScreen.cs
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,21 +15,21 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
-using BudgetPlanner;
-using GroupProject;
-using GroupProject.Source.WinForms;
+<<<<<<< Updated upstream:GroupProject/Source/WinForms/MainScreen.cs
+using LiveChartsCore.SkiaSharpView.WinForms;
+using SkiaSharp;
 using LiveChartsCore;
 using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
-using LiveChartsCore.SkiaSharpView.WinForms;
-using Microsoft.Toolkit.Uwp.Notifications;
-using SkiaSharp;
+=======
+>>>>>>> Stashed changes:GroupProject/Source/WinForms/Menus/PaymentScreen.cs
 
 namespace BudgetPlanner
 {
     // THIS IS CURRENTLY THE MAIN PAGE OF THE APP
-    public partial class MainScreen : UserControl
+    public partial class PaymentScreen : UserControl
     {
         private const string CREATE_ACCOUNT_OPTION_TEXT = "Create New Account";
         private const int ERROR_MESSAGE_VANISH_TIME = 5000; // 5 seconds
@@ -34,23 +43,26 @@ namespace BudgetPlanner
         private decimal m_Amount;
         public string ExpenseType;
 
-        public MainScreen()
+
+        public PaymentScreen()
         {
             InitializeComponent();
         }
 
         private void MainScreen_Load(object InSender, EventArgs InEvent)
         {
-            UserLabel.Text = Session.ActiveProfile.GetUser().GetUsername();
+            ScreenManager.HostForm.SetMenuBarActive(true);
+
+            ScreenManager.SetRightMenuBar(new RightMenuBar());
+
+            //  UserLabel.Text = Session.ActiveProfile.GetUser().GetUsername();
 
 
             decimal tempBalance = Session.ActiveProfile.GetBalance(); //ensures balance is already displayed
             BalanceTxtBx.Text = tempBalance.ToString();
             ExpenseTypeTxtBox.Visible = false;
             ExpenseTypeLbl.Visible = false;
-
         }
-
 
         private void UpdateUI()
         {
@@ -96,7 +108,10 @@ namespace BudgetPlanner
                         catch (Exception ex)
                         {
                             Logger.Warn("Cannot overdraw");
+<<<<<<< Updated upstream:GroupProject/Source/WinForms/MainScreen.cs
+=======
                             Notifications.Notification("Insufficent Funds", "You're over the spending limit!");
+>>>>>>> Stashed changes:GroupProject/Source/WinForms/Menus/PaymentScreen.cs
                         }
 
                 }
@@ -179,9 +194,11 @@ namespace BudgetPlanner
 
         }
 
-        private void SubManagerButton_Click(object sender, EventArgs e)
+        private void LogoLable_Click(object sender, EventArgs e)
         {
-            ScreenManager.SwitchScreens(new SubscriptionManagerForm());
+
         }
+
+      
     }
 }
