@@ -145,6 +145,97 @@ namespace BudgetPlanner
             m_User.Print();
             Console.WriteLine("Balance: " + m_Balance);
         }
+
+        //Adds a subscription to the dictionary
+        public void AddSubscription(string subName, DeductionFrequency frequency, decimal amount)
+        {
+            Subscription newSub = new Subscription(frequency, amount, subName);
+            AddSubscription(newSub);
+            //this.count++;
+        }
+
+        //Removes a subscription from the list
+        public bool DeleteSubscription(string subName)
+        {
+            bool isFound = false;
+
+            foreach (var subscription in GetSubscriptions())
+            {
+                if (subName.ToLower().TrimEnd() == subscription.GetName().ToLower().TrimEnd())
+                { 
+                    GetSubscriptions().Remove(subscription);
+                    isFound = true;
+                    return isFound;
+                }
+            }
+
+            return isFound;
+        }
+
+        //Allows users to pass in information to edit subscriptions already in the list
+        public bool EditSubscription(string subName, DeductionFrequency frequency, decimal amount)
+        {
+            bool isFound = false;
+
+            foreach (var subscription in GetSubscriptions())
+            {
+                if (subName == subscription.GetName())
+                {
+                    GetSubscriptions().Remove(subscription);
+                    GetSubscriptions().Add(new Subscription(frequency, amount, subName));
+                    isFound = true;
+                }
+            }
+
+            return isFound;
+        }
+
+        //Gets total value of subscriptions
+        public decimal GetValueOfSubs()
+        {
+            decimal total = 0;
+            foreach (var subscription in GetSubscriptions())
+            {
+                total += subscription.GetChargeAmount();
+            }
+
+            return total;
+        }
+
+        //Function returns a string informing users when they are overbudget or on track with budget goals
+        public string OverUnderBudget()
+        {
+            decimal total = GetValueOfSubs();
+            decimal budget = GetBalance();
+
+            if (total > budget)
+            {
+                return $"User is overbudget by ${total - budget}. Consider cancelling some subscriptions to meet budget goals!";
+            }
+            else if (total <= budget)
+            {
+                return $"You're on track with your budget goals! You are under budget by ${budget - total}.";
+            }
+            else
+            {
+                return "ERROR";
+            }
+        }
+
+        public static DeductionFrequency CheckFrequency(string frequency)
+        {
+            if (Enum.TryParse<DeductionFrequency>(frequency, true, out var result))
+            {
+                return result;
+            }
+
+            throw new ArgumentException("Invalid frequency");
+        }
+
+        public static string DisplayInfo(Subscription sub)
+        {
+            return $"{sub.GetName()}: ${sub.GetChargeAmount()} {sub.GetFrequency()}";
+        }
     }
 
 }

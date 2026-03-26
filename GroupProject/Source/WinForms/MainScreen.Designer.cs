@@ -44,6 +44,7 @@ namespace BudgetPlanner
             SavingsGoalLbl = new Label();
             UserLabel = new Label();
             BankPanel = new Panel();
+            SubManagerButton = new Button();
             UsernamePanel = new Panel();
             BackToSignInButton = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -194,6 +195,7 @@ namespace BudgetPlanner
             // BankPanel
             // 
             BankPanel.Anchor = AnchorStyles.None;
+            BankPanel.Controls.Add(SubManagerButton);
             BankPanel.Controls.Add(ExpenseTypeTxtBox);
             BankPanel.Controls.Add(ExpenseTypeLbl);
             BankPanel.Controls.Add(Transactions);
@@ -212,6 +214,16 @@ namespace BudgetPlanner
             BankPanel.Size = new Size(1139, 728);
             BankPanel.TabIndex = 10;
             BankPanel.Paint += BankPanel_Paint;
+            // 
+            // SubManagerButton
+            // 
+            SubManagerButton.Location = new Point(930, 528);
+            SubManagerButton.Name = "SubManagerButton";
+            SubManagerButton.Size = new Size(141, 62);
+            SubManagerButton.TabIndex = 12;
+            SubManagerButton.Text = "Subscription Manager";
+            SubManagerButton.UseVisualStyleBackColor = true;
+            SubManagerButton.Click += SubManagerButton_Click;
             // 
             // UsernamePanel
             // 
@@ -294,6 +306,6 @@ namespace BudgetPlanner
         private PictureBox BackToSignInButton;
         private TableLayoutPanel tableLayoutPanel1;
         private TextBox ExpenseTypeTxtBox;
-
+        private Button SubManagerButton;
     }
 }

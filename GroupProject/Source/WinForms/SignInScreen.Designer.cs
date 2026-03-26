@@ -46,7 +46,7 @@
             // 
             pictureBox1.Image = GroupProject.Properties.Resources.SignIn;
             pictureBox1.Location = new Point(62, 42);
-            pictureBox1.Margin = new Padding(4, 4, 4, 4);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(201, 201);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -66,7 +66,7 @@
             // UsernameInput
             // 
             UsernameInput.Location = new Point(6, 274);
-            UsernameInput.Margin = new Padding(4, 4, 4, 4);
+            UsernameInput.Margin = new Padding(4);
             UsernameInput.Name = "UsernameInput";
             UsernameInput.Size = new Size(155, 31);
             UsernameInput.TabIndex = 3;
@@ -74,15 +74,16 @@
             // PasswordInput
             // 
             PasswordInput.Location = new Point(170, 274);
-            PasswordInput.Margin = new Padding(4, 4, 4, 4);
+            PasswordInput.Margin = new Padding(4);
             PasswordInput.Name = "PasswordInput";
             PasswordInput.Size = new Size(155, 31);
             PasswordInput.TabIndex = 4;
+            PasswordInput.TextChanged += PasswordInput_TextChanged;
             // 
             // SignInButton
             // 
             SignInButton.Location = new Point(105, 340);
-            SignInButton.Margin = new Padding(4, 4, 4, 4);
+            SignInButton.Margin = new Padding(4);
             SignInButton.Name = "SignInButton";
             SignInButton.Size = new Size(118, 36);
             SignInButton.TabIndex = 5;
@@ -121,7 +122,7 @@
             SignInPanel.Controls.Add(SignInButton);
             SignInPanel.Controls.Add(PasswordInput);
             SignInPanel.Location = new Point(375, 194);
-            SignInPanel.Margin = new Padding(4, 4, 4, 4);
+            SignInPanel.Margin = new Padding(4);
             SignInPanel.Name = "SignInPanel";
             SignInPanel.Size = new Size(363, 447);
             SignInPanel.TabIndex = 8;
@@ -135,7 +136,7 @@
             TableLayoutPanel.Controls.Add(SignInPanel, 1, 1);
             TableLayoutPanel.Dock = DockStyle.Fill;
             TableLayoutPanel.Location = new Point(0, 0);
-            TableLayoutPanel.Margin = new Padding(4, 4, 4, 4);
+            TableLayoutPanel.Margin = new Padding(4);
             TableLayoutPanel.Name = "TableLayoutPanel";
             TableLayoutPanel.RowCount = 3;
             TableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 24.8366013F));
@@ -150,7 +151,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(TableLayoutPanel);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "SignInScreen";
             Size = new Size(1098, 765);
             Load += SignInScreen_Load;

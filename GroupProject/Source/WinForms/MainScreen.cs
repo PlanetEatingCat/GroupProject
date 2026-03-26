@@ -51,7 +51,7 @@ namespace BudgetPlanner
 
         }
 
-      
+
         private void UpdateUI()
         {
             // Update Progress Bar
@@ -96,8 +96,8 @@ namespace BudgetPlanner
                         catch (Exception ex)
                         {
                             Logger.Warn("Cannot overdraw");
-							Notifications.Notification("Insufficent Funds", "You're over the spending limit!");
-						}
+                            Notifications.Notification("Insufficent Funds", "You're over the spending limit!");
+                        }
 
                 }
                 else if (WithdrawAddSelect.Text == "Deposit") // Adds to Balance
@@ -177,6 +177,11 @@ namespace BudgetPlanner
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void SubManagerButton_Click(object sender, EventArgs e)
+        {
+            ScreenManager.SwitchScreens(new SubscriptionManagerForm());
         }
     }
 }

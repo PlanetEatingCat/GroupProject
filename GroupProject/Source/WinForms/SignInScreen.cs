@@ -46,5 +46,10 @@ namespace BudgetPlanner
         {
 
         }
+
+        private void PasswordInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

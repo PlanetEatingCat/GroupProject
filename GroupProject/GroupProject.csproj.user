@@ -13,7 +13,13 @@
     <Compile Update="Source\WinForms\MainScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Source\WinForms\RemoveSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Source\WinForms\SignInScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\SubscriptionManagerForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

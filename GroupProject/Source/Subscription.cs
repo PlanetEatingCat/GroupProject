@@ -6,28 +6,39 @@ using System.Threading.Tasks;
 
 namespace BudgetPlanner
 {
-    public enum DuductionFrequency
+    public enum DeductionFrequency
     {
         None = 1,
         Daily,
+        Weekly,
         Monthly,
-        EveryTwoMonths,
-        Yearly,
+        Quarterly,
+        Annually,
     }
 
     public class Subscription
     {
-        DuductionFrequency m_Frequency;
+        DeductionFrequency m_Frequency;
         decimal m_ChargeAmount;
+        string m_name;
 
-        public Subscription() { }
+        public Subscription(DeductionFrequency frequency, decimal amount, string name) 
+        { 
+            this.m_Frequency = frequency;
+            this.m_ChargeAmount = amount;
+            this.m_name = name;
+        }
 
-        public DuductionFrequency GetFrequency() { return m_Frequency; }
+        public DeductionFrequency GetFrequency() { return m_Frequency; }
 
-        public void SetFrequency(DuductionFrequency InFrequency) { m_Frequency = InFrequency; }
+        public void SetFrequency(DeductionFrequency InFrequency) { m_Frequency = InFrequency; }
 
         public decimal GetChargeAmount() { return m_ChargeAmount; }
 
         public void SetChargeAmount(decimal InChargeAmount) { m_ChargeAmount = InChargeAmount; }
+
+        public string GetName() { return m_name; }
+
+        public void SetName(string Name) { m_name = Name; }
     }
 }
