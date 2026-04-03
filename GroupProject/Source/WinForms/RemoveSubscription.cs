@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,7 @@ namespace BudgetPlanner
 
         private void ConfirmRemove_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(SubRemoveText.Text.ToString().ToLower().TrimEnd());
+            //MessageBox.Show(SubRemoveText.Text.ToString().ToLower().TrimEnd());
             bool found = currentUser.DeleteSubscription(SubRemoveText.Text.ToString().ToLower().TrimEnd());
 
             if (found)
@@ -33,6 +34,8 @@ namespace BudgetPlanner
             {
                 MessageBox.Show("No subscription with that name on profile.");
             }
+
+            this.Close();
         }
     }
 }

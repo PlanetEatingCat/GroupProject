@@ -139,6 +139,7 @@
             EditSubscription.TabIndex = 11;
             EditSubscription.Text = "Edit Subscription";
             EditSubscription.UseVisualStyleBackColor = true;
+            EditSubscription.Click += EditSubscription_Click;
             // 
             // SubscriptionManagerForm
             // 

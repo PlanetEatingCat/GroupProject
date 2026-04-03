@@ -24,6 +24,8 @@ namespace BudgetPlanner
         public SubscriptionManagerForm()
         {
             InitializeComponent();
+            SubscriptionRemover.Enabled = false;
+            EditSubscription.Enabled = false;
             instance = this;
         }
 
@@ -61,6 +63,17 @@ namespace BudgetPlanner
             ListOfSubscriptions.Items.Add(Profile.DisplayInfo(newSub));
             currentUser.AddSubscription(newSub);
 
+            if (ListOfSubscriptions.Items.Count > 0)
+            {
+                SubscriptionRemover.Enabled = true;
+                EditSubscription.Enabled = true;
+            }
+            else
+            {
+                SubscriptionRemover.Enabled = false;
+                EditSubscription.Enabled = false;
+            }
+
             SubscriptionName.Text = "";
             SubscriptionAmount.Text = "";
             FrequencyDropDown.SelectedIndex = -1;
@@ -85,6 +98,12 @@ namespace BudgetPlanner
             {
                 ListOfSubscriptions.Items.Add(Profile.DisplayInfo(subscription));
             }
+        }
+
+        private void EditSubscription_Click(object sender, EventArgs e)
+        {
+            EditSubscriptionForm editForm = new EditSubscriptionForm();
+            editForm.Show();
         }
     }
 }

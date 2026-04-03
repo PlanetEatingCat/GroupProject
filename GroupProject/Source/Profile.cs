@@ -102,7 +102,7 @@ namespace BudgetPlanner
             return currentTransactions;
         }
 
-        /* Deposite money into account */
+        /* Deposit money into account */
         public void Deposit(decimal InAmount) 
         {
             //add to the balance, check for negative, limit
@@ -179,11 +179,12 @@ namespace BudgetPlanner
 
             foreach (var subscription in GetSubscriptions())
             {
-                if (subName == subscription.GetName())
+                if (subName.ToLower().TrimEnd() == subscription.GetName().ToLower().TrimEnd())
                 {
                     GetSubscriptions().Remove(subscription);
                     GetSubscriptions().Add(new Subscription(frequency, amount, subName));
                     isFound = true;
+                    return isFound;
                 }
             }
 
