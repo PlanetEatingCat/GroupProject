@@ -39,13 +39,14 @@ namespace BudgetPlanner
             serviceContainer.AddScoped<IncomeScreen>();
             serviceContainer.AddScoped<CardsScreen>();
             serviceContainer.AddScoped<SubscriptionScreen>();
+            serviceContainer.AddScoped<SubscriptionManagerForm>();
             serviceContainer.AddScoped<ThemeScreen>();
             serviceContainer.AddScoped<AccountScreen>();
             serviceContainer.AddScoped<AccountTitle>();
             serviceContainer.AddScoped<ScreenTitle>();
 
             // 4. Transient: Created new everytime its asked for
-            serviceContainer.AddTransient<RemoveSubscriptionForm>();
+           // serviceContainer.AddTransient<RemoveSubscriptionForm>();
 
             var provider = serviceContainer.BuildProvider();
 

@@ -1,8 +1,8 @@
 ﻿/********************************************
-Name: class Profile
+Name: class BankAccount
 Purpose: to encapsulate functionality of a bank account
 Notes: Everything that we need to save in a database or serialize can live here; 
-This is where the user data is stored at runtime 
+This is where the user data is stored at runtime
 ********************************************/
 
 using System;
@@ -25,20 +25,14 @@ namespace BudgetPlanner
         private int m_TransactionCount = 0;
 
         private Calendar m_Calendar;
-      
-
-        public Profile() 
+        public Profile()
         {
-            Initialize();
-
-            m_User = new User(); 
+            m_User = new User();
             m_Balance = 0;
         }
 
-        public Profile(string InUsername, string InPassword) 
+        public Profile(string InUsername, string InPassword)
         {
-            Initialize();
-
             m_User = new User();
             m_User.SetUsername(InUsername);
             m_User.SetPassword(InPassword);
@@ -46,10 +40,8 @@ namespace BudgetPlanner
             m_Balance = 0;
         }
 
-        public Profile(string InUsername, string InPassword, decimal InBalance) 
+        public Profile(string InUsername, string InPassword, decimal InBalance)
         {
-            Initialize();
-
             m_User = new User();
             m_User.SetUsername(InUsername);
             m_User.SetPassword(InPassword);
@@ -57,32 +49,23 @@ namespace BudgetPlanner
             SetBalance(InBalance);
         }
 
-        public Profile(User InUser, decimal InBalance) 
+        public Profile(User InUser, decimal InBalance)
         {
-            Initialize();
-
             m_User = InUser;
             SetBalance(InBalance);
         }
 
-        private void Initialize()
-        {
-           
-        }
-
-        public void SetBalance(decimal InBalance) 
+        public void SetBalance(decimal InBalance)
         {
             if (InBalance < 0)
                 throw new ArgumentOutOfRangeException(nameof(InBalance), "Balance cannot be negative.");
 
-            m_Balance = InBalance; 
+            m_Balance = InBalance;
         }
 
         public decimal GetBalance() { return m_Balance; }
 
         public User GetUser() { return m_User; }
-
-      
 
         public Calendar GetCalendar() { return m_Calendar; }
 
@@ -119,8 +102,8 @@ namespace BudgetPlanner
             return currentTransactions;
         }
 
-        /* Deposite money into account */
-        public void Deposit(decimal InAmount) 
+        /* Deposit money into account */
+        public void Deposit(decimal InAmount)
         {
             //add to the balance, check for negative, limit
 
@@ -131,12 +114,12 @@ namespace BudgetPlanner
                 throw new ArgumentOutOfRangeException(nameof(InAmount), "Profile cannot hold such a large amount of money");
 
             m_Balance += InAmount;
-          
 
-		}
+
+        }
 
         /* Withdraw money from account */
-        public void Withdraw(decimal InAmount) 
+        public void Withdraw(decimal InAmount)
         {
             //take away amount if balance is enough
 
@@ -151,13 +134,13 @@ namespace BudgetPlanner
         }
 
         /* Print the current account balance */
-        public void Inquiry() 
+        public void Inquiry()
         {
             Console.WriteLine("Balance: " + m_Balance);
         }
 
         /* Prints the account holder and current balance */
-        public void Print() 
+        public void Print()
         {
             m_User.Print();
             Console.WriteLine("Balance: " + m_Balance);
@@ -179,7 +162,7 @@ namespace BudgetPlanner
             foreach (var subscription in GetSubscriptions())
             {
                 if (subName.ToLower().TrimEnd() == subscription.GetName().ToLower().TrimEnd())
-                { 
+                {
                     GetSubscriptions().Remove(subscription);
                     isFound = true;
                     return isFound;
@@ -196,11 +179,12 @@ namespace BudgetPlanner
 
             foreach (var subscription in GetSubscriptions())
             {
-                if (subName == subscription.GetName())
+                if (subName.ToLower().TrimEnd() == subscription.GetName().ToLower().TrimEnd())
                 {
                     GetSubscriptions().Remove(subscription);
                     GetSubscriptions().Add(new Subscription(frequency, amount, subName));
                     isFound = true;
+                    return isFound;
                 }
             }
 

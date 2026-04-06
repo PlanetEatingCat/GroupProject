@@ -1,9 +1,4 @@
-﻿/********************************************
-Name: SubscriptionManagerForm.cs
-Purpose: Form to display a users subscriptions. Adds subscriptions to a list box and shows users.
-Notes: Work in Progress. Authored by Kiefer.
-********************************************/
-
+﻿using GroupProject.Source.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,38 +8,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Windows.Media.Control;
+using Windows.Management;
 
+/********************************************
+Name: SubscriptionManagerForm.cs
+Purpose: Form to display a users subscriptions. Adds subscriptions to a list box and shows users.
+Notes: Work in Progress. Authored by Kiefer.
+********************************************/
 namespace BudgetPlanner
 {
-    public partial class SubscriptionScreen : UserControl
+    public partial class SubscriptionManagerForm : UserControl
     {
+
         private readonly SessionManager m_SessionManager;
-        public static SubscriptionScreen Instance;
 
-        //-----------------------------------------------------------------------------------------------
-        // Screen
-        //-----------------------------------------------------------------------------------------------
+        public static SubscriptionManagerForm instance { get; private set; }
 
-        public SubscriptionScreen(SessionManager InSessionManager, MainForm InMainForm, 
-            AccountTitle InAccountTitle, ScreenTitle InScreenTitle)
+        public SubscriptionManagerForm(SessionManager InSessionManager)
         {
-            Instance = this;
-
             InitializeComponent();
 
             m_SessionManager = InSessionManager;
 
-            InMainForm.SetRightMenuBar(InAccountTitle);
-            InMainForm.SetLeftMenuBar(InScreenTitle);
-
-            InScreenTitle.SetIcon(MenuIcons.Subscriptions);
-            InScreenTitle.SetText("Subscriptions");
+            SubscriptionRemover.Enabled = false;
+            EditSubscription.Enabled = false;
+            instance = this;
         }
-
-        //-----------------------------------------------------------------------------------------------
-        // Controls
-        //-----------------------------------------------------------------------------------------------
 
         //Checks to make sure all values are valid, then creates the subscription object and displays it to the listbox
         private void AddSubscription_Click(object sender, EventArgs e)
@@ -80,20 +69,33 @@ namespace BudgetPlanner
             ListOfSubscriptions.Items.Add(Profile.DisplayInfo(newSub));
             m_SessionManager.GetActiveProfile().AddSubscription(newSub);
 
+            if (ListOfSubscriptions.Items.Count > 0)
+            {
+                SubscriptionRemover.Enabled = true;
+                EditSubscription.Enabled = true;
+            }
+            else
+            {
+                SubscriptionRemover.Enabled = false;
+                EditSubscription.Enabled = false;
+            }
+
             SubscriptionName.Text = "";
             SubscriptionAmount.Text = "";
             FrequencyDropDown.SelectedIndex = -1;
         }
 
-        private void SubscriptionRemover_Click(object sender, EventArgs e)
+        //Clicked on this by accident, but can't remove it without breaking the code
+        private void ListOfSubscriptions_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var form = new RemoveSubscription(m_SessionManager);
-            form.Show();
+
         }
 
-        //-----------------------------------------------------------------------------------------------
-        // Utils
-        //-----------------------------------------------------------------------------------------------
+        private void SubscriptionRemover_Click(object sender, EventArgs e)
+        {
+            RemoveSubscription removeForm = new RemoveSubscription(m_SessionManager);
+            removeForm.Show();
+        }
 
         public void FixList()
         {
@@ -102,6 +104,12 @@ namespace BudgetPlanner
             {
                 ListOfSubscriptions.Items.Add(Profile.DisplayInfo(subscription));
             }
+        }
+
+        private void EditSubscription_Click(object sender, EventArgs e)
+        {
+            EditSubscriptionForm editForm = new EditSubscriptionForm(m_SessionManager);
+            editForm.Show();
         }
     }
 }

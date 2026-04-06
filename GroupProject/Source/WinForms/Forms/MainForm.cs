@@ -155,7 +155,7 @@ namespace BudgetPlanner
         private void SubscriptionMenuButton_Click(object InSender, EventArgs InEventArgs)
         {
             SetActiveMenuItem(SubscriptionMenuButton);
-            m_NavigationManager.GoTo<SubscriptionScreen>();
+            m_NavigationManager.GoTo<SubscriptionManagerForm>();
         }
 
         private void HomeMenuButton_Click(object InSender, EventArgs InEventArgs)

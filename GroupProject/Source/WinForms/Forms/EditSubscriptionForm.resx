@@ -117,24 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MinButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA4AAAACCAYAAABoiu2qAAAABGdBTUEAALGPC/xhBQAAABFJREFUGFdj
-        +E8mYEAXIBYAANjqb5EI7QqUAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="MaxButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAcSURBVDhPY/hPJmBAoknBoxrx4FGNeDDlGkkGAK8EfZ8gVRvXAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="CloseButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAGFJREFUOE+1
-        0lEKwCAMA1BvPgfu3Bl1bGatraAYENTmgR+mtBIABUAGIPtoSacwPPEkwjKrHYYj/CE5a+jhH/KgLhoU
-        QcYGbYFTT+0V37vDgz2kZxUzjJDBDK8BYty+3Exu6mPYXe28PS0AAAAASUVORK5CYII=
-</value>
-  </data>
 </root>
