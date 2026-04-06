@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: GoalsScreen.cs
+Purpose: Add, remove, and edit income
+Notes: WIP by Ella.
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +18,15 @@ namespace BudgetPlanner
 {
     public partial class IncomeScreen : UserControl
     {
-        public IncomeScreen()
+        public IncomeScreen(MainForm InMainForm, AccountTitle InAccountTitle, ScreenTitle InScreenTitle)
         {
             InitializeComponent();
-        }
 
-        private void IncomeScreen_Load(object InSender, EventArgs InEvent)
-        {
+            InMainForm.SetRightMenuBar(InAccountTitle);
+            InMainForm.SetLeftMenuBar(InScreenTitle);
 
+            InScreenTitle.SetIcon(MenuIcons.Income);
+            InScreenTitle.SetText("Income");
         }
     }
 }

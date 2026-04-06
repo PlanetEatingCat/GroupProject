@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: Logger.cs
+Purpose: To log messages to the GUI
+Notes: WIP. 
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

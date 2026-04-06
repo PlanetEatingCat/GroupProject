@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: Notifications.cs
+Purpose: Toast messages
+Notes: Authored by Ella.
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

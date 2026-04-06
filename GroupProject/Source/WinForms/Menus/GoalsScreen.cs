@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: GoalsScreen.cs
+Purpose: The goals
+Notes: WIP by Kiefer.
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +18,15 @@ namespace BudgetPlanner
 {
     public partial class GoalsScreen : UserControl
     {
-        public GoalsScreen()
+        public GoalsScreen(MainForm InMainForm, AccountTitle InAccountTitle, ScreenTitle InScreenTitle)
         {
             InitializeComponent();
-        }
 
-        private void GoalsScreen_Load(object sender, EventArgs e)
-        {
+            InMainForm.SetRightMenuBar(InAccountTitle);
+            InMainForm.SetLeftMenuBar(InScreenTitle);
 
+            InScreenTitle.SetIcon(MenuIcons.Goals);
+            InScreenTitle.SetText("Goals");
         }
     }
 }
