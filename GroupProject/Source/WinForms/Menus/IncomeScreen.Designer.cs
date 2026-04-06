@@ -28,32 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(283, 245);
-            label1.Name = "label1";
-            label1.Size = new Size(71, 25);
-            label1.TabIndex = 0;
-            label1.Text = "Income";
             // 
             // IncomeScreen
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "IncomeScreen";
-            Size = new Size(1234, 810);
-            Load += IncomeScreen_Load;
+            Size = new Size(987, 648);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
     }
 }

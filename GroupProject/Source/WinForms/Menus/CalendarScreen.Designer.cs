@@ -1,4 +1,4 @@
-﻿namespace GroupProject.Source.WinForms
+﻿namespace BudgetPlanner
 {
     partial class CalendarScreen
     {
@@ -28,61 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            UserLabel = new Label();
-            UsernamePanel = new Panel();
-            BackToSignInButton = new PictureBox();
-            UsernamePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)BackToSignInButton).BeginInit();
             SuspendLayout();
-            // 
-            // UserLabel
-            // 
-            UserLabel.AutoSize = true;
-            UserLabel.Location = new Point(96, 28);
-            UserLabel.Margin = new Padding(4, 0, 4, 0);
-            UserLabel.Name = "UserLabel";
-            UserLabel.Size = new Size(91, 25);
-            UserLabel.TabIndex = 0;
-            UserLabel.Text = "Username";
-            // 
-            // UsernamePanel
-            // 
-            UsernamePanel.BackColor = SystemColors.ActiveCaption;
-            UsernamePanel.Controls.Add(BackToSignInButton);
-            UsernamePanel.Controls.Add(UserLabel);
-            UsernamePanel.Location = new Point(0, 0);
-            UsernamePanel.Margin = new Padding(4, 3, 4, 3);
-            UsernamePanel.Name = "UsernamePanel";
-            UsernamePanel.Size = new Size(216, 78);
-            UsernamePanel.TabIndex = 13;
-            // 
-            // BackToSignInButton
-            // 
-            BackToSignInButton.Image = Properties.Resources.SignIn;
-            BackToSignInButton.Location = new Point(21, 7);
-            BackToSignInButton.Margin = new Padding(4, 3, 4, 3);
-            BackToSignInButton.Name = "BackToSignInButton";
-            BackToSignInButton.Size = new Size(69, 68);
-            BackToSignInButton.SizeMode = PictureBoxSizeMode.StretchImage;
-            BackToSignInButton.TabIndex = 1;
-            BackToSignInButton.TabStop = false;
             // 
             // CalendarScreen
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(UsernamePanel);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "CalendarScreen";
-            Size = new Size(1259, 773);
-            UsernamePanel.ResumeLayout(false);
-            UsernamePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)BackToSignInButton).EndInit();
+            Size = new Size(1007, 618);
             ResumeLayout(false);
         }
 
         #endregion
-        private Label UserLabel;
-        private Panel UsernamePanel;
-        private PictureBox BackToSignInButton;
     }
 }

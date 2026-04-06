@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: CalendarWeekMask.cs
+Purpose: 
+Notes: WIP
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,8 +47,6 @@ namespace BudgetPlanner
         {
             return (Mask & ToCalendarWeek(day)) != 0;
         }
-
-   
 
         private CalendarBits ToCalendarWeek(DayOfWeek day)
         {

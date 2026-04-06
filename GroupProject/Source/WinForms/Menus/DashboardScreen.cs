@@ -1,4 +1,10 @@
-﻿using ScottPlot;
+﻿/********************************************
+Name: DashboardScreen.cs
+Purpose: The darshboard to display important stats and info
+Notes: WIP. 
+********************************************/
+
+using ScottPlot;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,85 +19,49 @@ namespace BudgetPlanner
 {
     public partial class DashboardScreen : UserControl
     {
-        public DashboardScreen()
+        //-----------------------------------------------------------------------------------------------
+        // Dependencies
+        //-----------------------------------------------------------------------------------------------
+
+        private readonly MainForm m_MainForm;
+        private readonly EventDispatcher m_EventDispatcher;
+
+        //-----------------------------------------------------------------------------------------------
+        // Form
+        //-----------------------------------------------------------------------------------------------
+
+        public DashboardScreen(EventDispatcher InEventDispatcher, MainForm InMainForm,
+            ThemeManager InThemeManager, AccountTitle InAccountTitle, ScreenTitle InScreenTitle)
         {
             InitializeComponent();
+
+            ApplyTheme(InThemeManager.GetCurrentTheme());
+
+            m_MainForm = InMainForm;
+            m_EventDispatcher = InEventDispatcher;
+
+            m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
+
+            m_MainForm.SetMenuBarActive(true);
+            //m_MainForm.ExpandMenu();
+
+            var rightMenuBar = InAccountTitle;
+            var leftMenuBar = InScreenTitle;
+            m_MainForm.SetRightMenuBar(rightMenuBar);
+            m_MainForm.SetLeftMenuBar(leftMenuBar);
         }
 
-        private void DashboardScreen_Load(object InSender, EventArgs InEvent)
+        //-----------------------------------------------------------------------------------------------
+        // Utils
+        //-----------------------------------------------------------------------------------------------
+
+        private void OnThemeChanged(ThemeChangedEvent InEvent)
         {
-            ScreenManager.HostForm.SetMenuBarActive(true);
+            ApplyTheme(InEvent.NewTheme);
+        }
 
-            ScreenManager.SetRightMenuBar(new RightMenuBar());
-
-            {
-                List<PieSlice> slices =
-                [
-                   new PieSlice() { Value = 5, FillColor = Colors.Red, Label = "Netflix", LegendText = "R" },
-                new PieSlice() { Value = 2, FillColor = Colors.Orange, Label = "Hulu" },
-                new PieSlice() { Value = 8, FillColor = Colors.Gold, Label = "Housing" },
-                new PieSlice() { Value = 4, FillColor = Colors.Green, Label = "Gas", LegendText = "G" },
-                new PieSlice() { Value = 8, FillColor = Colors.Blue, Label = "Travel", LegendText = "B" },
-            ];
-
-                var pie = formsPlot1.Plot.Add.Pie(slices);
-                pie.ExplodeFraction = .1;
-                pie.SliceLabelDistance = 1.4;
-
-                formsPlot1.Plot.ShowLegend();
-
-                // hide unnecessary plot components
-                formsPlot1.Plot.Axes.Frameless();
-                formsPlot1.Plot.HideGrid();
-
-                formsPlot1.Refresh();
-            }
-
-            {
-                List<PieSlice> slices =
-                [
-                   new PieSlice() { Value = 5, FillColor = Colors.Red, Label = "Netflix", LegendText = "R" },
-                new PieSlice() { Value = 2, FillColor = Colors.Orange, Label = "Hulu" },
-                new PieSlice() { Value = 8, FillColor = Colors.Gold, Label = "Housing" },
-                new PieSlice() { Value = 4, FillColor = Colors.Green, Label = "Gas", LegendText = "G" },
-                new PieSlice() { Value = 8, FillColor = Colors.Blue, Label = "Travel", LegendText = "B" },
-            ];
-
-                var pie = formsPlot2.Plot.Add.Pie(slices);
-                pie.ExplodeFraction = .1;
-                pie.SliceLabelDistance = 1.4;
-
-                formsPlot2.Plot.ShowLegend();
-
-                // hide unnecessary plot components
-                formsPlot2.Plot.Axes.Frameless();
-                formsPlot2.Plot.HideGrid();
-
-                formsPlot2.Refresh();
-            }
-
-            {
-                List<PieSlice> slices =
-                [
-                    new PieSlice() { Value = 5, FillColor = Colors.Red, Label = "Netflix", LegendText = "R" },
-                    new PieSlice() { Value = 2, FillColor = Colors.Orange, Label = "Hulu" },
-                    new PieSlice() { Value = 8, FillColor = Colors.Gold, Label = "Housing" },
-                    new PieSlice() { Value = 4, FillColor = Colors.Green, Label = "Gas", LegendText = "G" },
-                    new PieSlice() { Value = 8, FillColor = Colors.Blue, Label = "Travel", LegendText = "B" },
-                ];
-
-                var pie = formsPlot3.Plot.Add.Pie(slices);
-                pie.ExplodeFraction = .1;
-                pie.SliceLabelDistance = 1.4;
-
-                formsPlot3.Plot.ShowLegend();
-
-                // hide unnecessary plot components
-                formsPlot3.Plot.Axes.Frameless();
-                formsPlot3.Plot.HideGrid();
-
-                formsPlot3.Refresh();
-            }
+        public void ApplyTheme(Theme InTheme)
+        {
         }
     }
 }

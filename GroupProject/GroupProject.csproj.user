@@ -1,10 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Update="Source\WinForms\EditSubscriptionForm.cs">
       <SubType>Form</SubType>
     </Compile>
+=======
+    <Compile Update="Source\WinForms\Controls\MenuButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\Controls\ThemeEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\Forms\ModernForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\Menus\AccountScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+>>>>>>> main
     <Compile Update="Source\WinForms\Menus\CalendarScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\Menus\ExpensesScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Menus\DashboardScreen.cs">
@@ -16,30 +34,36 @@
     <Compile Update="Source\WinForms\Menus\IncomeScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Source\WinForms\Internal\BudgetPlannerForm.cs">
+    <Compile Update="Source\WinForms\Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Source\WinForms\Internal\DebugConsoleForm.cs">
+    <Compile Update="Source\WinForms\Forms\DebugConsoleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Source\WinForms\Menus\PaymentScreen.cs">
+    <Compile Update="Source\WinForms\Menus\CardsScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Source\WinForms\RightMenuBar.cs">
+    <Compile Update="Source\WinForms\Menus\ThemeScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Source\WinForms\RemoveSubscription.cs">
+    <Compile Update="Source\WinForms\Title\AccountTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\Forms\RemoveSubscriptionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Source\WinForms\SignInScreen.cs">
+    <Compile Update="Source\WinForms\Menus\SignInScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Source\WinForms\SubscriptionManagerForm.cs">
+    <Compile Update="Source\WinForms\Menus\SubscriptionScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\Title\ScreenTitle.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Source\WinForms\Internal\DebugConsoleForm.resx">
+    <EmbeddedResource Update="Source\WinForms\Forms\DebugConsoleForm.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,8 +1,8 @@
 ﻿/********************************************
-Name: class BankAccount
+Name: class Profile
 Purpose: to encapsulate functionality of a bank account
 Notes: Everything that we need to save in a database or serialize can live here; 
-This is where the user data is stored at runtime
+This is where the user data is stored at runtime 
 ********************************************/
 
 using System;
@@ -24,15 +24,21 @@ namespace BudgetPlanner
         private Transactions[] m_TransactionHistory = new Transactions[100];
         private int m_TransactionCount = 0;
 
-        private Calendar m_Calendar; 
+        private Calendar m_Calendar;
+      
+
         public Profile() 
         {
+            Initialize();
+
             m_User = new User(); 
             m_Balance = 0;
         }
 
         public Profile(string InUsername, string InPassword) 
         {
+            Initialize();
+
             m_User = new User();
             m_User.SetUsername(InUsername);
             m_User.SetPassword(InPassword);
@@ -42,6 +48,8 @@ namespace BudgetPlanner
 
         public Profile(string InUsername, string InPassword, decimal InBalance) 
         {
+            Initialize();
+
             m_User = new User();
             m_User.SetUsername(InUsername);
             m_User.SetPassword(InPassword);
@@ -51,8 +59,15 @@ namespace BudgetPlanner
 
         public Profile(User InUser, decimal InBalance) 
         {
+            Initialize();
+
             m_User = InUser;
             SetBalance(InBalance);
+        }
+
+        private void Initialize()
+        {
+           
         }
 
         public void SetBalance(decimal InBalance) 
@@ -66,6 +81,8 @@ namespace BudgetPlanner
         public decimal GetBalance() { return m_Balance; }
 
         public User GetUser() { return m_User; }
+
+      
 
         public Calendar GetCalendar() { return m_Calendar; }
 
