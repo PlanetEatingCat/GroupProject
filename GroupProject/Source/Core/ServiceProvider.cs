@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace BudgetPlanner
 {
+    // Used to access and create services
     public class ServiceProvider
     {
         private readonly Dictionary<Type, ServiceDescriptor> m_Descriptors;
         private Dictionary<Type, object> m_ScopedInstances = new();
 
         private readonly ServiceScopeFactory m_ScopeFactory;
-
    
         public ServiceProvider(Dictionary<Type, ServiceDescriptor> InDescriptors)
         {
@@ -66,6 +66,7 @@ namespace BudgetPlanner
             return CreateInstance(descriptor.Type);
         }
 
+        // Uses reflection to automatically pass dependencies into constructor
         private object CreateInstance(Type type)
         {
             var constructors = type.GetConstructors();

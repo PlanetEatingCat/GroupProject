@@ -28,6 +28,8 @@ namespace BudgetPlanner
         protected const int HT_CAPTION = 0x2;
         protected const int RESIZE_HANDLE_SIZE = 8; // For resizing with custom window border
 
+        Color m_TitleButtonTint = Color.White;
+
         //-----------------------------------------------------------------------------------------------
         // Ecapsulated windows functionality
         //-----------------------------------------------------------------------------------------------
@@ -52,6 +54,8 @@ namespace BudgetPlanner
             public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref DwmWindowCornerPreference pref, int size);
         }
 
+
+
         //-----------------------------------------------------------------------------------------------
         // Form
         //-----------------------------------------------------------------------------------------------
@@ -64,9 +68,22 @@ namespace BudgetPlanner
         private void BaseForm_Load(object sender, EventArgs e)
         {
             // Load emmeded icons
-            CloseButton.Image = ImageUtils.LoadPng(Icons.WindowCloseIcon);
-            MinButton.Image = ImageUtils.LoadPng(Icons.WindowMinimizeIcon);
-            MaxButton.Image = ImageUtils.LoadPng(Icons.WindowMaximizeIcon);
+            var closeIcon = ImageUtils.LoadPng(Icons.WindowCloseIcon);
+            var minIcon = ImageUtils.LoadPng(Icons.WindowMinimizeIcon);
+            var maxIcon = ImageUtils.LoadPng(Icons.WindowMaximizeIcon);
+
+            CloseButton.Image = ImageUtils.TintImage(closeIcon, m_TitleButtonTint);
+            MinButton.Image = ImageUtils.TintImage(minIcon, m_TitleButtonTint);
+            MaxButton.Image = ImageUtils.TintImage(maxIcon, m_TitleButtonTint);
+        }
+
+        public void SetTitleButtonTint(Color InTint)
+        {
+            m_TitleButtonTint = InTint;
+
+            CloseButton.Image = ImageUtils.TintImage(CloseButton.Image, m_TitleButtonTint);
+            MinButton.Image = ImageUtils.TintImage(MinButton.Image, m_TitleButtonTint);
+            MaxButton.Image = ImageUtils.TintImage(MaxButton.Image, m_TitleButtonTint);
         }
 
 
@@ -85,7 +102,8 @@ namespace BudgetPlanner
             {
                 this.Padding = new Padding(2);
                 WindowState = FormWindowState.Normal;
-                MaxButton.Image = ImageUtils.LoadPng(Icons.WindowMaximizeIcon);
+                var maxIcon = ImageUtils.LoadPng(Icons.WindowMaximizeIcon);
+                MaxButton.Image = ImageUtils.TintImage(maxIcon, m_TitleButtonTint);
                 SetFormRoundedCorners(true);
             }
 
@@ -93,7 +111,8 @@ namespace BudgetPlanner
             {
                 this.Padding = new Padding(0);
                 WindowState = FormWindowState.Maximized;
-                MaxButton.Image = ImageUtils.LoadPng(Icons.WindowRestoreIcon);
+                var maxIcon = ImageUtils.LoadPng(Icons.WindowRestoreIcon);
+                MaxButton.Image = ImageUtils.TintImage(maxIcon, m_TitleButtonTint);
                 SetFormRoundedCorners(false);
             }
         }
@@ -112,7 +131,8 @@ namespace BudgetPlanner
             if (WindowState != FormWindowState.Maximized)
             {
                 this.Padding = new Padding(2);
-                MaxButton.Image = ImageUtils.LoadPng(Icons.WindowMaximizeIcon);
+                var maxIcon = ImageUtils.LoadPng(Icons.WindowMaximizeIcon);
+                MaxButton.Image = ImageUtils.TintImage(maxIcon, m_TitleButtonTint);
                 SetFormRoundedCorners(true);
             }
         }

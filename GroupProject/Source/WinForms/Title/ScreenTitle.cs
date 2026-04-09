@@ -13,18 +13,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.Management;
 
 namespace BudgetPlanner
 {
     public partial class ScreenTitle : UserControl
     {
-        public ScreenTitle()
+        private readonly EventDispatcher m_EventDispatcher;
+
+        public ScreenTitle(EventDispatcher InEventDispatcher, ThemeManager InThemeManager)
         {
             InitializeComponent();
 
             HomeMenuButton.FlatAppearance.MouseOverBackColor = HomeMenuButton.BackColor;
             HomeMenuButton.FlatAppearance.MouseDownBackColor = HomeMenuButton.BackColor;
 
+            ApplyTheme(InThemeManager.GetCurrentTheme());
+
+            m_EventDispatcher = InEventDispatcher;
+
+            m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
+        }
+
+        private void OnThemeChanged(ThemeChangedEvent InEvent)
+        {
+            ApplyTheme(InEvent.NewTheme);
         }
 
         public void SetIcon(IconChar InChar)
@@ -40,6 +53,12 @@ namespace BudgetPlanner
         private void HomeMenuButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void ApplyTheme(Theme InTheme)
+        {
+            HomeMenuButton.IconColor = ColorUtils.GetContrastColor(InTheme.Background);
+            HomeMenuButton.ForeColor = ColorUtils.GetContrastColor(InTheme.Background);
         }
     }
 }

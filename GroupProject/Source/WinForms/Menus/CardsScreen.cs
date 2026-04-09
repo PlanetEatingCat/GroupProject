@@ -157,7 +157,7 @@ namespace BudgetPlanner
 
         private void BackToSignInButton_Click(object sender, EventArgs e)
         {
-            m_Navigator.GoTo<SignInScreen>();
+         //   m_Navigator.GoTo<LoginForm>();
         }
 
         private void WithdrawAddSelect_SelectedIndexChanged(object sender, EventArgs e)

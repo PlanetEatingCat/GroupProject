@@ -40,6 +40,7 @@ namespace BudgetPlanner
         public Color SoulAccent;
         public Color Border;
         public Color Active;
+        public Color DefaultFontColor;
 
         public Font DefaultFont;
         public Font TitleFont;

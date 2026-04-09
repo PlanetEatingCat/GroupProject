@@ -23,13 +23,15 @@ namespace BudgetPlanner
 
     public class ServiceDescriptor
     {
-        public ServiceLifetime Lifetime { get; set; }
-        public Type Type { get; set; }
-        public object Instance { get; set; } 
+        public ServiceLifetime Lifetime;
+        public Type Type;
+        public object Instance; 
     }
 
+    // Creates and manages lifetimes for all app services/ dependencies 
     public class ServiceContainer
     {
+        // List of service descriptions used to create them when requested
         private readonly Dictionary<Type, ServiceDescriptor> m_Descriptors 
             = new Dictionary<Type, ServiceDescriptor>();
    
@@ -78,6 +80,7 @@ namespace BudgetPlanner
             };
         }
 
+        // Builds the service provide which is used for getting services
         public ServiceProvider BuildProvider()
         {
             return new ServiceProvider(m_Descriptors);

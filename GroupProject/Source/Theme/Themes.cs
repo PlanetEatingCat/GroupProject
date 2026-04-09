@@ -36,7 +36,7 @@ namespace BudgetPlanner
 
             SnhuBlue = new Theme();
             SnhuBlue.Name = "SnhuBlue";
-            SnhuBlue.Background = Color.FromArgb(185, 209, 234);
+            SnhuBlue.Background = Color.White;//Color.FromArgb(185, 209, 234);
             SnhuBlue.Surface = Color.FromArgb(51, 153, 255);
             SnhuBlue.Active = Color.FromArgb(62, 158, 255);
             SnhuBlue.Border = Color.FromArgb(185, 209, 234);
@@ -46,6 +46,7 @@ namespace BudgetPlanner
             SnhuBlue.Sibling = Color.FromArgb(72, 217, 236);
             SnhuBlue.SoulAccent = Color.FromArgb(227, 132, 236);
             SnhuBlue.Extra = Color.FromArgb(255, 190, 75);
+
             // Dark.Background;
         }
 

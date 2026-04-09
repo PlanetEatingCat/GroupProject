@@ -1,15 +1,11 @@
-﻿/********************************************
-Name: SignInScreen.cs
-Purpose: to sign in and set profile
-Notes: Work in Progress. 
-********************************************/
-
-using BudgetPlanner;
+﻿using BudgetPlanner;
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +13,7 @@ using System.Windows.Forms;
 
 namespace BudgetPlanner
 {
-    public partial class SignInScreen : UserControl
+    public partial class LoginForm : ModernForm
     {
         //-----------------------------------------------------------------------------------------------
         // Dependencies
@@ -27,12 +23,16 @@ namespace BudgetPlanner
         private readonly NavigationManager m_Navigator;
         private readonly SessionManager m_SessionManager;
         private readonly EventDispatcher m_EventDispatcher;
+        private readonly ThemeManager m_ThemeManager;
 
         //-----------------------------------------------------------------------------------------------
         // Screen
         //-----------------------------------------------------------------------------------------------
 
-        public SignInScreen(EventDispatcher InEventDispatcher, MainForm InMainForm, NavigationManager InNavigator,
+
+
+
+        public LoginForm(EventDispatcher InEventDispatcher, MainForm InMainForm, NavigationManager InNavigator,
             SessionManager InSessionManager, ThemeManager InThemeManager)
         {
             InitializeComponent();
@@ -43,8 +43,18 @@ namespace BudgetPlanner
             m_Navigator = InNavigator;
             m_SessionManager = InSessionManager;
             m_EventDispatcher = InEventDispatcher;
+            m_ThemeManager = InThemeManager;
 
             m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
+
+
+            foreach (var theme in InThemeManager.GetThemes())
+            {
+                ThemeComboBox.Items.Add(theme.Name);
+            }
+
+            ThemeComboBox.SelectedIndex = ThemeComboBox.FindString(InThemeManager.GetCurrentTheme().Name);
+
         }
 
         private void OnThemeChanged(ThemeChangedEvent InEvent)
@@ -54,10 +64,12 @@ namespace BudgetPlanner
 
         private void SignInScreen_Load(object sender, EventArgs e)
         {
-            m_MainForm.SetMenuBarActive(false);
-            m_MainForm.ClearRightMenuBar();
-            m_MainForm.ClearLeftMenuBar();
-            SignInPanel.Location = new Point(Size.Width / 2, Size.Height / 2);
+            //  m_MainForm.SetMenuBarActive(false);
+            //  m_MainForm.ClearRightMenuBar();
+            //   m_MainForm.ClearLeftMenuBar();
+            //SignInPanel.Location = new Point(Size.Width / 2, Size.Height / 2);
+
+            SetTitleButtonTint(Color.Gray);
         }
 
         //-----------------------------------------------------------------------------------------------
@@ -66,17 +78,12 @@ namespace BudgetPlanner
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            User user = new User(UsernameInput.Text, PasswordInput.Text, 90);
-
-            Profile profile = new Profile(user, 0);
-            m_SessionManager.Login(profile);
-
+            m_EventDispatcher.Publish(new LogInEvent(UsernameInput.Text, PasswordInput.Text, true));
 
             UsernameInput.Text = PasswordInput.Text = "";
 
-            Logger.Info($"Sign in as '{user.GetUsername()}' successful!");
+            // Logger.Info($"Sign in as '{user.GetUsername()}' successful!");
 
-            m_Navigator.GoTo<DashboardScreen>();
         }
 
         private void SignInScreen_Resize(object sender, EventArgs e)
@@ -95,37 +102,49 @@ namespace BudgetPlanner
         // Utils
         //-----------------------------------------------------------------------------------------------
 
-        public void OnSwitch()
-        {
-            m_MainForm.SetMenuBarActive(false);
-            m_MainForm.ClearRightMenuBar();
-            m_MainForm.ClearLeftMenuBar();
-        }
-
         public void ApplyTheme(Theme InTheme)
         {
 
-            WelcomeLabel.BackColor = InTheme.Surface;
+            //WelcomeLabel.BackColor = InTheme.Surface;
 
-            UsernameInput.BackColor = InTheme.Sibling;
-            UsernameInput.ForeColor = Color.White;
-            PasswordInput.BackColor = InTheme.Sibling;
-            PasswordInput.ForeColor = Color.White;
+            UsernameInput.BackColor = Color.White;
+            UsernameInput.ForeColor = Color.Black;
+            PasswordInput.BackColor = Color.White;
+            PasswordInput.ForeColor = Color.Black;
 
             SignInButton.BackColor = InTheme.Accent;
 
-            UsernameInputLabel.BackColor = InTheme.Surface;
-            UsernameInputLabel.ForeColor = Color.White;
+            UsernameInputLabel.BackColor = Color.White;
+            UsernameInputLabel.ForeColor = Color.Black;
 
-            PasswordInputLabel.BackColor = InTheme.Surface;
-            PasswordInputLabel.ForeColor = Color.White;
+            PasswordInputLabel.BackColor = Color.White;
+            PasswordInputLabel.ForeColor = Color.Black;
 
-            SignInPanel.BackColor = InTheme.Surface;
+            SignInPanel.BackColor = Color.White;
+
+            DevelopersLabel.ForeColor = InTheme.Accent;
+            DeveloperIcon.IconColor = InTheme.Accent;
 
             iconPictureBox1.IconColor = InTheme.Accent;
             iconPictureBox1.BackColor = InTheme.Surface;
-            iconButton1.IconColor = InTheme.Accent;
-            iconButton1.BackColor = InTheme.Surface;
+            SidePanel.BackColor = InTheme.Surface;
+
+            TitleLabel.ForeColor = InTheme.Surface;
+            SubtitleLabel.ForeColor = InTheme.Surface;
+
+            this.BackColor = Color.Gray;
+            //  SidePanel.IconColor = InTheme.Accent;
+            //   iconButton1.BackColor = InTheme.Surface;
+        }
+
+        private void DevelopersLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ThemeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            m_ThemeManager.SetTheme(ThemeComboBox.Text);
         }
     }
 }

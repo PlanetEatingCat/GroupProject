@@ -39,6 +39,10 @@ namespace BudgetPlanner
         // ---------------------------------------------------------------------------------------
         public MainForm(EventDispatcher InEventDispatcher, ThemeManager InThemeManager, NavigationManager InNavigationManager)
         {
+            ArgumentNullException.ThrowIfNull(InEventDispatcher);
+            ArgumentNullException.ThrowIfNull(InThemeManager);
+            ArgumentNullException.ThrowIfNull(InNavigationManager);
+
             InitializeComponent();
 
             m_EventDispatcher = InEventDispatcher;
@@ -267,6 +271,7 @@ namespace BudgetPlanner
         {
             if (!InActive && m_MenuBarActive)
             {
+                MenuPanel.Visible = false;
                 CollapseMenu();
 
                 foreach (Control control in MenuPanel.Controls)
@@ -278,6 +283,8 @@ namespace BudgetPlanner
             }
             else if (!m_MenuBarActive)
             {
+                MenuPanel.Visible = true;
+                
                 foreach (Control control in MenuPanel.Controls)
                 {
                     control.Visible = true;
@@ -380,6 +387,9 @@ namespace BudgetPlanner
 
             MenuPanel.BackColor = InTheme.Surface;
             TitleBarPanel.BackColor = InTheme.Background;
+
+
+            SetTitleButtonTint(ColorUtils.GetContrastColor(InTheme.Background));
         }
     }
 }

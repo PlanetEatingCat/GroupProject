@@ -10,11 +10,17 @@
     <Compile Update="Source\WinForms\Forms\EditSubscriptionForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Source\WinForms\Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Source\WinForms\Forms\ModernForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Forms\RemoveSubscription.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\Menus\DashboardScreen.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Menus\SubscriptionManagerForm.cs">
       <SubType>UserControl</SubType>
@@ -26,9 +32,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Menus\ExpensesScreen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Source\WinForms\Menus\DashboardScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Menus\GoalsScreen.cs">
@@ -50,9 +53,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Title\AccountTitle.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Source\WinForms\Menus\SignInScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Menus\SubscriptionScreen.cs">

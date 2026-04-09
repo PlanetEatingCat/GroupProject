@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BudgetPlanner
 {
-    public class ServiceScope : IDisposable
+    public class ServiceScope
     {
         private ServiceProvider m_Provider;
 
@@ -18,9 +18,6 @@ namespace BudgetPlanner
 
         public ServiceProvider GetProvider() { return m_Provider; }
 
-        public void Dispose()
-        {
-        }
     }
 
     public class ServiceScopeFactory

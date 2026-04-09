@@ -123,7 +123,7 @@
             TitleBarPanel.MouseDown += TitleBarPanel_MouseDown;
             TitleBarPanel.Resize += TitleBarPanel_Resize;
             // 
-            // BaseForm
+            // ModernForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -133,7 +133,7 @@
             Controls.Add(TitleBarPanel);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
-            Name = "BaseForm";
+            Name = "ModernForm";
             Text = "BaseForm";
             Load += BaseForm_Load;
             TitleBarPanel.ResumeLayout(false);

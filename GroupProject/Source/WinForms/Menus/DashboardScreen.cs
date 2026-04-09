@@ -9,11 +9,16 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.Management;
+using static SkiaSharp.HarfBuzz.SKShaper;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 
 namespace BudgetPlanner
 {
@@ -25,13 +30,19 @@ namespace BudgetPlanner
 
         private readonly MainForm m_MainForm;
         private readonly EventDispatcher m_EventDispatcher;
+        private readonly SessionManager m_SessionManager;
 
         //-----------------------------------------------------------------------------------------------
         // Form
         //-----------------------------------------------------------------------------------------------
 
+        //-----------------------------------------------------------------------------------------------
+        // [1] Pass in Dependencies by constructor using DI Container
+        //-----------------------------------------------------------------------------------------------
+
         public DashboardScreen(EventDispatcher InEventDispatcher, MainForm InMainForm,
-            ThemeManager InThemeManager, AccountTitle InAccountTitle, ScreenTitle InScreenTitle)
+            ThemeManager InThemeManager, AccountTitle InAccountTitle, ScreenTitle InScreenTitle,
+            SessionManager InSessionManager)
         {
             InitializeComponent();
 
@@ -39,11 +50,13 @@ namespace BudgetPlanner
 
             m_MainForm = InMainForm;
             m_EventDispatcher = InEventDispatcher;
-
+            m_SessionManager = InSessionManager;
+            
+            //------------------------------------------------------------------------------------------------
+            // [2] Subscribe to Events to communicate across services and screens 
+            //------------------------------------------------------------------------------------------------
             m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
 
-            m_MainForm.SetMenuBarActive(true);
-            //m_MainForm.ExpandMenu();
 
             var rightMenuBar = InAccountTitle;
             var leftMenuBar = InScreenTitle;
@@ -62,6 +75,30 @@ namespace BudgetPlanner
 
         public void ApplyTheme(Theme InTheme)
         {
+            // Nothing here yet
+        }
+
+
+
+
+        // ------------------------------------------------------------------------------------------------
+        // WIP
+        // ------------------------------------------------------------------------------------------------
+        private void DashboardScreen_Load(object sender, EventArgs e)
+        {
+            var subscriptions = m_SessionManager.GetActiveProfile().GetSubscriptions();
+            foreach (var subscription in subscriptions)
+            {
+                var calculator = new TimelineCalculator(subscription.GetName(), new DateTime(2026, 1, 1), CalendarRepeatType.Month);
+                var result = calculator.GetOccurrencesInYear(2026);
+
+                foreach (var date in result)
+                {
+                    Logger.ConsoleInfo($"Subscription: {subscription.GetName()}; Amount: {subscription.GetChargeAmount()}, Date: {date}");
+                }
+            }
+
+
         }
     }
 }

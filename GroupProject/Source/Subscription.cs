@@ -4,6 +4,7 @@ Purpose: Subscription input
 Notes: 
 ********************************************/
 
+using ScottPlot.TickGenerators.Financial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +19,21 @@ namespace BudgetPlanner
         Daily,
         Weekly,
         Monthly,
-        Quarterly,
         Annually,
+    }
+
+    public class SubscriptionInstance 
+    {
+        public decimal ChargeAmount;
+        public string Name;
+        public DateTime DateTime;
+
+        public SubscriptionInstance(string InName, decimal InChargeAmount, DateTime InDateTime) 
+        {
+            ChargeAmount = InChargeAmount;
+            Name = InName;
+            DateTime = InDateTime;
+        }
     }
 
     public class Subscription
@@ -45,6 +59,6 @@ namespace BudgetPlanner
 
         public string GetName() { return m_name; }
 
-        public void SetName(string Name) { m_name = Name; }
+        public void SetName(string Name) { m_name = Name; } 
     }
 }

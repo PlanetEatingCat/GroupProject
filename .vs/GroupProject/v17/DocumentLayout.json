@@ -3,119 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\core\\app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\core\\app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\winforms\\menus\\subscriptionmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\menus\\subscriptionmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\winforms\\menus\\subscriptionscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\menus\\subscriptionscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\winforms\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\winforms\\forms\\editsubscriptionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\forms\\editsubscriptionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\winforms\\navigationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\navigationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\winforms\\forms\\removesubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\forms\\removesubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\transactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\transactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\groupproject\\source\\winforms\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\core\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\core\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\incomesource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\incomesource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\SubscriptionManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\winforms\\menus\\incomescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\menus\\incomescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\RemoveSubscription.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\winforms\\menus\\incomescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\menus\\incomescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\winforms\\menus\\incomescreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\menus\\incomescreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\groupproject\\source\\winforms\\subscriptionmanagerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\winforms\\menus\\dashboardscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\menus\\dashboardscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\core\\app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\core\\app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\ScreenManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\core\\eventdispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\core\\eventdispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\core\\serviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\core\\serviceprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\groupproject\\source\\winforms\\signinscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\core\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\core\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\core\\appcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\core\\appcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\Internal\\BudgetPlannerForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\theme\\theme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\theme\\theme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\ScreenManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\theme\\thememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\theme\\thememanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\groupproject\\source\\winforms\\internal\\budgetplannerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|c:\\users\\dcurt\\onedrive\\desktop\\storage\\programming\\groupproject\\groupproject\\source\\winforms\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\groupproject\\source\\winforms\\internal\\debugconsoleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\groupproject\\source\\winforms\\menus\\subscriptionscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\menus\\subscriptionscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\groupproject\\source\\winforms\\removesubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:groupproject\\source\\winforms\\removesubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\RemoveSubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GroupProject\\Source\\WinForms\\RemoveSubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\EditSubscriptionForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GroupProject\\Source\\WinForms\\EditSubscriptionForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\groupproject\\source\\winforms\\editsubscriptionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:groupproject\\source\\winforms\\editsubscriptionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\EditSubscriptionForm.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GroupProject\\Source\\WinForms\\EditSubscriptionForm.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\groupproject\\source\\winforms\\menus\\dashboardscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{37FC8161-80F0-4392-B4A5-B31F591CB2E0}|GroupProject\\GroupProject.csproj|solutionrelative:groupproject\\source\\winforms\\menus\\dashboardscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -125,8 +82,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1448,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DashboardScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\DashboardScreen.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Menus\\DashboardScreen.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\DashboardScreen.cs [Design]",
+              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Menus\\DashboardScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T12:07:43.425Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DashboardScreen.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\DashboardScreen.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Menus\\DashboardScreen.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\DashboardScreen.cs",
+              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Menus\\DashboardScreen.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAcwEkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T12:06:36.954Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EventDispatcher.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\EventDispatcher.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\Core\\EventDispatcher.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\EventDispatcher.cs",
+              "RelativeToolTip": "GroupProject\\Source\\Core\\EventDispatcher.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwFMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T12:10:15.255Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -141,395 +139,189 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\App.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\Core\\App.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\App.cs",
-              "RelativeToolTip": "GroupProject\\Source\\Core\\App.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACkAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:21:20.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EditSubscriptionForm.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Forms\\EditSubscriptionForm.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Forms\\EditSubscriptionForm.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Forms\\EditSubscriptionForm.cs",
-              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Forms\\EditSubscriptionForm.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowDUAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:20:13.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Profile.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Profile.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\Profile.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Profile.cs",
-              "RelativeToolTip": "GroupProject\\Source\\Profile.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAPIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Forms\\MainForm.cs",
               "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Forms\\MainForm.cs",
               "RelativeToolTip": "GroupProject\\Source\\WinForms\\Forms\\MainForm.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAqwJ0AAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwEAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:21:00.801Z",
+              "WhenOpened": "2026-04-08T13:10:12.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RemoveSubscription.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Forms\\RemoveSubscription.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Forms\\RemoveSubscription.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Forms\\RemoveSubscription.cs",
-              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Forms\\RemoveSubscription.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "NavigationManager.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\NavigationManager.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\NavigationManager.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\NavigationManager.cs",
+              "RelativeToolTip": "GroupProject\\Source\\WinForms\\NavigationManager.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAzwBwAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:19:22.914Z",
+              "WhenOpened": "2026-04-08T13:13:35.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SubscriptionManagerForm.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\SubscriptionManagerForm.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Menus\\SubscriptionManagerForm.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\SubscriptionManagerForm.cs",
-              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Menus\\SubscriptionManagerForm.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAwwF8AAABTAAAAAAAAAA==",
+              "Title": "Events.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\Events.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\Core\\Events.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\Events.cs",
+              "RelativeToolTip": "GroupProject\\Source\\Core\\Events.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:17:49.682Z",
+              "WhenOpened": "2026-04-08T14:57:35.718Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\User.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\User.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\User.cs",
-              "RelativeToolTip": "GroupProject\\Source\\User.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:54.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SubscriptionManager.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\SubscriptionManager.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\SubscriptionManager.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\SubscriptionManager.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\SubscriptionManager.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.063Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SubscriptionScreen.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\SubscriptionScreen.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Menus\\SubscriptionScreen.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\SubscriptionScreen.cs",
-              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Menus\\SubscriptionScreen.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAFkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:21:35.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "RemoveSubscription.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\RemoveSubscription.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\RemoveSubscription.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\RemoveSubscription.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\RemoveSubscription.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2026-04-06T02:11:55.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "RemoveSubscription.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\RemoveSubscription.Designer.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\RemoveSubscription.Designer.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\RemoveSubscription.Designer.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\RemoveSubscription.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Transactions.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Transactions.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\Transactions.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Transactions.cs",
-              "RelativeToolTip": "GroupProject\\Source\\Transactions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.068Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Subscription.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Subscription.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\Subscription.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Subscription.cs",
-              "RelativeToolTip": "GroupProject\\Source\\Subscription.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwA4AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.069Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SubscriptionManagerForm.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.071Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "SubscriptionManagerForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2026-04-06T02:11:55.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "RemoveSubscription.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\RemoveSubscription.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\RemoveSubscription.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\RemoveSubscription.cs",
-              "RelativeToolTip": "GroupProject\\Source\\WinForms\\RemoveSubscription.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.258Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "EditSubscriptionForm.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\EditSubscriptionForm.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\EditSubscriptionForm.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\EditSubscriptionForm.cs",
-              "RelativeToolTip": "GroupProject\\Source\\WinForms\\EditSubscriptionForm.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.26Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "SubscriptionManagerForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.Designer.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.Designer.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.Designer.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SubscriptionManagerForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.262Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "EditSubscriptionForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\EditSubscriptionForm.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\EditSubscriptionForm.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\EditSubscriptionForm.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\EditSubscriptionForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "EditSubscriptionForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\EditSubscriptionForm.Designer.cs",
-              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\EditSubscriptionForm.Designer.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\EditSubscriptionForm.Designer.cs",
-              "RelativeToolTip": "GroupProject\\Source\\WinForms\\EditSubscriptionForm.Designer.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAuwHsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.461Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainScreen.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T15:05:42.275Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MainScreen.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAawLcAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ScreenManager.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\ScreenManager.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\ScreenManager.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\ScreenManager.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\ScreenManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.471Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "SignInScreen.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "SignInScreen.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.499Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "IncomeSource.cs",
               "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\IncomeSource.cs",
               "RelativeDocumentMoniker": "GroupProject\\Source\\IncomeSource.cs",
               "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\IncomeSource.cs",
               "RelativeToolTip": "GroupProject\\Source\\IncomeSource.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAywEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.501Z"
+              "WhenOpened": "2026-04-09T19:17:57.89Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "SignInScreen.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.Designer.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.Designer.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.Designer.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\SignInScreen.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "IncomeScreen.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.cs",
+              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAwwGoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.503Z"
+              "WhenOpened": "2026-04-09T19:16:30.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IncomeScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.cs [Design]",
+              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T19:13:15.583Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IncomeScreen.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.Designer.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.Designer.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.Designer.cs",
+              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Menus\\IncomeScreen.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T19:16:56.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\App.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\Core\\App.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\App.cs",
+              "RelativeToolTip": "GroupProject\\Source\\Core\\App.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T13:15:42.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ServiceProvider.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\ServiceProvider.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\Core\\ServiceProvider.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\ServiceProvider.cs",
+              "RelativeToolTip": "GroupProject\\Source\\Core\\ServiceProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T13:22:57.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ServiceContainer.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\ServiceContainer.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\Core\\ServiceContainer.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\ServiceContainer.cs",
+              "RelativeToolTip": "GroupProject\\Source\\Core\\ServiceContainer.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAiwB8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T13:12:47.983Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "MainScreen.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
+              "Title": "AppContext.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\AppContext.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\Core\\AppContext.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Core\\AppContext.cs",
+              "RelativeToolTip": "GroupProject\\Source\\Core\\AppContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T15:05:42.297Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "BudgetPlannerForm.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\Internal\\BudgetPlannerForm.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\Internal\\BudgetPlannerForm.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\Internal\\BudgetPlannerForm.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\Internal\\BudgetPlannerForm.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.507Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ScreenManager.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\ScreenManager.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\ScreenManager.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\ScreenManager.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\ScreenManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.507Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "BudgetPlannerForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\Internal\\BudgetPlannerForm.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\Internal\\BudgetPlannerForm.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Internal\\BudgetPlannerForm.cs [Design]",
-              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Internal\\BudgetPlannerForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.525Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "DebugConsoleForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\Internal\\DebugConsoleForm.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\Internal\\DebugConsoleForm.cs",
-              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Internal\\DebugConsoleForm.cs [Design]",
-              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Internal\\DebugConsoleForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T02:11:55.527Z"
+              "WhenOpened": "2026-04-08T13:18:32.749Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "MainScreen.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.Designer.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.Designer.cs",
-              "ToolTip": "C:\\Users\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.Designer.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Kwhso\\source\\repos\\IT145_GroupProject\\IT145_GroupProject\\GroupProject\\Source\\WinForms\\MainScreen.Designer.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAhwIYAAAA5AAAAAAAAAA==",
+              "Title": "Theme.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Theme\\Theme.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\Theme\\Theme.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Theme\\Theme.cs",
+              "RelativeToolTip": "GroupProject\\Source\\Theme\\Theme.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T15:05:42.309Z"
+              "WhenOpened": "2026-04-08T14:59:50.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ThemeManager.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Theme\\ThemeManager.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\Theme\\ThemeManager.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\Theme\\ThemeManager.cs",
+              "RelativeToolTip": "GroupProject\\Source\\Theme\\ThemeManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T14:59:52.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Forms\\LoginForm.cs",
+              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Forms\\LoginForm.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAuwJQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T14:59:17.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SubscriptionScreen.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\SubscriptionScreen.cs",
+              "RelativeDocumentMoniker": "GroupProject\\Source\\WinForms\\Menus\\SubscriptionScreen.cs",
+              "ToolTip": "C:\\Users\\dcurt\\OneDrive\\Desktop\\Storage\\Programming\\GroupProject\\GroupProject\\Source\\WinForms\\Menus\\SubscriptionScreen.cs [Design]",
+              "RelativeToolTip": "GroupProject\\Source\\WinForms\\Menus\\SubscriptionScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T14:57:54.71Z"
             }
           ]
         }

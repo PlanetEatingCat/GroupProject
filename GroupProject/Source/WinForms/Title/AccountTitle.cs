@@ -64,7 +64,8 @@ namespace BudgetPlanner
 
         private void signOutToolStripMenuItem_Click(object InSender, EventArgs InEventArgs)
         {
-            m_Navigator.GoTo<SignInScreen>();
+            m_EventDispatcher.Publish(new LogOutEvent());
+            //m_Navigator.GoTo<LoginForm>();
         }
         private void settingsToolStripMenuItem_Click(object InSender, EventArgs InEventArgs)
         {
@@ -78,6 +79,7 @@ namespace BudgetPlanner
         public void ApplyTheme(Theme InTheme)
         {
             AccountIcon.IconColor = InTheme.Accent;
+            AccountOptionsButton.ForeColor= ColorUtils.GetContrastColor(InTheme.Background);
         }
 
         private void AccountOptionsMenu_Opening(object sender, CancelEventArgs e)

@@ -6,25 +6,34 @@ Notes: WIP.
 
 using BudgetPlanner;
 using GroupProject.Source.WinForms.Menus;
+using ScottPlot.Colormaps;
 using System.Collections.Generic;
+using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using Windows.Devices.Bluetooth;
 using Windows.Networking.NetworkOperators;
 
 namespace BudgetPlanner
 {
+    //----------------------------------------------------------------------------------------
+    // Core Functionality
+    //----------------------------------------------------------------------------------------
+
     public static class App
     {
         public static void Start()
         {
             // 1. Set up app dependencies
-
             // 2. Singletons: Created once and always alive until the end of the application
 
             ServiceContainer serviceContainer = new ServiceContainer();
 
             serviceContainer.AddSingleton<MainForm>();
+            serviceContainer.AddSingleton<LoginForm>();
+            serviceContainer.AddSingleton<AppContext>();
             serviceContainer.AddSingleton<SessionManager>();
             serviceContainer.AddSingleton<ThemeManager>();
             serviceContainer.AddSingleton<NavigationManager>();
@@ -32,7 +41,7 @@ namespace BudgetPlanner
 
             // 3. Scoped: Created once and always alive until the end of its scope
             serviceContainer.AddScoped<ExpensesScreen>();
-            serviceContainer.AddScoped<SignInScreen>();
+            serviceContainer.AddScoped<LoginForm>();
             serviceContainer.AddScoped<DashboardScreen>();
             serviceContainer.AddScoped<CalendarScreen>();
             serviceContainer.AddScoped<GoalsScreen>();
@@ -45,11 +54,9 @@ namespace BudgetPlanner
             serviceContainer.AddScoped<AccountTitle>();
             serviceContainer.AddScoped<ScreenTitle>();
 
-            // 4. Transient: Created new everytime its asked for
-           // serviceContainer.AddTransient<RemoveSubscriptionForm>();
-
             var provider = serviceContainer.BuildProvider();
 
+            // Initialize themes
             Themes.Initialize();
             var themeManager = provider.GetService<ThemeManager>();
             themeManager.SetTheme("SnhuBlue");
@@ -57,18 +64,18 @@ namespace BudgetPlanner
             // Winforms initialization
             ApplicationConfiguration.Initialize();
 
-
-            // 5. Get MainForm singleton from container
-            var mainForm = provider.GetService<MainForm>();
+            // Switch to the dashboard/home screen
             var navigator = provider.GetService<NavigationManager>();
+            navigator.GoTo<DashboardScreen>();
 
-            navigator.GoTo<SignInScreen>();
-
+            // Show debug console
             var debugConsoleForm = new DebugConsoleForm();
             debugConsoleForm.Show();
 
-            // 7. Run the application
-            Application.Run(mainForm);
-        }
+            // Create and run the app context
+            AppContext context = provider.GetService<AppContext>();
+            Application.Run(context);
+
+        }   
     }
 }

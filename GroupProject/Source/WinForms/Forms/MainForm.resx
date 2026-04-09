@@ -127,7 +127,8 @@
   <data name="MaxButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAcSURBVDhPY/hPJmBAoknBoxrx4FGNeDDlGkkGAK8EfZ8gVRvXAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAcSURBVDhPY/hPJmAAEySCUY14wKhGPIByjeQAAAHbzzF3
+        MANfAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="CloseButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -115,6 +115,7 @@ namespace BudgetPlanner
 
             return brightness > 128 ? Color.Black : Color.White;
         }
+
         private void WireClick(Control InControl)
         {
             InControl.Click += (s, e) => OnClick(e);

@@ -6,13 +6,6 @@ using System.Threading.Tasks;
 
 namespace BudgetPlanner
 {
-    public class ScreenChangedEvent
-    {
-        public ScreenChangedEvent(UserControl InScreen) { Screen = InScreen; }
-
-        public UserControl Screen;
-    }
-
     public class NavigationManager
     {
         // Dependencies
@@ -30,7 +23,6 @@ namespace BudgetPlanner
 
         public void GoTo<TScreen>() where TScreen : UserControl
         {
-            m_CurrentScope?.Dispose();
             m_CurrentScope = m_ServiceScopeFactory.CreateScope();
 
             var screen = m_CurrentScope.GetProvider().GetService<TScreen>();

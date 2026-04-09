@@ -24,7 +24,6 @@ namespace BudgetPlanner
         private Transactions[] m_TransactionHistory = new Transactions[100];
         private int m_TransactionCount = 0;
 
-        private Calendar m_Calendar;
         public Profile()
         {
             m_User = new User();
@@ -67,7 +66,6 @@ namespace BudgetPlanner
 
         public User GetUser() { return m_User; }
 
-        public Calendar GetCalendar() { return m_Calendar; }
 
         public List<Subscription> GetSubscriptions() { return m_Subscriptions; }
 
@@ -94,6 +92,7 @@ namespace BudgetPlanner
                 m_TransactionHistory[99] = transaction;
             }
         }
+
 
         public Transactions[] GetTransactions()
         {

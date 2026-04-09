@@ -15,15 +15,7 @@ using System.Xml.Linq;
 namespace BudgetPlanner 
 {
     // Theme Changed Event
-    public class ThemeChangedEvent
-    {
-        public Theme NewTheme;
-
-        public ThemeChangedEvent(Theme InTheme)
-        {
-            NewTheme = InTheme;
-        }
-    }
+   
 
     // Theme Manager
     public class ThemeManager

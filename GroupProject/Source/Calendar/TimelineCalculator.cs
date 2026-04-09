@@ -11,7 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using CalendarEventID = System.Guid;
 
 namespace BudgetPlanner
 {
@@ -21,6 +20,11 @@ namespace BudgetPlanner
         {
             int diff = (int)InDateTime.DayOfWeek; // Sunday = 0
             return InDateTime.Date.AddDays(-diff);
+        }
+
+        public static DateTime GetWeekEnd(DateTime InDateTime)
+        {
+            return InDateTime.Date.AddDays(7);
         }
 
         public static DateTime GetMonthStart(DateTime InDateTime)
@@ -52,73 +56,69 @@ namespace BudgetPlanner
         Year
     }
 
-    public struct CalendarEvent
+    public class TimelineCalculator
     {
-        public CalendarEventID ID = new CalendarEventID();
-
         public string Name;
         public string Description;
 
         public DateTime StartDate;
         public DateTime EndDate;
 
-        public uint RepeatFrequency; // Repeat every [ex. 1] ...
+        public uint RepeatFrequency = 1; // Repeat every [ex. 1] ...
         public CalendarRepeatType RepeatType; // ... [ex. Week]
 
         public CalendarWeekMask WeekMask;
 
-        public CalendarEvent() { } 
-
-        public bool OccursInRange(DateTime InStartTime, DateTime InEndTime, out List<DateTime> OutDays)
+        public TimelineCalculator(string InName, DateTime InStartDate, CalendarRepeatType InRepeatType) 
         {
-            OutDays = new List<DateTime>();
+            Name = InName;
+            StartDate = InStartDate;
+            RepeatType = InRepeatType;
+        }
+
+        public List<DateTime> GetOccurrencesInRange(DateTime InStartTime, DateTime InEndTime)
+        {
+            var result = new List<DateTime>();
 
             for (DateTime day = InStartTime; day <= InEndTime; day = day.AddDays(1))
             {
                 if (OccursToday(day))
                 {
-                    OutDays.Add(day);
-                    return true;
+                    result.Add(day);
                 }
             }
 
-            return false;
+            return result;
         }
 
-        public bool OccursThisYear(DateTime InDateTime, out List<DateTime> OutDays)
+        public List<DateTime> GetOccurrencesInYear(int InYear)
         {
-            DateTime yearStart = CalendarUtils.GetYearStart(InDateTime);
-            DateTime yearEnd = CalendarUtils.GetYearEnd(InDateTime);
+            DateTime dateTime = new DateTime(InYear, 1, 1);
 
-            return OccursInRange(yearStart, yearEnd, out OutDays);
+            DateTime yearStart = CalendarUtils.GetYearStart(dateTime);
+            DateTime yearEnd = CalendarUtils.GetYearEnd(dateTime);
+
+            return GetOccurrencesInRange(yearStart, yearEnd);
         }
 
-        public bool OccursThisMonth(DateTime InDateTime, out List<DateTime> OutDays)
+        public List<DateTime> GetOccurrencesInMonth(int InYear, int InMonth)
         {
-            OutDays = new List<DateTime>();
-            DateTime monthStart = CalendarUtils.GetMonthStart(InDateTime);
-            DateTime monthEnd = CalendarUtils.GetMonthEnd(InDateTime);
+            DateTime dateTime = new DateTime(InYear, InMonth, 1);
 
-            return OccursInRange(monthStart, monthEnd, out OutDays);
+            DateTime monthStart = CalendarUtils.GetMonthStart(dateTime);
+            DateTime monthEnd = CalendarUtils.GetMonthEnd(dateTime);
+
+            return GetOccurrencesInRange(monthStart, monthEnd);
         }
 
-        public bool OccursThisWeek(DateTime InDateTime, out List<DayOfWeek> OutDays)
+        public List<DateTime> GetOccurrencesInWeek(int InYear, int InMonth, int InDay)
         {
-            OutDays = new List<DayOfWeek>();
-            DateTime weekStart = CalendarUtils.GetWeekStart(InDateTime);
+            DateTime dateTime = new DateTime(InYear, InMonth, 1);
 
-            for (int i = 0; i < 7; i++)
-            {
-                DateTime day = weekStart.AddDays(i);
+            DateTime weekStart = CalendarUtils.GetWeekStart(dateTime);
+            DateTime weekEnd = CalendarUtils.GetWeekEnd(dateTime);
 
-                if (OccursToday(day))
-                {
-                    OutDays.Add(day.DayOfWeek);
-                    return true;
-                }
-            }
-
-            return false;
+            return GetOccurrencesInRange(weekStart, weekEnd);
         }
 
         public bool OccursToday(DateTime today)
@@ -126,7 +126,7 @@ namespace BudgetPlanner
             if (today < StartDate)
                 return false;
 
-            if (today > EndDate)
+            if (EndDate != DateTime.MinValue && today > EndDate)
                 return false;
 
             switch (RepeatType)
