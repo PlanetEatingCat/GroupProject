@@ -1,4 +1,4 @@
-﻿namespace GroupProject.Source.WinForms
+﻿namespace BudgetPlanner
 {
     partial class EditSubscriptionForm
     {

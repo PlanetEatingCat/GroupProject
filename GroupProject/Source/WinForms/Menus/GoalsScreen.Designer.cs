@@ -28,18 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
+            SavingsGoalBar = new ProgressBar();
+            ProgressTitle = new Label();
+            SavingsList = new ListBox();
+            GoalAmount = new Label();
+            GoalAmountEntry = new TextBox();
+            ConfirmButton = new Button();
+            ProgressAmount = new Label();
+            SavingsGoalAmount = new Label();
             SuspendLayout();
+            // 
+            // SavingsGoalBar
+            // 
+            SavingsGoalBar.ForeColor = Color.LawnGreen;
+            SavingsGoalBar.Location = new Point(258, 207);
+            SavingsGoalBar.Name = "SavingsGoalBar";
+            SavingsGoalBar.Size = new Size(650, 74);
+            SavingsGoalBar.TabIndex = 0;
+            // 
+            // ProgressTitle
+            // 
+            ProgressTitle.AutoSize = true;
+            ProgressTitle.Font = new Font("Segoe UI", 20F);
+            ProgressTitle.Location = new Point(469, 52);
+            ProgressTitle.Name = "ProgressTitle";
+            ProgressTitle.Size = new Size(265, 54);
+            ProgressTitle.TabIndex = 1;
+            ProgressTitle.Text = "Savings Goals";
+            // 
+            // SavingsList
+            // 
+            SavingsList.FormattingEnabled = true;
+            SavingsList.ItemHeight = 25;
+            SavingsList.Location = new Point(258, 339);
+            SavingsList.Name = "SavingsList";
+            SavingsList.Size = new Size(650, 279);
+            SavingsList.TabIndex = 2;
+            // 
+            // GoalAmount
+            // 
+            GoalAmount.AutoSize = true;
+            GoalAmount.Location = new Point(303, 154);
+            GoalAmount.Name = "GoalAmount";
+            GoalAmount.Size = new Size(122, 25);
+            GoalAmount.TabIndex = 3;
+            GoalAmount.Text = "Goal Amount:";
+            GoalAmount.Click += GoalAmount_Click;
+            // 
+            // GoalAmountEntry
+            // 
+            GoalAmountEntry.Location = new Point(441, 151);
+            GoalAmountEntry.Name = "GoalAmountEntry";
+            GoalAmountEntry.Size = new Size(150, 31);
+            GoalAmountEntry.TabIndex = 4;
+            // 
+            // ConfirmButton
+            // 
+            ConfirmButton.Location = new Point(622, 149);
+            ConfirmButton.Name = "ConfirmButton";
+            ConfirmButton.Size = new Size(112, 34);
+            ConfirmButton.TabIndex = 5;
+            ConfirmButton.Text = "Confirm";
+            ConfirmButton.UseVisualStyleBackColor = true;
+            ConfirmButton.Click += ConfirmButton_Click;
+            // 
+            // ProgressAmount
+            // 
+            ProgressAmount.AutoSize = true;
+            ProgressAmount.Location = new Point(258, 298);
+            ProgressAmount.Name = "ProgressAmount";
+            ProgressAmount.Size = new Size(151, 25);
+            ProgressAmount.TabIndex = 6;
+            ProgressAmount.Text = "Progress Amount";
+            // 
+            // SavingsGoalAmount
+            // 
+            SavingsGoalAmount.AutoSize = true;
+            SavingsGoalAmount.Location = new Point(688, 298);
+            SavingsGoalAmount.Name = "SavingsGoalAmount";
+            SavingsGoalAmount.Size = new Size(118, 25);
+            SavingsGoalAmount.TabIndex = 7;
+            SavingsGoalAmount.Text = "Goal Amount";
             // 
             // GoalsScreen
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            Margin = new Padding(2, 2, 2, 2);
+            BackColor = SystemColors.GradientActiveCaption;
+            Controls.Add(SavingsGoalAmount);
+            Controls.Add(ProgressAmount);
+            Controls.Add(ConfirmButton);
+            Controls.Add(GoalAmountEntry);
+            Controls.Add(GoalAmount);
+            Controls.Add(SavingsList);
+            Controls.Add(ProgressTitle);
+            Controls.Add(SavingsGoalBar);
+            Margin = new Padding(2);
             Name = "GoalsScreen";
-            Size = new Size(987, 648);
+            Size = new Size(1234, 810);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private ProgressBar SavingsGoalBar;
+        private Label ProgressTitle;
+        private ListBox SavingsList;
+        private Label GoalAmount;
+        private TextBox GoalAmountEntry;
+        private Button ConfirmButton;
+        private Label ProgressAmount;
+        private Label SavingsGoalAmount;
     }
 }

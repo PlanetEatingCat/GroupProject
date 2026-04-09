@@ -20,7 +20,7 @@ namespace BudgetPlanner
     public partial class SubscriptionScreen : UserControl
     {
         private readonly SessionManager m_SessionManager;
-        public static SubscriptionScreen Instance;
+        public static SubscriptionScreen instance;
 
         //-----------------------------------------------------------------------------------------------
         // Screen
@@ -29,14 +29,12 @@ namespace BudgetPlanner
         public SubscriptionScreen(SessionManager InSessionManager, MainForm InMainForm, 
             AccountTitle InAccountTitle, ScreenTitle InScreenTitle)
         {
-            Instance = this;
+            instance = this;
 
             InitializeComponent();
-<<<<<<< HEAD:GroupProject/Source/WinForms/SubscriptionManagerForm.cs
             SubscriptionRemover.Enabled = false;
             EditSubscription.Enabled = false;
             instance = this;
-=======
 
             m_SessionManager = InSessionManager;
 
@@ -45,7 +43,6 @@ namespace BudgetPlanner
 
             InScreenTitle.SetIcon(MenuIcons.Subscriptions);
             InScreenTitle.SetText("Subscriptions");
->>>>>>> main:GroupProject/Source/WinForms/Menus/SubscriptionScreen.cs
         }
 
         //-----------------------------------------------------------------------------------------------
@@ -123,7 +120,7 @@ namespace BudgetPlanner
 
         private void EditSubscription_Click(object sender, EventArgs e)
         {
-            EditSubscriptionForm editForm = new EditSubscriptionForm();
+            EditSubscriptionForm editForm = new EditSubscriptionForm(m_SessionManager);
             editForm.Show();
         }
     }

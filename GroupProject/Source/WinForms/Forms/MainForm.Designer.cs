@@ -55,50 +55,50 @@ namespace BudgetPlanner
             // 
             // RightMenuBarPanel
             // 
-            RightMenuBarPanel.Location = new Point(631, 0);
-            RightMenuBarPanel.Margin = new Padding(4, 5, 4, 5);
-            RightMenuBarPanel.Size = new Size(94, 66);
+            RightMenuBarPanel.Location = new Point(790, 0);
+            RightMenuBarPanel.Margin = new Padding(5, 6, 5, 6);
+            RightMenuBarPanel.Size = new Size(118, 82);
             // 
             // MinButton
             // 
             MinButton.FlatAppearance.BorderSize = 0;
             MinButton.Image = (Image)resources.GetObject("MinButton.Image");
-            MinButton.Location = new Point(725, 0);
-            MinButton.Size = new Size(66, 66);
+            MinButton.Location = new Point(908, 0);
+            MinButton.Size = new Size(82, 82);
             // 
             // MaxButton
             // 
             MaxButton.FlatAppearance.BorderSize = 0;
             MaxButton.Image = (Image)resources.GetObject("MaxButton.Image");
-            MaxButton.Location = new Point(791, 0);
-            MaxButton.Margin = new Padding(4, 5, 4, 5);
-            MaxButton.Size = new Size(66, 66);
+            MaxButton.Location = new Point(990, 0);
+            MaxButton.Margin = new Padding(5, 6, 5, 6);
+            MaxButton.Size = new Size(82, 82);
             // 
             // CloseButton
             // 
             CloseButton.FlatAppearance.BorderSize = 0;
             CloseButton.Image = (Image)resources.GetObject("CloseButton.Image");
-            CloseButton.Location = new Point(857, 0);
-            CloseButton.Margin = new Padding(4, 5, 4, 5);
-            CloseButton.Size = new Size(66, 66);
+            CloseButton.Location = new Point(1072, 0);
+            CloseButton.Margin = new Padding(5, 6, 5, 6);
+            CloseButton.Size = new Size(82, 82);
             // 
             // LeftMenuBarPanel
             // 
-            LeftMenuBarPanel.Margin = new Padding(4, 5, 4, 5);
-            LeftMenuBarPanel.Size = new Size(250, 66);
+            LeftMenuBarPanel.Margin = new Padding(5, 6, 5, 6);
+            LeftMenuBarPanel.Size = new Size(312, 82);
             // 
             // BaseMainPanel
             // 
-            BaseMainPanel.Location = new Point(232, 68);
-            BaseMainPanel.Margin = new Padding(4);
-            BaseMainPanel.Padding = new Padding(4);
-            BaseMainPanel.Size = new Size(923, 622);
+            BaseMainPanel.Location = new Point(290, 84);
+            BaseMainPanel.Margin = new Padding(5, 5, 5, 5);
+            BaseMainPanel.Padding = new Padding(5, 5, 5, 5);
+            BaseMainPanel.Size = new Size(1154, 779);
             // 
             // TitleBarPanel
             // 
-            TitleBarPanel.Location = new Point(232, 2);
-            TitleBarPanel.Margin = new Padding(4);
-            TitleBarPanel.Size = new Size(923, 66);
+            TitleBarPanel.Location = new Point(290, 2);
+            TitleBarPanel.Margin = new Padding(5, 5, 5, 5);
+            TitleBarPanel.Size = new Size(1154, 82);
             // 
             // MessagePanel
             // 
@@ -106,28 +106,29 @@ namespace BudgetPlanner
             MessagePanel.Controls.Add(Message);
             MessagePanel.Controls.Add(MessageIcon);
             MessagePanel.Dock = DockStyle.Bottom;
-            MessagePanel.Location = new Point(2, 690);
-            MessagePanel.Margin = new Padding(3, 2, 3, 2);
+            MessagePanel.Location = new Point(2, 863);
+            MessagePanel.Margin = new Padding(4, 2, 4, 2);
             MessagePanel.Name = "MessagePanel";
-            MessagePanel.Size = new Size(1153, 60);
+            MessagePanel.Size = new Size(1442, 75);
             MessagePanel.TabIndex = 1;
             // 
             // Message
             // 
             Message.AutoSize = true;
-            Message.Location = new Point(46, 2);
+            Message.Location = new Point(58, 2);
+            Message.Margin = new Padding(4, 0, 4, 0);
             Message.Name = "Message";
-            Message.Size = new Size(50, 20);
+            Message.Size = new Size(59, 25);
             Message.TabIndex = 2;
             Message.Text = "label1";
             // 
             // MessageIcon
             // 
             MessageIcon.Image = GroupProject.Properties.Resources.InfoIcon;
-            MessageIcon.Location = new Point(3, 2);
-            MessageIcon.Margin = new Padding(3, 2, 3, 2);
+            MessageIcon.Location = new Point(4, 2);
+            MessageIcon.Margin = new Padding(4, 2, 4, 2);
             MessageIcon.Name = "MessageIcon";
-            MessageIcon.Size = new Size(37, 38);
+            MessageIcon.Size = new Size(46, 48);
             MessageIcon.SizeMode = PictureBoxSizeMode.StretchImage;
             MessageIcon.TabIndex = 0;
             MessageIcon.TabStop = false;
@@ -140,10 +141,10 @@ namespace BudgetPlanner
             MenuButton.IconColor = Color.White;
             MenuButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             MenuButton.IconSize = 30;
-            MenuButton.Location = new Point(161, 0);
-            MenuButton.Margin = new Padding(3, 4, 3, 4);
+            MenuButton.Location = new Point(201, 0);
+            MenuButton.Margin = new Padding(4, 5, 4, 5);
             MenuButton.Name = "MenuButton";
-            MenuButton.Size = new Size(69, 80);
+            MenuButton.Size = new Size(86, 100);
             MenuButton.TabIndex = 0;
             MenuButton.UseVisualStyleBackColor = true;
             MenuButton.Click += MenuButton_Click;
@@ -155,8 +156,9 @@ namespace BudgetPlanner
             LogoLable.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LogoLable.ForeColor = Color.White;
             LogoLable.Location = new Point(0, 0);
+            LogoLable.Margin = new Padding(4, 0, 4, 0);
             LogoLable.Name = "LogoLable";
-            LogoLable.Size = new Size(169, 54);
+            LogoLable.Size = new Size(205, 65);
             LogoLable.TabIndex = 1;
             LogoLable.Text = "BUDGET";
             // 
@@ -173,11 +175,11 @@ namespace BudgetPlanner
             HomeMenuButton.IconChar = FontAwesome.Sharp.IconChar.House;
             HomeMenuButton.IconColor = Color.White;
             HomeMenuButton.Label = "Home";
-            HomeMenuButton.Location = new Point(0, 54);
-            HomeMenuButton.Margin = new Padding(3, 4, 3, 4);
+            HomeMenuButton.Location = new Point(0, 65);
+            HomeMenuButton.Margin = new Padding(4, 5, 4, 5);
             HomeMenuButton.Name = "HomeMenuButton";
             HomeMenuButton.NormalColor = SystemColors.MenuHighlight;
-            HomeMenuButton.Size = new Size(230, 46);
+            HomeMenuButton.Size = new Size(288, 58);
             HomeMenuButton.TabIndex = 2;
             HomeMenuButton.Tag = "Home";
             HomeMenuButton.Click += HomeMenuButton_Click;
@@ -194,11 +196,11 @@ namespace BudgetPlanner
             CalendarMenuButton.IconChar = FontAwesome.Sharp.IconChar.CalendarDay;
             CalendarMenuButton.IconColor = Color.White;
             CalendarMenuButton.Label = "Calendar";
-            CalendarMenuButton.Location = new Point(0, 100);
-            CalendarMenuButton.Margin = new Padding(3, 4, 3, 4);
+            CalendarMenuButton.Location = new Point(0, 123);
+            CalendarMenuButton.Margin = new Padding(4, 5, 4, 5);
             CalendarMenuButton.Name = "CalendarMenuButton";
             CalendarMenuButton.NormalColor = SystemColors.MenuHighlight;
-            CalendarMenuButton.Size = new Size(230, 46);
+            CalendarMenuButton.Size = new Size(288, 58);
             CalendarMenuButton.TabIndex = 3;
             CalendarMenuButton.Tag = "Calendar";
             CalendarMenuButton.Click += CalendarMenuButton_Click;
@@ -215,11 +217,11 @@ namespace BudgetPlanner
             SubscriptionMenuButton.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckDollar;
             SubscriptionMenuButton.IconColor = Color.White;
             SubscriptionMenuButton.Label = "Subscriptions";
-            SubscriptionMenuButton.Location = new Point(0, 146);
-            SubscriptionMenuButton.Margin = new Padding(3, 4, 3, 4);
+            SubscriptionMenuButton.Location = new Point(0, 181);
+            SubscriptionMenuButton.Margin = new Padding(4, 5, 4, 5);
             SubscriptionMenuButton.Name = "SubscriptionMenuButton";
             SubscriptionMenuButton.NormalColor = SystemColors.MenuHighlight;
-            SubscriptionMenuButton.Size = new Size(230, 46);
+            SubscriptionMenuButton.Size = new Size(288, 58);
             SubscriptionMenuButton.TabIndex = 4;
             SubscriptionMenuButton.Tag = "Subscriptions";
             SubscriptionMenuButton.Click += SubscriptionMenuButton_Click;
@@ -236,11 +238,11 @@ namespace BudgetPlanner
             GoalsMenuButton.IconChar = FontAwesome.Sharp.IconChar.Bullseye;
             GoalsMenuButton.IconColor = Color.White;
             GoalsMenuButton.Label = "Goals";
-            GoalsMenuButton.Location = new Point(0, 192);
-            GoalsMenuButton.Margin = new Padding(3, 4, 3, 4);
+            GoalsMenuButton.Location = new Point(0, 239);
+            GoalsMenuButton.Margin = new Padding(4, 5, 4, 5);
             GoalsMenuButton.Name = "GoalsMenuButton";
             GoalsMenuButton.NormalColor = SystemColors.MenuHighlight;
-            GoalsMenuButton.Size = new Size(230, 46);
+            GoalsMenuButton.Size = new Size(288, 58);
             GoalsMenuButton.TabIndex = 5;
             GoalsMenuButton.Tag = "Goals";
             GoalsMenuButton.Click += GoalsMenuButton_Click;
@@ -257,11 +259,11 @@ namespace BudgetPlanner
             IncomeMenuButton.IconChar = FontAwesome.Sharp.IconChar.Briefcase;
             IncomeMenuButton.IconColor = Color.White;
             IncomeMenuButton.Label = "Icome";
-            IncomeMenuButton.Location = new Point(0, 238);
-            IncomeMenuButton.Margin = new Padding(3, 4, 3, 4);
+            IncomeMenuButton.Location = new Point(0, 297);
+            IncomeMenuButton.Margin = new Padding(4, 5, 4, 5);
             IncomeMenuButton.Name = "IncomeMenuButton";
             IncomeMenuButton.NormalColor = SystemColors.MenuHighlight;
-            IncomeMenuButton.Size = new Size(230, 46);
+            IncomeMenuButton.Size = new Size(288, 58);
             IncomeMenuButton.TabIndex = 6;
             IncomeMenuButton.Tag = "Income";
             IncomeMenuButton.Click += IncomeMenuButton_Click;
@@ -278,11 +280,11 @@ namespace BudgetPlanner
             CardMenuButton.IconChar = FontAwesome.Sharp.IconChar.MoneyCheck;
             CardMenuButton.IconColor = Color.White;
             CardMenuButton.Label = "Cards";
-            CardMenuButton.Location = new Point(0, 284);
-            CardMenuButton.Margin = new Padding(3, 4, 3, 4);
+            CardMenuButton.Location = new Point(0, 355);
+            CardMenuButton.Margin = new Padding(4, 5, 4, 5);
             CardMenuButton.Name = "CardMenuButton";
             CardMenuButton.NormalColor = SystemColors.MenuHighlight;
-            CardMenuButton.Size = new Size(230, 46);
+            CardMenuButton.Size = new Size(288, 58);
             CardMenuButton.TabIndex = 7;
             CardMenuButton.Tag = "Cards";
             CardMenuButton.Click += CardMenuButton_Click;
@@ -299,11 +301,11 @@ namespace BudgetPlanner
             ExpensesMenuButton.IconChar = FontAwesome.Sharp.IconChar.MoneyBill1;
             ExpensesMenuButton.IconColor = Color.White;
             ExpensesMenuButton.Label = "Expenses";
-            ExpensesMenuButton.Location = new Point(0, 330);
-            ExpensesMenuButton.Margin = new Padding(3, 4, 3, 4);
+            ExpensesMenuButton.Location = new Point(0, 413);
+            ExpensesMenuButton.Margin = new Padding(4, 5, 4, 5);
             ExpensesMenuButton.Name = "ExpensesMenuButton";
             ExpensesMenuButton.NormalColor = SystemColors.MenuHighlight;
-            ExpensesMenuButton.Size = new Size(230, 46);
+            ExpensesMenuButton.Size = new Size(288, 58);
             ExpensesMenuButton.TabIndex = 8;
             ExpensesMenuButton.Tag = "Expenses";
             ExpensesMenuButton.Click += ExpensesMenuButton_Click;
@@ -323,9 +325,9 @@ namespace BudgetPlanner
             MenuPanel.Controls.Add(MenuButton);
             MenuPanel.Dock = DockStyle.Left;
             MenuPanel.Location = new Point(2, 2);
-            MenuPanel.Margin = new Padding(3, 4, 3, 4);
+            MenuPanel.Margin = new Padding(4, 5, 4, 5);
             MenuPanel.Name = "MenuPanel";
-            MenuPanel.Size = new Size(230, 688);
+            MenuPanel.Size = new Size(288, 861);
             MenuPanel.TabIndex = 12;
             // 
             // ThemeMenuButton
@@ -340,11 +342,11 @@ namespace BudgetPlanner
             ThemeMenuButton.IconChar = FontAwesome.Sharp.IconChar.Panorama;
             ThemeMenuButton.IconColor = Color.White;
             ThemeMenuButton.Label = "Themes";
-            ThemeMenuButton.Location = new Point(0, 376);
-            ThemeMenuButton.Margin = new Padding(3, 4, 3, 4);
+            ThemeMenuButton.Location = new Point(0, 471);
+            ThemeMenuButton.Margin = new Padding(4, 5, 4, 5);
             ThemeMenuButton.Name = "ThemeMenuButton";
             ThemeMenuButton.NormalColor = SystemColors.MenuHighlight;
-            ThemeMenuButton.Size = new Size(230, 46);
+            ThemeMenuButton.Size = new Size(288, 58);
             ThemeMenuButton.TabIndex = 9;
             ThemeMenuButton.Tag = "Expenses";
             ThemeMenuButton.Click += ThemeMenuButton_Click;
@@ -357,18 +359,17 @@ namespace BudgetPlanner
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuHighlight;
-            ClientSize = new Size(1157, 752);
+            ClientSize = new Size(1446, 940);
             Controls.Add(MenuPanel);
             Controls.Add(MessagePanel);
             DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Location = new Point(0, 0);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "MainForm";
-            Padding = new Padding(2);
             Text = "Budget Planner";
             Load += BudgetPlannerForm_Load;
             Controls.SetChildIndex(MessagePanel, 0);

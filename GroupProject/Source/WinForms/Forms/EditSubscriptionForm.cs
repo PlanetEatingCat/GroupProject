@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GroupProject.Source.WinForms
+namespace BudgetPlanner
 {
     public partial class EditSubscriptionForm : Form
     {
