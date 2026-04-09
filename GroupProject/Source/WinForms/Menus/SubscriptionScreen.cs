@@ -32,6 +32,11 @@ namespace BudgetPlanner
             Instance = this;
 
             InitializeComponent();
+<<<<<<< HEAD:GroupProject/Source/WinForms/SubscriptionManagerForm.cs
+            SubscriptionRemover.Enabled = false;
+            EditSubscription.Enabled = false;
+            instance = this;
+=======
 
             m_SessionManager = InSessionManager;
 
@@ -40,6 +45,7 @@ namespace BudgetPlanner
 
             InScreenTitle.SetIcon(MenuIcons.Subscriptions);
             InScreenTitle.SetText("Subscriptions");
+>>>>>>> main:GroupProject/Source/WinForms/Menus/SubscriptionScreen.cs
         }
 
         //-----------------------------------------------------------------------------------------------
@@ -80,6 +86,17 @@ namespace BudgetPlanner
             ListOfSubscriptions.Items.Add(Profile.DisplayInfo(newSub));
             m_SessionManager.GetActiveProfile().AddSubscription(newSub);
 
+            if (ListOfSubscriptions.Items.Count > 0)
+            {
+                SubscriptionRemover.Enabled = true;
+                EditSubscription.Enabled = true;
+            }
+            else
+            {
+                SubscriptionRemover.Enabled = false;
+                EditSubscription.Enabled = false;
+            }
+
             SubscriptionName.Text = "";
             SubscriptionAmount.Text = "";
             FrequencyDropDown.SelectedIndex = -1;
@@ -102,6 +119,12 @@ namespace BudgetPlanner
             {
                 ListOfSubscriptions.Items.Add(Profile.DisplayInfo(subscription));
             }
+        }
+
+        private void EditSubscription_Click(object sender, EventArgs e)
+        {
+            EditSubscriptionForm editForm = new EditSubscriptionForm();
+            editForm.Show();
         }
     }
 }

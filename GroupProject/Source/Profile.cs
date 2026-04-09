@@ -102,7 +102,7 @@ namespace BudgetPlanner
         }
 
         /* Deposit money into account */
-        public void Deposit(decimal InAmount)
+        public void Deposit(decimal InAmount) 
         {
             //add to the balance, check for negative, limit
 

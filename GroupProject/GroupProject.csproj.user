@@ -7,6 +7,9 @@
     <Compile Update="Source\WinForms\Controls\ThemeEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Source\WinForms\EditSubscriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Source\WinForms\Forms\EditSubscriptionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -51,6 +54,9 @@
     </Compile>
     <Compile Update="Source\WinForms\Menus\ThemeScreen.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\RemoveSubscription.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Title\AccountTitle.cs">
       <SubType>UserControl</SubType>
