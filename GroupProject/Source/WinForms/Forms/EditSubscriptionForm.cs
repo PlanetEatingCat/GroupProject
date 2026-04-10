@@ -1,4 +1,10 @@
-﻿using BudgetPlanner;
+﻿/********************************************
+Name: EditSubscriptionForm.cs
+Purpose: Editing of user subscriptions
+Notes: WIP by Kiefer.
+********************************************/
+
+using BudgetPlanner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,6 +70,11 @@ namespace BudgetPlanner
             }
 
             this.Close();
+        }
+
+        private void EditSubscriptionForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            SubscriptionScreen.instance.GetEditSubscription().Enabled = true;
         }
     }
 }

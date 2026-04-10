@@ -123,6 +123,7 @@
             Controls.Add(SubName);
             //Name = "EditSubscriptionForm";
             Text = "EditSubscriptionForm";
+            FormClosed += EditSubscriptionForm_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

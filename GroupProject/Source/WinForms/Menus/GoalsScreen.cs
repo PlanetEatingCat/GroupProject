@@ -19,9 +19,42 @@ namespace BudgetPlanner
 {
     public partial class GoalsScreen : UserControl
     {
-        public GoalsScreen(MainForm InMainForm, AccountTitle InAccountTitle, ScreenTitle InScreenTitle)
+        private readonly SessionManager m_SessionManager;
+
+        protected float goal;
+        protected float progToGoal;
+        public GoalsScreen(MainForm InMainForm, AccountTitle InAccountTitle, ScreenTitle InScreenTitle, SessionManager InSessionManager)
         {
             InitializeComponent();
+            m_SessionManager = InSessionManager;
+
+            goal = m_SessionManager.GetActiveProfile().GetGoalAmount();
+            progToGoal = m_SessionManager.GetActiveProfile().GetProgToGoal();
+
+            if (goal != 0)
+            {
+                AmountToAdd.Enabled = true;
+                ConfirmAddBtn.Enabled = true;
+
+                GoalAmountEntry.Enabled = false;
+                ConfirmButton.Enabled = false;
+
+                SavingsGoalAmount.Text = $"Goal Amount: {goal}";
+                ProgressAmount.Text = $"Progress Amount: {progToGoal}";
+
+                if (m_SessionManager.GetActiveProfile().GetProgBarValue() > 0)
+                {
+                    SavingsGoalBar.Value = m_SessionManager.GetActiveProfile().GetProgBarValue();
+                }
+            }
+            else
+            {
+                AmountToAdd.Enabled = false;
+                ConfirmAddBtn.Enabled = false;
+
+                GoalAmountEntry.Enabled = true;
+                ConfirmButton.Enabled = true;
+            }
 
             InMainForm.SetRightMenuBar(InAccountTitle);
             InMainForm.SetLeftMenuBar(InScreenTitle);
@@ -38,6 +71,14 @@ namespace BudgetPlanner
             if (float.TryParse(GoalAmountEntry.Text, out result) == false)
             {
                 MessageBox.Show("Must input a valid amount.");
+                GoalAmountEntry.Text = "";
+                return;
+            }
+
+            if (result <= 0)
+            {
+                MessageBox.Show("Must input a valid amount.");
+                GoalAmountEntry.Text = "";
                 return;
             }
 
@@ -46,21 +87,91 @@ namespace BudgetPlanner
             ConfirmButton.Enabled = false;
             GoalAmountEntry.Text = "";
             GoalAmountEntry.Enabled = false;
-        }
+            AmountToAdd.Enabled = true;
+            ConfirmAddBtn.Enabled = true;
+            goal = result;
 
-        /*
-         * Updating the progress bar:
-         * 1.) If amount is less than goal amount, divide input amount by goal amount, multiply by 100, and then call progressbar.increment(result of math)
-         * 2.) If amount is more than goal amount, immediately set progress bar to full and congratulate the user on their progress.
-         * 3.) If amount is invalid (Not a number, negative number, etc.), display message box informing user of problem.
-         * 
-         * This code would be attached to a confirm button from the user, or could be integrated with income in some way to automatically handle this.
-         */
+            m_SessionManager.GetActiveProfile().SetGoalAmount(goal);
+            m_SessionManager.GetActiveProfile().SetProgToGoal(0);
+        }
 
         //Added by mistake, ignore
         private void GoalAmount_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ConfirmAddBtn_Click(object sender, EventArgs e)
+        {
+            //Amount user is contributing to goal
+            float addResult;
+            //Amount to increment bar
+            float amountToAdd;
+
+            //Input validation
+            if (AmountToAdd.Text == "")
+            {
+                MessageBox.Show("Must input a valid number.");
+                return;
+            }
+
+            while (float.TryParse(AmountToAdd.Text.ToString(), out addResult) == false)
+            {
+                MessageBox.Show("Must input a valid number.");
+                AmountToAdd.Text = "";
+                return;
+            }
+
+            if (addResult <= 0)
+            {
+                MessageBox.Show("Cannot contribute 0/negative amount towards goal.");
+                AmountToAdd.Text = "";
+                return;
+            }
+
+            //Math to increment progress bar
+            amountToAdd = (addResult / goal) * 100;
+            progToGoal += addResult;
+            ProgressAmount.Text = $"Progress Amount: ${progToGoal}";
+
+            m_SessionManager.GetActiveProfile().SetProgToGoal(progToGoal);
+
+            if (amountToAdd >= 100)
+            {
+                GoalReached();
+            }
+            else if (amountToAdd < 100)
+            {
+                if (SavingsGoalBar.Value + amountToAdd >= 100)
+                {
+                    GoalReached();
+                }
+                else
+                {
+                    SavingsGoalBar.Value += (int)amountToAdd;
+                    m_SessionManager.GetActiveProfile().SetProgBarValue(SavingsGoalBar.Value);
+                }
+            }
+        }
+
+        //Handles what should happen when goal is reached by the user
+        public void GoalReached()
+        {
+            SavingsGoalBar.Value = 100;
+            MessageBox.Show("Congratulations! Goal Reached!");
+            SavingsGoalBar.Value = 0;
+            ConfirmButton.Enabled = true;
+            GoalAmountEntry.Enabled = true;
+            ProgressAmount.Text = $"Progress Amount: $0";
+            SavingsGoalAmount.Text = $"Goal Amount: ";
+            AmountToAdd.Text = "";
+            AmountToAdd.Enabled = false;
+            ConfirmAddBtn.Enabled = false;
+            progToGoal = 0;
+
+            m_SessionManager.GetActiveProfile().SetProgBarValue(0);
+            m_SessionManager.GetActiveProfile().SetProgToGoal(0);
+            m_SessionManager.GetActiveProfile().SetGoalAmount(0);
         }
     }
 }

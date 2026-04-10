@@ -32,11 +32,22 @@ namespace BudgetPlanner
             instance = this;
 
             InitializeComponent();
-            SubscriptionRemover.Enabled = false;
-            EditSubscription.Enabled = false;
             instance = this;
 
             m_SessionManager = InSessionManager;
+
+            FixList();
+
+            if (ListOfSubscriptions.Items.Count != 0)
+            {
+                SubscriptionRemover.Enabled = true;
+                EditSubscription.Enabled = true;
+            }
+            else
+            {
+                SubscriptionRemover.Enabled = false;
+                EditSubscription.Enabled = false;
+            }
 
             InMainForm.SetRightMenuBar(InAccountTitle);
             InMainForm.SetLeftMenuBar(InScreenTitle);
@@ -103,6 +114,16 @@ namespace BudgetPlanner
         {
             var form = new RemoveSubscription(m_SessionManager);
             form.Show();
+            SubscriptionRemover.Enabled = false;
+            EditSubscription.Enabled = false;
+        }
+
+        private void EditSubscription_Click(object sender, EventArgs e)
+        {
+            EditSubscriptionForm editForm = new EditSubscriptionForm(m_SessionManager);
+            editForm.Show();
+            EditSubscription.Enabled = false;
+            SubscriptionRemover.Enabled = false;
         }
 
         //-----------------------------------------------------------------------------------------------
@@ -118,10 +139,19 @@ namespace BudgetPlanner
             }
         }
 
-        private void EditSubscription_Click(object sender, EventArgs e)
+        public int GetListCount()
         {
-            EditSubscriptionForm editForm = new EditSubscriptionForm(m_SessionManager);
-            editForm.Show();
+            return ListOfSubscriptions.Items.Count;
+        }
+
+        public Button GetSubscriptionRemover()
+        {
+            return SubscriptionRemover;
+        }
+
+        public Button GetEditSubscription()
+        {
+            return EditSubscription;
         }
     }
 }

@@ -36,6 +36,9 @@
             ConfirmButton = new Button();
             ProgressAmount = new Label();
             SavingsGoalAmount = new Label();
+            ConfirmAddBtn = new Button();
+            AmountLabel = new Label();
+            AmountToAdd = new TextBox();
             SuspendLayout();
             // 
             // SavingsGoalBar
@@ -110,11 +113,40 @@
             SavingsGoalAmount.TabIndex = 7;
             SavingsGoalAmount.Text = "Goal Amount";
             // 
+            // ConfirmAddBtn
+            // 
+            ConfirmAddBtn.Location = new Point(515, 703);
+            ConfirmAddBtn.Name = "ConfirmAddBtn";
+            ConfirmAddBtn.Size = new Size(112, 34);
+            ConfirmAddBtn.TabIndex = 8;
+            ConfirmAddBtn.Text = "Confirm";
+            ConfirmAddBtn.UseVisualStyleBackColor = true;
+            ConfirmAddBtn.Click += ConfirmAddBtn_Click;
+            // 
+            // AmountLabel
+            // 
+            AmountLabel.AutoSize = true;
+            AmountLabel.Location = new Point(501, 632);
+            AmountLabel.Name = "AmountLabel";
+            AmountLabel.Size = new Size(139, 25);
+            AmountLabel.TabIndex = 9;
+            AmountLabel.Text = "Amount To Add";
+            // 
+            // AmountToAdd
+            // 
+            AmountToAdd.Location = new Point(501, 666);
+            AmountToAdd.Name = "AmountToAdd";
+            AmountToAdd.Size = new Size(139, 31);
+            AmountToAdd.TabIndex = 10;
+            // 
             // GoalsScreen
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
+            Controls.Add(AmountToAdd);
+            Controls.Add(AmountLabel);
+            Controls.Add(ConfirmAddBtn);
             Controls.Add(SavingsGoalAmount);
             Controls.Add(ProgressAmount);
             Controls.Add(ConfirmButton);
@@ -140,5 +172,8 @@
         private Button ConfirmButton;
         private Label ProgressAmount;
         private Label SavingsGoalAmount;
+        private Button ConfirmAddBtn;
+        private Label AmountLabel;
+        private TextBox AmountToAdd;
     }
 }

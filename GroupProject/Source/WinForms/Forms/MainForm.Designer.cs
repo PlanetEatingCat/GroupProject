@@ -90,14 +90,14 @@ namespace BudgetPlanner
             // BaseMainPanel
             // 
             BaseMainPanel.Location = new Point(290, 84);
-            BaseMainPanel.Margin = new Padding(5, 5, 5, 5);
-            BaseMainPanel.Padding = new Padding(5, 5, 5, 5);
+            BaseMainPanel.Margin = new Padding(5);
+            BaseMainPanel.Padding = new Padding(5);
             BaseMainPanel.Size = new Size(1154, 779);
             // 
             // TitleBarPanel
             // 
             TitleBarPanel.Location = new Point(290, 2);
-            TitleBarPanel.Margin = new Padding(5, 5, 5, 5);
+            TitleBarPanel.Margin = new Padding(5);
             TitleBarPanel.Size = new Size(1154, 82);
             // 
             // MessagePanel

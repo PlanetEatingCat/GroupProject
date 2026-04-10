@@ -1,4 +1,10 @@
-﻿using BudgetPlanner;
+﻿/********************************************
+Name: RemoveSubscription.cs
+Purpose: Removal of user subscriptions
+Notes: WIP by Kiefer.
+********************************************/
+
+using BudgetPlanner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace BudgetPlanner
 {
@@ -25,13 +32,12 @@ namespace BudgetPlanner
 
         private void ConfirmRemove_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(SubRemoveText.Text.ToString().ToLower().TrimEnd());
             bool found = m_SessionManager.GetActiveProfile().DeleteSubscription(SubRemoveText.Text.ToString().ToLower().TrimEnd());
 
             if (found)
             {
                 MessageBox.Show("Subscription removed successfully.");
-                SubscriptionManagerForm.instance.FixList();
+                SubscriptionScreen.instance.FixList();
             }
             else
             {
@@ -39,6 +45,20 @@ namespace BudgetPlanner
             }
 
             this.Close();
+        }
+
+        private void RemoveSubscription_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (SubscriptionScreen.instance.GetListCount() == 0)
+            {
+                SubscriptionScreen.instance.GetSubscriptionRemover().Enabled = false;
+                SubscriptionScreen.instance.GetEditSubscription().Enabled = false;
+            }
+            else
+            {
+                SubscriptionScreen.instance.GetSubscriptionRemover().Enabled = true;
+                SubscriptionScreen.instance.GetEditSubscription().Enabled = true;
+            }
         }
     }
 }

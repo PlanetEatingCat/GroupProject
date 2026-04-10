@@ -30,6 +30,10 @@ namespace BudgetPlanner
 
             m_SessionManager = InSessionManager;
 
+            FixList();
+
+            //Check list box != null to enable buttons for edit/remove
+
             SubscriptionRemover.Enabled = false;
             EditSubscription.Enabled = false;
             instance = this;
