@@ -1,4 +1,5 @@
 ﻿using BudgetPlanner;
+using LiveChartsCore.Themes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,15 +12,28 @@ using System.Windows.Forms;
 
 namespace BudgetPlanner
 {
-    public partial class EditSubscriptionForm : Form
+    public partial class EditSubscriptionForm : ModernForm
     {
         private readonly SessionManager m_SessionManager;
+        private readonly EventDispatcher m_EventDispatcher;
 
-        public EditSubscriptionForm(SessionManager InSessionManager)
+        public EditSubscriptionForm(SessionManager InSessionManager, EventDispatcher InEventDispatcher, ThemeManager InThemeManager)
         {
             InitializeComponent();
 
             m_SessionManager = InSessionManager;
+
+            ApplyTheme(InThemeManager.GetCurrentTheme());
+
+            m_EventDispatcher = InEventDispatcher;
+            m_SessionManager = InSessionManager;
+
+            m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
+        }
+
+        private void OnThemeChanged(ThemeChangedEvent InEvent)
+        {
+            ApplyTheme(InEvent.NewTheme);
         }
 
         private void EditConfirm_Click(object sender, EventArgs e)
@@ -51,12 +65,12 @@ namespace BudgetPlanner
                 return;
             }
 
-            bool found = m_SessionManager.GetActiveProfile().EditSubscription(SubName.Text.ToString(), frequency, amountOwed);
+            bool found = m_SessionManager.GetActiveProfile().EditSubscription(SubName.Text.ToString(), "Type", frequency, amountOwed);
 
             if (found)
             {
                 MessageBox.Show("Subscription edited successfully.");
-                SubscriptionManagerForm.instance.FixList();
+                SubscriptionScreen.instance.FixList();
             }
             else
             {
@@ -64,6 +78,48 @@ namespace BudgetPlanner
             }
 
             this.Close();
+        }
+
+        private void EditSubscriptionForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public override void ApplyTheme(Theme InTheme)
+        {
+            this.BackColor = InTheme.Background;
+
+            BaseMainPanel.BackColor = InTheme.Background;
+            TitleBarPanel.BackColor = InTheme.Surface;
+            RightMenuBarPanel.BackColor = InTheme.Surface;
+            MinButton.BackColor = InTheme.Surface;
+            MaxButton.BackColor = InTheme.Surface;
+            CloseButton.BackColor = InTheme.Surface;
+
+            Name.BackColor = InTheme.Background;
+            Name.ForeColor = Color.White;
+            Amount.BackColor = InTheme.Background;
+            Amount.ForeColor = Color.White;
+            Freq.BackColor = InTheme.Background;
+            Freq.ForeColor = Color.White;
+            TitleLabel.ForeColor = Color.White;
+
+            SubName.BackColor = InTheme.Box;
+            SubName.ForeColor = Color.White;
+
+            OwedAmount.BackColor = InTheme.Box;
+            OwedAmount.ForeColor = Color.White;
+
+            FreqDropDown.BackColor = InTheme.Box;
+            FreqDropDown.ForeColor = Color.White;
+
+            EditConfirm.BackColor = InTheme.Accent;
+            EditConfirm.ForeColor = Color.White;
+        }
+
+        private void EditSubscriptionForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+          
         }
     }
 }

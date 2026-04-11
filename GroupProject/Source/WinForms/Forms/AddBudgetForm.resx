@@ -120,21 +120,21 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="MinButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA4AAAACCAYAAABoiu2qAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
-        JQAAFiUBSVIk8AAAABFJREFUGFdj+E8mYEAXIBYAANjqb5EI7QqUAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAACCAYAAABoiu2qAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cgAAEnIBXmVb4wAAABFJREFUGFdj+E8mYEAXIBYAANjqb5EI7QqUAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="MaxButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAcSURBVDhPY/hPJmAAEySCUY14wKhGPIByjeQAAAHbzzF3
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAcSURBVDhPY/hPJmAAEySCUY14wKhGPIByjeQAAAHbzzF3
         MANfAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="CloseButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
-        JQAAFiUBSVIk8AAAAGFJREFUOE+lklEKgDAMxXZzFfTaqRStbLOro+bzNYF9rJQ/ALuIrP3eo466zwBs
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cgAAEnIBXmVb4wAAAGFJREFUOE+lklEKgDAMxXZzFfTaqRStbLOro+bzNYF9rJQ/ALuIrP3eo466zwBs
         cjGM9eY6UTyMDC/+jIxanI6MKpiPlFSYeqon2gYsrX3jRf3tFUeR4cbAEUWGOs2Xy3AClD/pIAdzf1AA
         AAAASUVORK5CYII=
 </value>

@@ -47,7 +47,6 @@ namespace BudgetPlanner
 
             m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
 
-
             foreach (var theme in InThemeManager.GetThemes())
             {
                 ThemeComboBox.Items.Add(theme.Name);
@@ -139,7 +138,7 @@ namespace BudgetPlanner
 
         private void DevelopersLabel_Click(object sender, EventArgs e)
         {
-
+             
         }
 
         private void ThemeComboBox_SelectedIndexChanged(object sender, EventArgs e)

@@ -8,8 +8,11 @@ This is where the user data is stored at runtime
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
+using Windows.Management;
 
 
 namespace BudgetPlanner
@@ -20,8 +23,9 @@ namespace BudgetPlanner
         public decimal m_Balance;
         private List<Subscription> m_Subscriptions = new List<Subscription>();
         private List<IncomeSource> m_IncomeSources = new List<IncomeSource>();
+        private List<Budget> m_Budgets = new List<Budget>();
 
-        private Transactions[] m_TransactionHistory = new Transactions[100];
+        private List<Transactions> m_Transactions = new List<Transactions>();
         private int m_TransactionCount = 0;
 
         public Profile()
@@ -69,36 +73,62 @@ namespace BudgetPlanner
 
         public List<Subscription> GetSubscriptions() { return m_Subscriptions; }
 
+        public List<Budget> GetBudgets() { return m_Budgets; }
+
         public List<IncomeSource> GetIncomeSources() { return m_IncomeSources; }
+
+        public bool TryGetBudgetByName(string InName, out Budget OutBudget)
+        {
+            foreach (var budget in m_Budgets)
+            {
+                if (budget.GetName() == InName)
+                {
+                    OutBudget = budget;
+                    return true;
+                }
+            }
+
+            OutBudget = null;
+            return false;
+        }
+
+        public Dictionary<string, List<Budget>> GetBudgetsByCategory()
+        {
+            var result = new Dictionary<string, List<Budget>>();
+            foreach (var budget in m_Budgets)
+            {
+                string category = budget.GetCategory();
+                if (!result.ContainsKey(category)) 
+                {
+                    result[category] = new List<Budget>();
+                }
+
+                result[category].Add(budget);
+            }
+
+            return result;
+        }
 
         public void AddSubscription(Subscription InSubscription) { m_Subscriptions.Add(InSubscription); }
 
+        public void AddBudget(Budget InBudget) { m_Budgets.Add(InBudget); }
+
         public void AddIncomeSource(IncomeSource InIncomeSource) { m_IncomeSources.Add(InIncomeSource); }
 
-        public void AddTransaction(Transactions transaction)
+        public void AddTransaction(Transactions InTransaction)
         {
-            if (m_TransactionCount < 100)
+            m_Transactions.Add(InTransaction);
+
+            if (TryGetBudgetByName(InTransaction.GetExpenseType(), out var OutBudget))
             {
-                m_TransactionHistory[m_TransactionCount] = transaction;
-                m_TransactionCount++;
-            }
-            else
-            {
-                // Shift everything left by 1 to make room for the new transaction
-                for (int i = 1; i < 100; i++)
-                {
-                    m_TransactionHistory[i - 1] = m_TransactionHistory[i];
-                }
-                m_TransactionHistory[99] = transaction;
+                OutBudget.SetCurrentSpentAmount(InTransaction.GetAmount());
             }
         }
 
 
-        public Transactions[] GetTransactions()
+        public List<Transactions> GetTransactions()
         {
-            Transactions[] currentTransactions = new Transactions[m_TransactionCount];
-            Array.Copy(m_TransactionHistory, currentTransactions, m_TransactionCount);
-            return currentTransactions;
+            return m_Transactions;
         }
 
         /* Deposit money into account */
@@ -146,9 +176,9 @@ namespace BudgetPlanner
         }
 
         //Adds a subscription to the dictionary
-        public void AddSubscription(string subName, DeductionFrequency frequency, decimal amount)
+        public void AddSubscription(string subName, string InType, DeductionFrequency frequency, decimal amount)
         {
-            Subscription newSub = new Subscription(frequency, amount, subName);
+            Subscription newSub = new Subscription(frequency, amount, subName, InType);
             AddSubscription(newSub);
             //this.count++;
         }
@@ -172,7 +202,7 @@ namespace BudgetPlanner
         }
 
         //Allows users to pass in information to edit subscriptions already in the list
-        public bool EditSubscription(string subName, DeductionFrequency frequency, decimal amount)
+        public bool EditSubscription(string subName, string InType, DeductionFrequency frequency, decimal amount)
         {
             bool isFound = false;
 
@@ -181,13 +211,35 @@ namespace BudgetPlanner
                 if (subName.ToLower().TrimEnd() == subscription.GetName().ToLower().TrimEnd())
                 {
                     GetSubscriptions().Remove(subscription);
-                    GetSubscriptions().Add(new Subscription(frequency, amount, subName));
+                    GetSubscriptions().Add(new Subscription(frequency, amount, subName, InType));
                     isFound = true;
                     return isFound;
                 }
             }
 
             return isFound;
+        }
+
+        public bool EditBudget(string InOldName, string InNewName, string InCategory, decimal InMaxAmount)
+        {
+            if(TryGetBudgetByName(InOldName, out var OutBudget))
+            {
+                OutBudget.SetName(InNewName);
+                OutBudget.SetCategory(InCategory);
+                OutBudget.SetMaxSpentAmount(InMaxAmount);
+
+                foreach(var transaction in m_Transactions)
+                {
+                    if(transaction.GetExpenseType() == InOldName)
+                    {
+                        transaction.ExpenseType = InNewName;
+                    }
+                }
+
+                return true;
+            }
+
+            return false;
         }
 
         //Gets total value of subscriptions
@@ -222,6 +274,21 @@ namespace BudgetPlanner
             }
         }
 
+        public void UpdateTransactions()
+        {
+        /*    DateTime today = new DateTime(2026, 4, 1);
+
+            foreach(var subscription in m_Subscriptions)
+            {
+                var calculator = new TimelineCalculator(subscription.GetName(), new DateTime(2026, 1, 1), CalendarRepeatType.Month);
+                if(calculator.OccursToday(today))
+                {
+                    Transactions transaction = new Transactions(this, subscription.GetChargeAmount(), "Withdrawal", subscription.GetType());
+                    AddTransaction(transaction);
+                }
+            }*/
+        }
+
         public static DeductionFrequency CheckFrequency(string frequency)
         {
             if (Enum.TryParse<DeductionFrequency>(frequency, true, out var result))
@@ -236,6 +303,8 @@ namespace BudgetPlanner
         {
             return $"{sub.GetName()}: ${sub.GetChargeAmount()} {sub.GetFrequency()}";
         }
+
+        
     }
 
 }

@@ -27,7 +27,7 @@ using LiveChartsCore.SkiaSharpView;
 
 namespace BudgetPlanner
 {
-    public partial class CardsScreen : UserControl
+    public partial class ExpenseScreen : UserControl
     {
         //-----------------------------------------------------------------------------------------------
         // Dependencies
@@ -51,7 +51,7 @@ namespace BudgetPlanner
         // Screen
         //-----------------------------------------------------------------------------------------------
 
-        public CardsScreen(MainForm InMainForm, NavigationManager InNavigator, SessionManager InSessionManager,
+        public ExpenseScreen(MainForm InMainForm, NavigationManager InNavigator, SessionManager InSessionManager,
                           AccountTitle InAccountTitle, ScreenTitle InScreenTitle)
         {
             InitializeComponent();
@@ -85,8 +85,14 @@ namespace BudgetPlanner
 
             decimal tempBalance = m_SessionManager.GetActiveProfile().GetBalance(); //ensures balance is already displayed
             BalanceTxtBx.Text = tempBalance.ToString();
-            ExpenseTypeTxtBox.Visible = false;
+            ExpenseTypeComboBox.Visible = false;
             ExpenseTypeLbl.Visible = false;
+
+            foreach(var budget in m_SessionManager.GetActiveProfile().GetBudgets())
+            {
+                ExpenseTypeComboBox.Items.Add(budget.GetName());
+            }
+
         }
 
         //-----------------------------------------------------------------------------------------------
@@ -101,15 +107,17 @@ namespace BudgetPlanner
 
                 if (WithdrawAddSelect.Text == "Add Expense") //Withdraws from Balance
                 {
-                    if (ExpenseTypeTxtBox.Text == "")
-                    { Logger.Warn("Please Enter an Expense Type"); }
+                    if (ExpenseTypeComboBox.Text == "")
+                    { 
+                        Logger.Warn("Please Enter an Expense Type");
+                    }
                     else
                         try
                         {
                             m_SessionManager.GetActiveProfile().Withdraw(number);
                             decimal tempBalance = m_SessionManager.GetActiveProfile().GetBalance();//edits balance textbox
                             BalanceTxtBx.Text = tempBalance.ToString();
-                            ExpenseType = ExpenseTypeTxtBox.Text;
+                            ExpenseType = ExpenseTypeComboBox.Text;
 
                             //Creates a transactions object and adds it to history
                             Transactions temp = new Transactions(m_SessionManager.GetActiveProfile(), m_Amount, "Withdrawal", ExpenseType);
@@ -165,12 +173,12 @@ namespace BudgetPlanner
             if (WithdrawAddSelect.Text == "Add Expense")
 
             {
-                ExpenseTypeTxtBox.Visible = true;
+                ExpenseTypeComboBox.Visible = true;
                 ExpenseTypeLbl.Visible = true;
             }
             else
             {
-                ExpenseTypeTxtBox.Visible = false;
+                ExpenseTypeComboBox.Visible = false;
                 ExpenseTypeLbl.Visible = false;
             }
         }
@@ -178,7 +186,7 @@ namespace BudgetPlanner
         private void ExpenseTypeTxtBox_TextChanged(object sender, EventArgs e)
         {
             string ExpenseType;
-            ExpenseType = ExpenseTypeTxtBox.Text;
+            ExpenseType = ExpenseTypeComboBox.Text;
 
         }
 

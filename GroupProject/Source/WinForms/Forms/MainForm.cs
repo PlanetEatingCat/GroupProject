@@ -159,7 +159,7 @@ namespace BudgetPlanner
         private void SubscriptionMenuButton_Click(object InSender, EventArgs InEventArgs)
         {
             SetActiveMenuItem(SubscriptionMenuButton);
-            m_NavigationManager.GoTo<SubscriptionManagerForm>();
+            m_NavigationManager.GoTo<SubscriptionScreen>();
         }
 
         private void HomeMenuButton_Click(object InSender, EventArgs InEventArgs)
@@ -174,16 +174,10 @@ namespace BudgetPlanner
             m_NavigationManager.GoTo<GoalsScreen>();
         }
 
-        private void CardMenuButton_Click(object InSender, EventArgs InEventArgs)
-        {
-            SetActiveMenuItem(CardMenuButton);
-            m_NavigationManager.GoTo<CardsScreen>();
-        }
-
         private void CalendarMenuButton_Click(object InSender, EventArgs InEventArgs)
         {
-            SetActiveMenuItem(CalendarMenuButton);
-            m_NavigationManager.GoTo<CalendarScreen>();
+          //  SetActiveMenuItem(CalendarMenuButton);
+          //  m_NavigationManager.GoTo<CalendarScreen>();
         }
 
         private void ThemeMenuButton_Click(object InSender, EventArgs InEventArgs)
@@ -195,7 +189,7 @@ namespace BudgetPlanner
         private void ExpensesMenuButton_Click(object InSender, EventArgs InEventArgs)
         {
             SetActiveMenuItem(ExpensesMenuButton);
-            m_NavigationManager.GoTo<ExpensesScreen>();
+            m_NavigationManager.GoTo<ExpenseScreen>();
         }
 
         // --------------------------------------------------------------------------------------------------
@@ -343,12 +337,6 @@ namespace BudgetPlanner
             HomeMenuButton.ActiveIndicatorColor = InTheme.SoulAccent;
             HomeMenuButton.ActiveColor = InTheme.Active;
 
-            CalendarMenuButton.NormalColor = InTheme.Surface; ;
-            CalendarMenuButton.IconColor = InTheme.Compliment;
-            CalendarMenuButton.ForeColor = InTheme.Compliment;
-            CalendarMenuButton.ActiveIndicatorColor = InTheme.Compliment;
-            CalendarMenuButton.ActiveColor = InTheme.Active;
-
             SubscriptionMenuButton.NormalColor = InTheme.Surface;
             SubscriptionMenuButton.IconColor = InTheme.Sibling;
             SubscriptionMenuButton.ForeColor = InTheme.Sibling;
@@ -367,16 +355,10 @@ namespace BudgetPlanner
             IncomeMenuButton.ActiveIndicatorColor = InTheme.TwinCompliment;
             IncomeMenuButton.ActiveColor = InTheme.Active;
 
-            CardMenuButton.NormalColor = InTheme.Surface;
-            CardMenuButton.IconColor = InTheme.Extra;
-            CardMenuButton.ForeColor = InTheme.Extra;
-            CardMenuButton.ActiveIndicatorColor = InTheme.Extra;
-            CardMenuButton.ActiveColor = InTheme.Active;
-
             ExpensesMenuButton.NormalColor = InTheme.Surface;
-            ExpensesMenuButton.IconColor = InTheme.Accent;
-            ExpensesMenuButton.ForeColor = InTheme.Accent;
-            ExpensesMenuButton.ActiveIndicatorColor = InTheme.Accent;
+            ExpensesMenuButton.IconColor = InTheme.Extra;
+            ExpensesMenuButton.ForeColor = InTheme.Extra;
+            ExpensesMenuButton.ActiveIndicatorColor = InTheme.Extra;
             ExpensesMenuButton.ActiveColor = InTheme.Active;
 
             ThemeMenuButton.NormalColor = InTheme.Surface;

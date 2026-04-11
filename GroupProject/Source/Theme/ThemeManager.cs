@@ -31,6 +31,7 @@ namespace BudgetPlanner
 
             m_Themes.Add(Themes.Dark);
             m_Themes.Add(Themes.SnhuBlue);
+            m_Themes.Add(Themes.Deep);
 
         }
 

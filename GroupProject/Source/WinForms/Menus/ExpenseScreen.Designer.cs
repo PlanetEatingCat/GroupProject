@@ -2,7 +2,7 @@
 
 namespace BudgetPlanner
 {
-    partial class CardsScreen
+    partial class ExpenseScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,13 +36,13 @@ namespace BudgetPlanner
             AmountTxtBx = new TextBox();
             WithdrawAddSelect = new ComboBox();
             EditBalanceLbl = new Label();
-            ExpenseTypeTxtBox = new TextBox();
             ExpenseTypeLbl = new Label();
             BalanceTxtBx = new TextBox();
             SavingsProgressBar = new ProgressBar();
             panel1 = new Panel();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             panel2 = new Panel();
+            ExpenseTypeComboBox = new ComboBox();
             BalanceLbl = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
@@ -129,18 +129,6 @@ namespace BudgetPlanner
             EditBalanceLbl.TabIndex = 2;
             EditBalanceLbl.Text = "Move Money/ History";
             // 
-            // ExpenseTypeTxtBox
-            // 
-            ExpenseTypeTxtBox.BackColor = SystemColors.ActiveCaption;
-            ExpenseTypeTxtBox.BorderStyle = BorderStyle.FixedSingle;
-            ExpenseTypeTxtBox.Dock = DockStyle.Fill;
-            ExpenseTypeTxtBox.Location = new Point(289, 0);
-            ExpenseTypeTxtBox.Margin = new Padding(2);
-            ExpenseTypeTxtBox.Name = "ExpenseTypeTxtBox";
-            ExpenseTypeTxtBox.Size = new Size(359, 27);
-            ExpenseTypeTxtBox.TabIndex = 11;
-            ExpenseTypeTxtBox.TextChanged += ExpenseTypeTxtBox_TextChanged;
-            // 
             // ExpenseTypeLbl
             // 
             ExpenseTypeLbl.AutoSize = true;
@@ -205,7 +193,7 @@ namespace BudgetPlanner
             // 
             // panel2
             // 
-            panel2.Controls.Add(ExpenseTypeTxtBox);
+            panel2.Controls.Add(ExpenseTypeComboBox);
             panel2.Controls.Add(AmountLbl);
             panel2.Controls.Add(ExpenseTypeLbl);
             panel2.Controls.Add(WithdrawAddSelect);
@@ -217,6 +205,15 @@ namespace BudgetPlanner
             panel2.Name = "panel2";
             panel2.Size = new Size(987, 30);
             panel2.TabIndex = 13;
+            // 
+            // ExpenseTypeComboBox
+            // 
+            ExpenseTypeComboBox.FormattingEnabled = true;
+            ExpenseTypeComboBox.Location = new Point(289, 0);
+            ExpenseTypeComboBox.Margin = new Padding(2, 2, 2, 2);
+            ExpenseTypeComboBox.Name = "ExpenseTypeComboBox";
+            ExpenseTypeComboBox.Size = new Size(354, 28);
+            ExpenseTypeComboBox.TabIndex = 14;
             // 
             // BalanceLbl
             // 
@@ -230,7 +227,7 @@ namespace BudgetPlanner
             BalanceLbl.TabIndex = 0;
             BalanceLbl.Text = "Current Balance:";
             // 
-            // CardsScreen
+            // ExpenseScreen
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -241,7 +238,7 @@ namespace BudgetPlanner
             Controls.Add(BalanceLbl);
             Controls.Add(EditBalanceLbl);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "CardsScreen";
+            Name = "ExpenseScreen";
             Size = new Size(987, 648);
             Load += MainScreen_Load;
             panel1.ResumeLayout(false);
@@ -262,10 +259,10 @@ namespace BudgetPlanner
         private Button ConfirmBttn;
         private ListBox Transactions;
         private ProgressBar SavingsProgressBar;
-        private TextBox ExpenseTypeTxtBox;
         private Panel panel1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Panel panel2;
         private Label BalanceLbl;
+        private ComboBox ExpenseTypeComboBox;
     }
 }

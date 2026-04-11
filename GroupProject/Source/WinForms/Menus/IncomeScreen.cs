@@ -113,12 +113,7 @@ namespace BudgetPlanner
                 else
                 {
                     CurrentIncomeLbl.Text = $"Current Income for {name} is set to ${amount} Every Two Months";
-
-
                 }
-
-
-
             }
         }
 

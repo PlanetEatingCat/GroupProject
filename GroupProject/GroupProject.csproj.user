@@ -1,11 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Source\WinForms\Controls\BudgetCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Source\WinForms\Controls\MenuButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\Controls\BudgetEdit.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Controls\ThemeEdit.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\Controls\TransactionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Source\WinForms\Forms\AddBudgetForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Forms\EditSubscriptionForm.cs">
       <SubType>Form</SubType>
@@ -22,16 +34,7 @@
     <Compile Update="Source\WinForms\Menus\DashboardScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Source\WinForms\Menus\SubscriptionManagerForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="Source\WinForms\Menus\AccountScreen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Source\WinForms\Menus\CalendarScreen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Source\WinForms\Menus\ExpensesScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Menus\GoalsScreen.cs">
@@ -46,7 +49,7 @@
     <Compile Update="Source\WinForms\Forms\DebugConsoleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Source\WinForms\Menus\CardsScreen.cs">
+    <Compile Update="Source\WinForms\Menus\ExpenseScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Source\WinForms\Menus\ThemeScreen.cs">

@@ -31,7 +31,7 @@ namespace BudgetPlanner
             if (found)
             {
                 MessageBox.Show("Subscription removed successfully.");
-                SubscriptionManagerForm.instance.FixList();
+                SubscriptionScreen.instance.FixList();
             }
             else
             {

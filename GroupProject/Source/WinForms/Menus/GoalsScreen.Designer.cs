@@ -36,6 +36,8 @@
             ConfirmButton = new Button();
             ProgressAmount = new Label();
             SavingsGoalAmount = new Label();
+            button1 = new Button();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // SavingsGoalBar
@@ -110,11 +112,31 @@
             SavingsGoalAmount.TabIndex = 7;
             SavingsGoalAmount.Text = "Goal Amount";
             // 
+            // button1
+            // 
+            button1.Location = new Point(607, 739);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 34);
+            button1.TabIndex = 8;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(607, 675);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(150, 31);
+            textBox1.TabIndex = 9;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
             // GoalsScreen
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
+            Controls.Add(textBox1);
+            Controls.Add(button1);
             Controls.Add(SavingsGoalAmount);
             Controls.Add(ProgressAmount);
             Controls.Add(ConfirmButton);
@@ -140,5 +162,7 @@
         private Button ConfirmButton;
         private Label ProgressAmount;
         private Label SavingsGoalAmount;
+        private Button button1;
+        private TextBox textBox1;
     }
 }

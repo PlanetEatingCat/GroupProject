@@ -18,7 +18,7 @@ namespace BudgetPlanner
         public Profile m_Account { get; protected set; }
         public decimal m_Amount;
         public string m_Type;
-        public string ExpenseType = "test"; //****
+        public string ExpenseType = "Deposit"; //****
 
         public Transactions(Profile Account, decimal Amount, string Type)
         {
@@ -36,6 +36,22 @@ namespace BudgetPlanner
             this.ExpenseType = EType;
 
         }
+
+        public string GetExpenseType()
+        {
+            return ExpenseType;
+        }
+
+        public string GetType()
+        {
+            return m_Type;
+        }
+
+        public decimal GetAmount()
+        {
+            return m_Amount;
+        }
+
         public string Statement(string type)
         {
             if (type == "Withdrawal")

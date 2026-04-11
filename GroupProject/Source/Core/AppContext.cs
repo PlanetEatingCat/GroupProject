@@ -77,7 +77,7 @@ namespace BudgetPlanner
             m_FormCount++;
 
             // Get the form positions based upon the user specific data.
-            if (ReadFormDataFromFile())
+         /* if (ReadFormDataFromFile())
             {
                 // If the data was read from the file, set the form
                 // positions manually.
@@ -86,7 +86,7 @@ namespace BudgetPlanner
 
                 m_MainForm.Bounds = m_MainFormPosition;
                 m_LoginForm.Bounds = m_LoginFormPosition;
-            }
+            }*/
 
             // Show both forms.
             m_MainForm.Hide();

@@ -21,7 +21,6 @@ namespace BudgetPlanner
     //----------------------------------------------------------------------------------------
     // Core Functionality
     //----------------------------------------------------------------------------------------
-
     public static class App
     {
         public static void Start()
@@ -40,26 +39,26 @@ namespace BudgetPlanner
             serviceContainer.AddSingleton<EventDispatcher>();
 
             // 3. Scoped: Created once and always alive until the end of its scope
-            serviceContainer.AddScoped<ExpensesScreen>();
+            serviceContainer.AddScoped<ExpenseScreen>();
             serviceContainer.AddScoped<LoginForm>();
             serviceContainer.AddScoped<DashboardScreen>();
-            serviceContainer.AddScoped<CalendarScreen>();
             serviceContainer.AddScoped<GoalsScreen>();
             serviceContainer.AddScoped<IncomeScreen>();
-            serviceContainer.AddScoped<CardsScreen>();
+            serviceContainer.AddScoped<ExpenseScreen>();
             serviceContainer.AddScoped<SubscriptionScreen>();
-            serviceContainer.AddScoped<SubscriptionManagerForm>();
             serviceContainer.AddScoped<ThemeScreen>();
             serviceContainer.AddScoped<AccountScreen>();
             serviceContainer.AddScoped<AccountTitle>();
             serviceContainer.AddScoped<ScreenTitle>();
+
+            serviceContainer.AddTransient<BudgetEdit>();
 
             var provider = serviceContainer.BuildProvider();
 
             // Initialize themes
             Themes.Initialize();
             var themeManager = provider.GetService<ThemeManager>();
-            themeManager.SetTheme("SnhuBlue");
+            themeManager.SetTheme("Deep");
 
             // Winforms initialization
             ApplicationConfiguration.Initialize();

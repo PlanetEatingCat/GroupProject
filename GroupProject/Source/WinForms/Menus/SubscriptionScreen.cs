@@ -20,14 +20,18 @@ namespace BudgetPlanner
     public partial class SubscriptionScreen : UserControl
     {
         private readonly SessionManager m_SessionManager;
+        private readonly EventDispatcher m_EventDispatcher;
+        private readonly ThemeManager m_ThemeManager;
+
         public static SubscriptionScreen instance;
 
         //-----------------------------------------------------------------------------------------------
         // Screen
         //-----------------------------------------------------------------------------------------------
 
-        public SubscriptionScreen(SessionManager InSessionManager, MainForm InMainForm, 
-            AccountTitle InAccountTitle, ScreenTitle InScreenTitle)
+        public SubscriptionScreen(SessionManager InSessionManager, MainForm InMainForm,
+            AccountTitle InAccountTitle, ScreenTitle InScreenTitle, EventDispatcher InEventDispatcher,
+            ThemeManager InThemeManager)
         {
             instance = this;
 
@@ -37,12 +41,24 @@ namespace BudgetPlanner
             instance = this;
 
             m_SessionManager = InSessionManager;
+            m_EventDispatcher = InEventDispatcher;
+            m_ThemeManager = InThemeManager;
+
+            ApplyTheme(InThemeManager.GetCurrentTheme());
+            m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
+
+
 
             InMainForm.SetRightMenuBar(InAccountTitle);
             InMainForm.SetLeftMenuBar(InScreenTitle);
 
             InScreenTitle.SetIcon(MenuIcons.Subscriptions);
             InScreenTitle.SetText("Subscriptions");
+        }
+
+        private void OnThemeChanged(ThemeChangedEvent InEvent)
+        {
+            ApplyTheme(InEvent.NewTheme);
         }
 
         //-----------------------------------------------------------------------------------------------
@@ -79,7 +95,7 @@ namespace BudgetPlanner
                 return;
             }
 
-            Subscription newSub = new Subscription(frequency, amountOwed, SubscriptionName.Text);
+            Subscription newSub = new Subscription(frequency, amountOwed, SubscriptionName.Text, TypeComboBox.Text);
             ListOfSubscriptions.Items.Add(Profile.DisplayInfo(newSub));
             m_SessionManager.GetActiveProfile().AddSubscription(newSub);
 
@@ -120,8 +136,49 @@ namespace BudgetPlanner
 
         private void EditSubscription_Click(object sender, EventArgs e)
         {
-            EditSubscriptionForm editForm = new EditSubscriptionForm(m_SessionManager);
+            EditSubscriptionForm editForm = new EditSubscriptionForm(m_SessionManager, m_EventDispatcher, m_ThemeManager);
             editForm.Show();
+        }
+
+        public void ApplyTheme(Theme InTheme)
+        {
+            this.BackColor = InTheme.Background;
+
+            SubscriptionName.BackColor = InTheme.Box;
+            SubscriptionName.ForeColor = Color.White;
+
+            SubscriptionAmount.BackColor = InTheme.Box;
+            SubscriptionAmount.ForeColor = Color.White;
+
+            FrequencyDropDown.BackColor = InTheme.Box;
+            FrequencyDropDown.ForeColor = Color.White;
+
+            SubscriptionRemover.BackColor = InTheme.Accent;
+            SubscriptionRemover.ForeColor = Color.White;
+
+            EditSubscription.BackColor = InTheme.Accent;
+            EditSubscription.ForeColor = Color.White;
+
+            AddSubscription.BackColor = InTheme.Accent;
+            AddSubscription.ForeColor = Color.White;
+
+            ListOfSubscriptions.BackColor = InTheme.Box;
+            ListOfSubscriptions.ForeColor = Color.White;
+
+            ToolsPanel.BackColor = InTheme.Surface;
+            TitlePanel.BackColor = InTheme.Surface;
+
+            SubNameLabel.ForeColor = Color.White;
+            PayAmount.ForeColor = Color.White;
+            PaymentFrequency.ForeColor = Color.White;
+
+            Title.ForeColor = Color.White;
+
+        }
+
+        private void ListOfSubscriptions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
