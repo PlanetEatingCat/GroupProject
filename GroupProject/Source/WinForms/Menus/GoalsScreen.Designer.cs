@@ -36,8 +36,9 @@
             ConfirmButton = new Button();
             ProgressAmount = new Label();
             SavingsGoalAmount = new Label();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            ConfirmAddBtn = new Button();
+            AmountLabel = new Label();
+            AmountToAdd = new TextBox();
             SuspendLayout();
             // 
             // SavingsGoalBar
@@ -112,31 +113,40 @@
             SavingsGoalAmount.TabIndex = 7;
             SavingsGoalAmount.Text = "Goal Amount";
             // 
-            // button1
+            // ConfirmAddBtn
             // 
-            button1.Location = new Point(607, 739);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 8;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            ConfirmAddBtn.Location = new Point(515, 703);
+            ConfirmAddBtn.Name = "ConfirmAddBtn";
+            ConfirmAddBtn.Size = new Size(112, 34);
+            ConfirmAddBtn.TabIndex = 8;
+            ConfirmAddBtn.Text = "Confirm";
+            ConfirmAddBtn.UseVisualStyleBackColor = true;
+            ConfirmAddBtn.Click += ConfirmAddBtn_Click;
             // 
-            // textBox1
+            // AmountLabel
             // 
-            textBox1.Location = new Point(607, 675);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 31);
-            textBox1.TabIndex = 9;
-            textBox1.TextChanged += textBox1_TextChanged;
+            AmountLabel.AutoSize = true;
+            AmountLabel.Location = new Point(501, 632);
+            AmountLabel.Name = "AmountLabel";
+            AmountLabel.Size = new Size(139, 25);
+            AmountLabel.TabIndex = 9;
+            AmountLabel.Text = "Amount To Add";
+            // 
+            // AmountToAdd
+            // 
+            AmountToAdd.Location = new Point(501, 666);
+            AmountToAdd.Name = "AmountToAdd";
+            AmountToAdd.Size = new Size(139, 31);
+            AmountToAdd.TabIndex = 10;
             // 
             // GoalsScreen
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            Controls.Add(textBox1);
-            Controls.Add(button1);
+            Controls.Add(AmountToAdd);
+            Controls.Add(AmountLabel);
+            Controls.Add(ConfirmAddBtn);
             Controls.Add(SavingsGoalAmount);
             Controls.Add(ProgressAmount);
             Controls.Add(ConfirmButton);
@@ -162,7 +172,8 @@
         private Button ConfirmButton;
         private Label ProgressAmount;
         private Label SavingsGoalAmount;
-        private Button button1;
-        private TextBox textBox1;
+        private Button ConfirmAddBtn;
+        private Label AmountLabel;
+        private TextBox AmountToAdd;
     }
 }

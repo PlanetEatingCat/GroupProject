@@ -28,6 +28,10 @@ namespace BudgetPlanner
         private List<Transactions> m_Transactions = new List<Transactions>();
         private int m_TransactionCount = 0;
 
+        private float m_GoalAmount = 0;
+        private float m_ProgToGoal = 0;
+        private int m_ProgBarValue = 0;
+
         public Profile()
         {
             m_User = new User();
@@ -69,7 +73,6 @@ namespace BudgetPlanner
         public decimal GetBalance() { return m_Balance; }
 
         public User GetUser() { return m_User; }
-
 
         public List<Subscription> GetSubscriptions() { return m_Subscriptions; }
 
@@ -115,7 +118,20 @@ namespace BudgetPlanner
 
         public void AddIncomeSource(IncomeSource InIncomeSource) { m_IncomeSources.Add(InIncomeSource); }
 
-        public void AddTransaction(Transactions InTransaction)
+        //Getters and setters for goals screen
+        public float GetGoalAmount() { return m_GoalAmount; }
+
+        public float GetProgToGoal() { return m_ProgToGoal; }
+
+        public int GetProgBarValue() { return m_ProgBarValue; }
+
+        public void SetGoalAmount(float numAdd) { m_GoalAmount = numAdd; }
+
+        public void SetProgToGoal(float numAdd) { m_ProgToGoal = numAdd; }
+
+        public void SetProgBarValue(int numAdd) { m_ProgBarValue = numAdd; }
+
+        public void AddTransaction(Transactions transaction)
         {
             m_Transactions.Add(InTransaction);
 

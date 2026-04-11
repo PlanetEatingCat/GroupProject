@@ -71,6 +71,7 @@
             Controls.Add(SubRemoveText);
             Name = "RemoveSubscription";
             Text = "RemoveSubscription";
+            FormClosed += RemoveSubscription_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

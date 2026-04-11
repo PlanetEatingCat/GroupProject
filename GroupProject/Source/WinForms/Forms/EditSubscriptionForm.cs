@@ -1,5 +1,11 @@
-﻿using BudgetPlanner;
+/********************************************
+Name: EditSubscriptionForm.cs
+Purpose: Editing of user subscriptions
+Notes: WIP by Kiefer.
+********************************************/
+using BudgetPlanner;
 using LiveChartsCore.Themes;
+using BudgetPlanner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -116,10 +122,10 @@ namespace BudgetPlanner
             EditConfirm.BackColor = InTheme.Accent;
             EditConfirm.ForeColor = Color.White;
         }
-
+          
         private void EditSubscriptionForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-          
+            SubscriptionScreen.instance.GetEditSubscription().Enabled = true;
         }
     }
 }
