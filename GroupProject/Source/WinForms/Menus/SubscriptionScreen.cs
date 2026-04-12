@@ -106,7 +106,7 @@ namespace BudgetPlanner
                 return;
             }
 
-            Subscription newSub = new Subscription(frequency, amountOwed, SubscriptionName.Text, TypeComboBox.Text);
+            Subscription newSub = new Subscription(frequency, amountOwed, SubscriptionName.Text);
             ListOfSubscriptions.Items.Add(Profile.DisplayInfo(newSub));
             m_SessionManager.GetActiveProfile().AddSubscription(newSub);
 
@@ -128,7 +128,7 @@ namespace BudgetPlanner
 
         private void SubscriptionRemover_Click(object sender, EventArgs e)
         {
-            var form = new RemoveSubscription(m_SessionManager);
+            var form = new RemoveSubscription(m_SessionManager, m_EventDispatcher, m_ThemeManager);
             form.Show();
             SubscriptionRemover.Enabled = false;
             EditSubscription.Enabled = false;
@@ -136,7 +136,7 @@ namespace BudgetPlanner
 
         private void EditSubscription_Click(object sender, EventArgs e)
         {
-            EditSubscriptionForm editForm = new EditSubscriptionForm(m_SessionManager);
+            EditSubscriptionForm editForm = new EditSubscriptionForm(m_SessionManager, m_EventDispatcher, m_ThemeManager);
             editForm.Show();
             EditSubscription.Enabled = false;
             SubscriptionRemover.Enabled = false;
@@ -177,13 +177,13 @@ namespace BudgetPlanner
             this.BackColor = InTheme.Background;
 
             SubscriptionName.BackColor = InTheme.Box;
-            SubscriptionName.ForeColor = Color.White;
+            SubscriptionName.ForeColor = InTheme.Text;
 
             SubscriptionAmount.BackColor = InTheme.Box;
-            SubscriptionAmount.ForeColor = Color.White;
+            SubscriptionAmount.ForeColor = InTheme.Text;
 
             FrequencyDropDown.BackColor = InTheme.Box;
-            FrequencyDropDown.ForeColor = Color.White;
+            FrequencyDropDown.ForeColor = InTheme.Text;
 
             SubscriptionRemover.BackColor = InTheme.Accent;
             SubscriptionRemover.ForeColor = Color.White;
@@ -195,16 +195,16 @@ namespace BudgetPlanner
             AddSubscription.ForeColor = Color.White;
 
             ListOfSubscriptions.BackColor = InTheme.Box;
-            ListOfSubscriptions.ForeColor = Color.White;
+            ListOfSubscriptions.ForeColor = InTheme.Text;
 
-            ToolsPanel.BackColor = InTheme.Surface;
-            TitlePanel.BackColor = InTheme.Surface;
+            ToolsPanel.BackColor = InTheme.Background;
+            TitlePanel.BackColor = InTheme.Background;
 
-            SubNameLabel.ForeColor = Color.White;
-            PayAmount.ForeColor = Color.White;
-            PaymentFrequency.ForeColor = Color.White;
+            SubNameLabel.ForeColor = InTheme.Text;
+            PayAmount.ForeColor = InTheme.Text;
+            PaymentFrequency.ForeColor = InTheme.Text;
 
-            Title.ForeColor = Color.White;
+            Title.ForeColor = InTheme.Text;
 
         }
 

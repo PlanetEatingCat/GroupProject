@@ -4,6 +4,7 @@ Purpose: The goals
 Notes: WIP by Kiefer.
 ********************************************/
 
+using ScottPlot.TickGenerators.TimeUnits;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,13 +21,23 @@ namespace BudgetPlanner
     public partial class GoalsScreen : UserControl
     {
         private readonly SessionManager m_SessionManager;
+        private readonly EventDispatcher m_EventDispatcher;
 
         protected float goal;
         protected float progToGoal;
-        public GoalsScreen(MainForm InMainForm, AccountTitle InAccountTitle, ScreenTitle InScreenTitle, SessionManager InSessionManager)
+        public GoalsScreen(MainForm InMainForm, AccountTitle InAccountTitle, ScreenTitle InScreenTitle, SessionManager InSessionManager,
+               ThemeManager InThemeManager, EventDispatcher InEventDispatcher)
         {
             InitializeComponent();
             m_SessionManager = InSessionManager;
+
+            ApplyTheme(InThemeManager.GetCurrentTheme());
+
+            m_EventDispatcher = InEventDispatcher;
+            m_SessionManager = InSessionManager;
+
+            m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
+
 
             goal = m_SessionManager.GetActiveProfile().GetGoalAmount();
             progToGoal = m_SessionManager.GetActiveProfile().GetProgToGoal();
@@ -63,6 +74,10 @@ namespace BudgetPlanner
             InScreenTitle.SetText("Goals");
         }
 
+        private void OnThemeChanged(ThemeChangedEvent InEvent)
+        {
+            ApplyTheme(InEvent.NewTheme);
+        }
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
             float result;
@@ -172,6 +187,42 @@ namespace BudgetPlanner
             m_SessionManager.GetActiveProfile().SetProgBarValue(0);
             m_SessionManager.GetActiveProfile().SetProgToGoal(0);
             m_SessionManager.GetActiveProfile().SetGoalAmount(0);
+        }
+
+        public void ApplyTheme(Theme InTheme)
+        {
+            SavingsGoalBar.BackColor = InTheme.Background;
+            this.BackColor = InTheme.Background;
+
+            ProgressTitle.BackColor = InTheme.Background;
+            ProgressTitle.ForeColor = InTheme.Text;
+
+            SavingsList.BackColor = InTheme.Box;
+            SavingsList.ForeColor = InTheme.Text;
+
+            GoalAmount.BackColor = InTheme.Background;
+            GoalAmount.ForeColor = InTheme.Text;
+
+            GoalAmountEntry.BackColor = InTheme.Box;
+            GoalAmountEntry.ForeColor = InTheme.Text;
+
+            ConfirmButton.BackColor = InTheme.Accent;
+            ConfirmButton.ForeColor = Color.White;
+
+
+            ProgressAmount.BackColor = InTheme.Background;
+            ProgressAmount.ForeColor = InTheme.Text;
+
+            SavingsGoalAmount.BackColor = InTheme.Background;
+            SavingsGoalAmount.ForeColor = InTheme.Text;
+
+            ConfirmAddBtn.BackColor = InTheme.Accent;
+            ConfirmAddBtn.ForeColor = Color.White;
+
+            AmountLabel.BackColor = InTheme.Background;
+            AmountLabel.ForeColor = InTheme.Text;
+            AmountToAdd.BackColor = InTheme.Box;
+            AmountToAdd.ForeColor = InTheme.Text;
         }
     }
 }

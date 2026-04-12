@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: PaymentScreen.cs
 Purpose: Add, remove, and edit expenses
-Notes: Should be in the epenses tab. WIP by Ella.
+Notes:Authored by Ella.
 ********************************************/
 
 using BudgetPlanner;
@@ -36,6 +36,8 @@ namespace BudgetPlanner
         private readonly MainForm m_MainForm;
         private readonly NavigationManager m_Navigator;
         private readonly SessionManager m_SessionManager;
+        private readonly EventDispatcher m_EventDispatcher;
+        private readonly ThemeManager m_ThemeManager;
 
         //-----------------------------------------------------------------------------------------------
         // Variables
@@ -52,13 +54,19 @@ namespace BudgetPlanner
         //-----------------------------------------------------------------------------------------------
 
         public ExpenseScreen(MainForm InMainForm, NavigationManager InNavigator, SessionManager InSessionManager,
-                          AccountTitle InAccountTitle, ScreenTitle InScreenTitle)
+                          AccountTitle InAccountTitle, ScreenTitle InScreenTitle, EventDispatcher InEventDispatcher,
+            ThemeManager InThemeManager)
         {
             InitializeComponent();
 
             m_MainForm = InMainForm;
             m_Navigator = InNavigator;
             m_SessionManager = InSessionManager;
+            m_EventDispatcher = InEventDispatcher;
+            m_ThemeManager = InThemeManager;
+
+            ApplyTheme(InThemeManager.GetCurrentTheme());
+            m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
 
             var rightMenuBar = InAccountTitle;
             var leftMenuBar = InScreenTitle;
@@ -71,6 +79,10 @@ namespace BudgetPlanner
             leftMenuBar.SetText("Card");
         }
 
+        private void OnThemeChanged(ThemeChangedEvent InEvent)
+        {
+            ApplyTheme(InEvent.NewTheme);
+        }
         private void MainScreen_Load(object InSender, EventArgs InEvent)
         {
             m_MainForm.SetMenuBarActive(true);
@@ -88,12 +100,27 @@ namespace BudgetPlanner
             ExpenseTypeComboBox.Visible = false;
             ExpenseTypeLbl.Visible = false;
 
-            foreach(var budget in m_SessionManager.GetActiveProfile().GetBudgets())
+            foreach (var budget in m_SessionManager.GetActiveProfile().GetBudgets())
             {
                 ExpenseTypeComboBox.Items.Add(budget.GetName());
             }
-
+            UpdateUI();
         }
+
+
+
+        private void UpdateUI()
+        {
+            // Update Progress Bar
+
+            // Update Transaction History ListBox
+            Transactions.Items.Clear();
+            foreach (var t in m_SessionManager.GetActiveProfile().GetTransactions())
+            {
+                Transactions.Items.Add(t.Statement(t.m_Type));
+            }
+        }
+
 
         //-----------------------------------------------------------------------------------------------
         // Controls
@@ -108,7 +135,7 @@ namespace BudgetPlanner
                 if (WithdrawAddSelect.Text == "Add Expense") //Withdraws from Balance
                 {
                     if (ExpenseTypeComboBox.Text == "")
-                    { 
+                    {
                         Logger.Warn("Please Enter an Expense Type");
                     }
                     else
@@ -165,7 +192,7 @@ namespace BudgetPlanner
 
         private void BackToSignInButton_Click(object sender, EventArgs e)
         {
-         //   m_Navigator.GoTo<LoginForm>();
+            //   m_Navigator.GoTo<LoginForm>();
         }
 
         private void WithdrawAddSelect_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,26 +217,56 @@ namespace BudgetPlanner
 
         }
 
+        private void ExpenseTypeLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BalanceLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //-----------------------------------------------------------------------------------------------
         // Private Utils
         //-----------------------------------------------------------------------------------------------
 
-        private void UpdateUI()
+        public void ApplyTheme(Theme InTheme)
         {
-            // Update Progress Bar
-            decimal currentBalance = m_SessionManager.GetActiveProfile().GetBalance();
-            int progressValue = (int)currentBalance;
-            if (progressValue < 0) progressValue = 0;
-            if (progressValue > SavingsProgressBar.Maximum) progressValue = SavingsProgressBar.Maximum;
-            SavingsProgressBar.Value = progressValue;
+            this.BackColor = InTheme.Background;
 
-            // Update Transaction History ListBox
-            Transactions.Items.Clear();
-            foreach (var t in m_SessionManager.GetActiveProfile().GetTransactions())
-            {
-                Transactions.Items.Add(t.Statement(t.m_Type));
-            }
+            ExpenseTypeLbl.BackColor = InTheme.Background;
+            ExpenseTypeLbl.ForeColor = InTheme.Text;
+
+            WithdrawAddSelect.BackColor = InTheme.Box;
+            WithdrawAddSelect.ForeColor = InTheme.Text;
+
+            EditBalanceLbl.BackColor = InTheme.Background;
+            EditBalanceLbl.ForeColor = InTheme.Text;
+
+            BalanceTxtBx.BackColor = InTheme.Box;
+            BalanceTxtBx.ForeColor = InTheme.Text;
+
+            AmountLbl.BackColor = InTheme.Background;
+            AmountLbl.ForeColor = InTheme.Text;
+
+            AmountTxtBx.BackColor = InTheme.Box;
+            AmountTxtBx.ForeColor = InTheme.Text;
+
+            ConfirmBttn.BackColor = InTheme.Accent;
+            ConfirmBttn.ForeColor = System.Drawing.Color.White;
+
+            Transactions.BackColor = InTheme.Box;
+            Transactions.ForeColor = InTheme.Text;
+
+            BalanceLbl.BackColor = InTheme.Background;
+            BalanceLbl.ForeColor = InTheme.Text;
+
+            ExpenseTypeComboBox.BackColor = InTheme.Box;
+            ExpenseTypeComboBox.ForeColor = InTheme.Text;
+
+            Title.BackColor = InTheme.Background;
+            Title.ForeColor = InTheme.Text;
         }
-
     }
 }

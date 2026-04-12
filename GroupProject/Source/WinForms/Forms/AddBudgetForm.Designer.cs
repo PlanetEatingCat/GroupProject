@@ -36,6 +36,7 @@
             label3 = new Label();
             LimitInput = new TextBox();
             DoneButton = new Button();
+            Title = new Label();
             BaseMainPanel.SuspendLayout();
             TitleBarPanel.SuspendLayout();
             SuspendLayout();
@@ -81,14 +82,22 @@
             // 
             // TitleBarPanel
             // 
+            TitleBarPanel.Controls.Add(Title);
             TitleBarPanel.Location = new Point(2, 2);
             TitleBarPanel.Size = new Size(414, 66);
+            TitleBarPanel.Controls.SetChildIndex(CloseButton, 0);
+            TitleBarPanel.Controls.SetChildIndex(MaxButton, 0);
+            TitleBarPanel.Controls.SetChildIndex(LeftMenuBarPanel, 0);
+            TitleBarPanel.Controls.SetChildIndex(MinButton, 0);
+            TitleBarPanel.Controls.SetChildIndex(RightMenuBarPanel, 0);
+            TitleBarPanel.Controls.SetChildIndex(Title, 0);
             // 
             // NameInput
             // 
+            NameInput.BorderStyle = BorderStyle.None;
             NameInput.Location = new Point(169, 21);
             NameInput.Name = "NameInput";
-            NameInput.Size = new Size(125, 27);
+            NameInput.Size = new Size(125, 20);
             NameInput.TabIndex = 0;
             // 
             // label1
@@ -111,9 +120,10 @@
             // 
             // CategoryInput
             // 
+            CategoryInput.BorderStyle = BorderStyle.None;
             CategoryInput.Location = new Point(169, 75);
             CategoryInput.Name = "CategoryInput";
-            CategoryInput.Size = new Size(125, 27);
+            CategoryInput.Size = new Size(125, 20);
             CategoryInput.TabIndex = 2;
             // 
             // label3
@@ -127,20 +137,34 @@
             // 
             // LimitInput
             // 
+            LimitInput.BorderStyle = BorderStyle.None;
             LimitInput.Location = new Point(169, 128);
             LimitInput.Name = "LimitInput";
-            LimitInput.Size = new Size(125, 27);
+            LimitInput.Size = new Size(125, 20);
             LimitInput.TabIndex = 4;
             // 
             // DoneButton
             // 
+            DoneButton.BackColor = SystemColors.MenuHighlight;
+            DoneButton.FlatAppearance.BorderSize = 0;
+            DoneButton.FlatStyle = FlatStyle.Flat;
             DoneButton.Location = new Point(152, 195);
             DoneButton.Name = "DoneButton";
             DoneButton.Size = new Size(152, 53);
             DoneButton.TabIndex = 6;
             DoneButton.Text = "Done";
-            DoneButton.UseVisualStyleBackColor = true;
+            DoneButton.UseVisualStyleBackColor = false;
             DoneButton.Click += button1_Click;
+            // 
+            // Title
+            // 
+            Title.AutoSize = true;
+            Title.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Title.Location = new Point(15, 14);
+            Title.Name = "Title";
+            Title.Size = new Size(138, 31);
+            Title.TabIndex = 8;
+            Title.Text = "Add Budget";
             // 
             // AddBudgetForm
             // 
@@ -154,6 +178,7 @@
             BaseMainPanel.ResumeLayout(false);
             BaseMainPanel.PerformLayout();
             TitleBarPanel.ResumeLayout(false);
+            TitleBarPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -166,5 +191,6 @@
         private Label label2;
         private TextBox CategoryInput;
         private Label label1;
+        private Label Title;
     }
 }

@@ -133,11 +133,11 @@ namespace BudgetPlanner
 
         public void AddTransaction(Transactions transaction)
         {
-            m_Transactions.Add(InTransaction);
+            m_Transactions.Add(transaction);
 
-            if (TryGetBudgetByName(InTransaction.GetExpenseType(), out var OutBudget))
+            if (TryGetBudgetByName(transaction.GetExpenseType(), out var OutBudget))
             {
-                OutBudget.SetCurrentSpentAmount(InTransaction.GetAmount());
+                OutBudget.SetCurrentSpentAmount(transaction.GetAmount());
             }
         }
 
@@ -194,7 +194,7 @@ namespace BudgetPlanner
         //Adds a subscription to the dictionary
         public void AddSubscription(string subName, string InType, DeductionFrequency frequency, decimal amount)
         {
-            Subscription newSub = new Subscription(frequency, amount, subName, InType);
+            Subscription newSub = new Subscription(frequency, amount, subName);
             AddSubscription(newSub);
             //this.count++;
         }
@@ -227,7 +227,7 @@ namespace BudgetPlanner
                 if (subName.ToLower().TrimEnd() == subscription.GetName().ToLower().TrimEnd())
                 {
                     GetSubscriptions().Remove(subscription);
-                    GetSubscriptions().Add(new Subscription(frequency, amount, subName, InType));
+                    GetSubscriptions().Add(new Subscription(frequency, amount, subName));
                     isFound = true;
                     return isFound;
                 }

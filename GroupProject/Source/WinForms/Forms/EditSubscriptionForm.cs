@@ -4,8 +4,9 @@ Purpose: Editing of user subscriptions
 Notes: WIP by Kiefer.
 ********************************************/
 using BudgetPlanner;
-using LiveChartsCore.Themes;
 using BudgetPlanner;
+using LiveChartsCore.Themes;
+using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +33,6 @@ namespace BudgetPlanner
             ApplyTheme(InThemeManager.GetCurrentTheme());
 
             m_EventDispatcher = InEventDispatcher;
-            m_SessionManager = InSessionManager;
 
             m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
         }
@@ -108,6 +108,7 @@ namespace BudgetPlanner
             Amount.ForeColor = Color.White;
             Freq.BackColor = InTheme.Background;
             Freq.ForeColor = Color.White;
+            TitleLabel.BackColor = InTheme.Surface;
             TitleLabel.ForeColor = Color.White;
 
             SubName.BackColor = InTheme.Box;

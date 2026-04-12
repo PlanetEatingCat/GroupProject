@@ -22,11 +22,22 @@ namespace BudgetPlanner
     public partial class IncomeScreen : UserControl
     {
         private SessionManager m_SessionManager;
+        private readonly EventDispatcher m_EventDispatcher;
+        private readonly ThemeManager m_ThemeManager;
 
-        public IncomeScreen(MainForm InMainForm, AccountTitle InAccountTitle, ScreenTitle InScreenTitle, SessionManager sessionManager)
+        public IncomeScreen(MainForm InMainForm, AccountTitle InAccountTitle, ScreenTitle InScreenTitle, 
+            SessionManager sessionManager, EventDispatcher InEventDispatcher,
+            ThemeManager InThemeManager)
         {
             InitializeComponent();
             m_SessionManager = sessionManager;
+            m_EventDispatcher = InEventDispatcher;
+            m_ThemeManager = InThemeManager;
+
+            ApplyTheme(InThemeManager.GetCurrentTheme());
+            m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
+
+
 
             InMainForm.SetRightMenuBar(InAccountTitle);
             InMainForm.SetLeftMenuBar(InScreenTitle);
@@ -35,6 +46,11 @@ namespace BudgetPlanner
             InScreenTitle.SetText("Income");
             CurrentIncomeLbl.Visible = false;
 
+        }
+
+        private void OnThemeChanged(ThemeChangedEvent InEvent)
+        {
+            ApplyTheme(InEvent.NewTheme);
         }
 
         private void IncomeScreen_Load(object sender, EventArgs e)
@@ -122,6 +138,39 @@ namespace BudgetPlanner
         private void IncomeLblSmall_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void ApplyTheme(Theme InTheme)
+        {
+            this.BackColor = InTheme.Background;
+
+            IncomeLbl.BackColor = InTheme.Background;
+            IncomeLbl.ForeColor = InTheme.Text;
+
+            AmountTxtBx.BackColor = InTheme.Box;
+            AmountTxtBx.ForeColor = InTheme.Text;
+
+            IncomeLblSmall.BackColor = InTheme.Background;
+            IncomeLblSmall.ForeColor = InTheme.Text;
+
+            NameTxtBx.BackColor = InTheme.Box;
+            NameTxtBx.ForeColor = InTheme.Text;
+
+
+            NameLbl.BackColor = InTheme.Background;
+            NameLbl.ForeColor = InTheme.Text;
+
+            FrequencyLbl.BackColor = InTheme.Background;
+            FrequencyLbl.ForeColor = InTheme.Text;
+
+            ConfirmButton.BackColor = InTheme.Accent;
+            ConfirmButton.ForeColor = Color.White;
+
+            CurrentIncomeLbl.BackColor = InTheme.Background;
+            CurrentIncomeLbl.ForeColor = InTheme.Text;
+
+            FrequencyComboBx.BackColor = InTheme.Box;
+            FrequencyComboBx.ForeColor = InTheme.Text;
         }
     }
 }

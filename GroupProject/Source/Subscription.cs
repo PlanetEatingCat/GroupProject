@@ -27,9 +27,8 @@ namespace BudgetPlanner
         DeductionFrequency m_Frequency;
         decimal m_ChargeAmount;
         string m_name;
-        string m_Type;
 
-        public Subscription(DeductionFrequency frequency, decimal amount, string name, string Type) 
+        public Subscription(DeductionFrequency frequency, decimal amount, string name) 
         { 
             this.m_Frequency = frequency;
             this.m_ChargeAmount = amount;
@@ -48,8 +47,5 @@ namespace BudgetPlanner
 
         public void SetName(string Name) { m_name = Name; }
 
-        public string GetType() { return m_Type; }
-
-        public void SetType(string InType) { m_Type = InType; }
     }
 }

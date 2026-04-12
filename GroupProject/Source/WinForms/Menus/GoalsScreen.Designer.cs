@@ -43,105 +43,135 @@
             // 
             // SavingsGoalBar
             // 
+            SavingsGoalBar.Anchor = AnchorStyles.None;
             SavingsGoalBar.ForeColor = Color.LawnGreen;
-            SavingsGoalBar.Location = new Point(258, 207);
+            SavingsGoalBar.Location = new Point(206, 166);
+            SavingsGoalBar.Margin = new Padding(2);
             SavingsGoalBar.Name = "SavingsGoalBar";
-            SavingsGoalBar.Size = new Size(650, 74);
+            SavingsGoalBar.Size = new Size(520, 59);
             SavingsGoalBar.TabIndex = 0;
             // 
             // ProgressTitle
             // 
+            ProgressTitle.Anchor = AnchorStyles.Top;
             ProgressTitle.AutoSize = true;
             ProgressTitle.Font = new Font("Segoe UI", 20F);
-            ProgressTitle.Location = new Point(469, 52);
+            ProgressTitle.Location = new Point(357, 41);
+            ProgressTitle.Margin = new Padding(2, 0, 2, 0);
             ProgressTitle.Name = "ProgressTitle";
-            ProgressTitle.Size = new Size(265, 54);
+            ProgressTitle.Size = new Size(223, 46);
             ProgressTitle.TabIndex = 1;
             ProgressTitle.Text = "Savings Goals";
             // 
             // SavingsList
             // 
+            SavingsList.Anchor = AnchorStyles.None;
+            SavingsList.BorderStyle = BorderStyle.FixedSingle;
             SavingsList.FormattingEnabled = true;
-            SavingsList.ItemHeight = 25;
-            SavingsList.Location = new Point(258, 339);
+            SavingsList.Location = new Point(206, 271);
+            SavingsList.Margin = new Padding(2);
             SavingsList.Name = "SavingsList";
-            SavingsList.Size = new Size(650, 279);
+            SavingsList.Size = new Size(521, 222);
             SavingsList.TabIndex = 2;
             // 
             // GoalAmount
             // 
+            GoalAmount.Anchor = AnchorStyles.None;
             GoalAmount.AutoSize = true;
-            GoalAmount.Location = new Point(303, 154);
+            GoalAmount.Location = new Point(242, 123);
+            GoalAmount.Margin = new Padding(2, 0, 2, 0);
             GoalAmount.Name = "GoalAmount";
-            GoalAmount.Size = new Size(122, 25);
+            GoalAmount.Size = new Size(100, 20);
             GoalAmount.TabIndex = 3;
             GoalAmount.Text = "Goal Amount:";
             GoalAmount.Click += GoalAmount_Click;
             // 
             // GoalAmountEntry
             // 
-            GoalAmountEntry.Location = new Point(441, 151);
+            GoalAmountEntry.Anchor = AnchorStyles.None;
+            GoalAmountEntry.BorderStyle = BorderStyle.None;
+            GoalAmountEntry.Location = new Point(346, 123);
+            GoalAmountEntry.Margin = new Padding(2);
             GoalAmountEntry.Name = "GoalAmountEntry";
-            GoalAmountEntry.Size = new Size(150, 31);
+            GoalAmountEntry.Size = new Size(121, 20);
             GoalAmountEntry.TabIndex = 4;
             // 
             // ConfirmButton
             // 
-            ConfirmButton.Location = new Point(622, 149);
+            ConfirmButton.Anchor = AnchorStyles.None;
+            ConfirmButton.BackColor = SystemColors.MenuHighlight;
+            ConfirmButton.FlatAppearance.BorderSize = 0;
+            ConfirmButton.FlatStyle = FlatStyle.Flat;
+            ConfirmButton.Location = new Point(490, 120);
+            ConfirmButton.Margin = new Padding(2);
             ConfirmButton.Name = "ConfirmButton";
-            ConfirmButton.Size = new Size(112, 34);
+            ConfirmButton.Size = new Size(90, 27);
             ConfirmButton.TabIndex = 5;
             ConfirmButton.Text = "Confirm";
-            ConfirmButton.UseVisualStyleBackColor = true;
+            ConfirmButton.UseVisualStyleBackColor = false;
             ConfirmButton.Click += ConfirmButton_Click;
             // 
             // ProgressAmount
             // 
+            ProgressAmount.Anchor = AnchorStyles.None;
             ProgressAmount.AutoSize = true;
-            ProgressAmount.Location = new Point(258, 298);
+            ProgressAmount.Location = new Point(206, 238);
+            ProgressAmount.Margin = new Padding(2, 0, 2, 0);
             ProgressAmount.Name = "ProgressAmount";
-            ProgressAmount.Size = new Size(151, 25);
+            ProgressAmount.Size = new Size(122, 20);
             ProgressAmount.TabIndex = 6;
             ProgressAmount.Text = "Progress Amount";
             // 
             // SavingsGoalAmount
             // 
+            SavingsGoalAmount.Anchor = AnchorStyles.None;
             SavingsGoalAmount.AutoSize = true;
-            SavingsGoalAmount.Location = new Point(688, 298);
+            SavingsGoalAmount.Location = new Point(550, 238);
+            SavingsGoalAmount.Margin = new Padding(2, 0, 2, 0);
             SavingsGoalAmount.Name = "SavingsGoalAmount";
-            SavingsGoalAmount.Size = new Size(118, 25);
+            SavingsGoalAmount.Size = new Size(97, 20);
             SavingsGoalAmount.TabIndex = 7;
             SavingsGoalAmount.Text = "Goal Amount";
             // 
             // ConfirmAddBtn
             // 
-            ConfirmAddBtn.Location = new Point(515, 703);
+            ConfirmAddBtn.Anchor = AnchorStyles.None;
+            ConfirmAddBtn.BackColor = SystemColors.MenuHighlight;
+            ConfirmAddBtn.FlatAppearance.BorderSize = 0;
+            ConfirmAddBtn.FlatStyle = FlatStyle.Flat;
+            ConfirmAddBtn.Location = new Point(412, 562);
+            ConfirmAddBtn.Margin = new Padding(2);
             ConfirmAddBtn.Name = "ConfirmAddBtn";
-            ConfirmAddBtn.Size = new Size(112, 34);
+            ConfirmAddBtn.Size = new Size(90, 27);
             ConfirmAddBtn.TabIndex = 8;
             ConfirmAddBtn.Text = "Confirm";
-            ConfirmAddBtn.UseVisualStyleBackColor = true;
+            ConfirmAddBtn.UseVisualStyleBackColor = false;
             ConfirmAddBtn.Click += ConfirmAddBtn_Click;
             // 
             // AmountLabel
             // 
+            AmountLabel.Anchor = AnchorStyles.None;
             AmountLabel.AutoSize = true;
-            AmountLabel.Location = new Point(501, 632);
+            AmountLabel.Location = new Point(401, 506);
+            AmountLabel.Margin = new Padding(2, 0, 2, 0);
             AmountLabel.Name = "AmountLabel";
-            AmountLabel.Size = new Size(139, 25);
+            AmountLabel.Size = new Size(114, 20);
             AmountLabel.TabIndex = 9;
             AmountLabel.Text = "Amount To Add";
             // 
             // AmountToAdd
             // 
-            AmountToAdd.Location = new Point(501, 666);
+            AmountToAdd.Anchor = AnchorStyles.None;
+            AmountToAdd.BorderStyle = BorderStyle.None;
+            AmountToAdd.Location = new Point(401, 533);
+            AmountToAdd.Margin = new Padding(2);
             AmountToAdd.Name = "AmountToAdd";
-            AmountToAdd.Size = new Size(139, 31);
+            AmountToAdd.Size = new Size(112, 20);
             AmountToAdd.TabIndex = 10;
             // 
             // GoalsScreen
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             Controls.Add(AmountToAdd);
@@ -157,7 +187,7 @@
             Controls.Add(SavingsGoalBar);
             Margin = new Padding(2);
             Name = "GoalsScreen";
-            Size = new Size(1234, 810);
+            Size = new Size(987, 648);
             ResumeLayout(false);
             PerformLayout();
         }

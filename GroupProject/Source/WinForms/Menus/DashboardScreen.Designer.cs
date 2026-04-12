@@ -28,16 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SubscriptionInfoPanel = new Panel();
-            SubscriptionTotal = new Label();
-            DollarLabel1 = new Label();
-            SubscriptionInfoLabel = new Label();
-            SubscriptionPlot = new ScottPlot.WinForms.FormsPlot();
-            IncomeTotal = new Label();
-            IncomeInfoLabel = new Label();
-            IncomePlot = new ScottPlot.WinForms.FormsPlot();
-            IncomeInfoPanel = new Panel();
-            DollarLabel2 = new Label();
             PlanPanel = new FlowLayoutPanel();
             panel1 = new Panel();
             PlanHeaderPanel = new Panel();
@@ -47,141 +37,17 @@
             TransactionPanel = new FlowLayoutPanel();
             TransactionHeaderPanel = new Panel();
             TransactionsTitle = new Label();
-            SubscriptionInfoPanel.SuspendLayout();
-            IncomeInfoPanel.SuspendLayout();
-            PlanPanel.SuspendLayout();
             panel1.SuspendLayout();
             PlanHeaderPanel.SuspendLayout();
             panel2.SuspendLayout();
             TransactionHeaderPanel.SuspendLayout();
             SuspendLayout();
             // 
-            // SubscriptionInfoPanel
-            // 
-            SubscriptionInfoPanel.BackColor = SystemColors.ActiveCaption;
-            SubscriptionInfoPanel.BorderStyle = BorderStyle.FixedSingle;
-            SubscriptionInfoPanel.Controls.Add(SubscriptionTotal);
-            SubscriptionInfoPanel.Controls.Add(DollarLabel1);
-            SubscriptionInfoPanel.Controls.Add(SubscriptionInfoLabel);
-            SubscriptionInfoPanel.Controls.Add(SubscriptionPlot);
-            SubscriptionInfoPanel.Location = new Point(39, 22);
-            SubscriptionInfoPanel.Margin = new Padding(2);
-            SubscriptionInfoPanel.Name = "SubscriptionInfoPanel";
-            SubscriptionInfoPanel.Size = new Size(218, 134);
-            SubscriptionInfoPanel.TabIndex = 0;
-            // 
-            // SubscriptionTotal
-            // 
-            SubscriptionTotal.AutoSize = true;
-            SubscriptionTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SubscriptionTotal.Location = new Point(38, 74);
-            SubscriptionTotal.Margin = new Padding(2, 0, 2, 0);
-            SubscriptionTotal.Name = "SubscriptionTotal";
-            SubscriptionTotal.Size = new Size(48, 28);
-            SubscriptionTotal.TabIndex = 2;
-            SubscriptionTotal.Text = "672";
-            // 
-            // DollarLabel1
-            // 
-            DollarLabel1.AutoSize = true;
-            DollarLabel1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            DollarLabel1.Location = new Point(18, 69);
-            DollarLabel1.Margin = new Padding(2, 0, 2, 0);
-            DollarLabel1.Name = "DollarLabel1";
-            DollarLabel1.Size = new Size(28, 32);
-            DollarLabel1.TabIndex = 1;
-            DollarLabel1.Text = "$";
-            // 
-            // SubscriptionInfoLabel
-            // 
-            SubscriptionInfoLabel.AutoSize = true;
-            SubscriptionInfoLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SubscriptionInfoLabel.Location = new Point(14, 14);
-            SubscriptionInfoLabel.Margin = new Padding(2, 0, 2, 0);
-            SubscriptionInfoLabel.Name = "SubscriptionInfoLabel";
-            SubscriptionInfoLabel.Size = new Size(139, 28);
-            SubscriptionInfoLabel.TabIndex = 0;
-            SubscriptionInfoLabel.Text = "Subscriptions";
-            // 
-            // SubscriptionPlot
-            // 
-            SubscriptionPlot.DisplayScale = 1.5F;
-            SubscriptionPlot.Location = new Point(88, 33);
-            SubscriptionPlot.Margin = new Padding(2);
-            SubscriptionPlot.Name = "SubscriptionPlot";
-            SubscriptionPlot.Size = new Size(130, 121);
-            SubscriptionPlot.TabIndex = 3;
-            // 
-            // planCategoryEdit2
-            // 
-         
-            // 
-            // planCategoryEdit1
-            // 
- 
-            // IncomeTotal
-            // 
-            IncomeTotal.AutoSize = true;
-            IncomeTotal.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            IncomeTotal.Location = new Point(38, 74);
-            IncomeTotal.Margin = new Padding(2, 0, 2, 0);
-            IncomeTotal.Name = "IncomeTotal";
-            IncomeTotal.Size = new Size(48, 28);
-            IncomeTotal.TabIndex = 2;
-            IncomeTotal.Text = "672";
-            // 
-            // IncomeInfoLabel
-            // 
-            IncomeInfoLabel.AutoSize = true;
-            IncomeInfoLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            IncomeInfoLabel.Location = new Point(14, 14);
-            IncomeInfoLabel.Margin = new Padding(2, 0, 2, 0);
-            IncomeInfoLabel.Name = "IncomeInfoLabel";
-            IncomeInfoLabel.Size = new Size(81, 28);
-            IncomeInfoLabel.TabIndex = 0;
-            IncomeInfoLabel.Text = "Income";
-            // 
-            // IncomePlot
-            // 
-            IncomePlot.DisplayScale = 1.5F;
-            IncomePlot.Location = new Point(88, 33);
-            IncomePlot.Margin = new Padding(2);
-            IncomePlot.Name = "IncomePlot";
-            IncomePlot.Size = new Size(130, 121);
-            IncomePlot.TabIndex = 3;
-            // 
-            // IncomeInfoPanel
-            // 
-            IncomeInfoPanel.BackColor = SystemColors.ActiveCaption;
-            IncomeInfoPanel.BorderStyle = BorderStyle.FixedSingle;
-            IncomeInfoPanel.Controls.Add(IncomeTotal);
-            IncomeInfoPanel.Controls.Add(DollarLabel2);
-            IncomeInfoPanel.Controls.Add(IncomeInfoLabel);
-            IncomeInfoPanel.Controls.Add(IncomePlot);
-            IncomeInfoPanel.Location = new Point(292, 22);
-            IncomeInfoPanel.Margin = new Padding(2);
-            IncomeInfoPanel.Name = "IncomeInfoPanel";
-            IncomeInfoPanel.Size = new Size(218, 134);
-            IncomeInfoPanel.TabIndex = 2;
-            // 
-            // DollarLabel2
-            // 
-            DollarLabel2.AutoSize = true;
-            DollarLabel2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            DollarLabel2.Location = new Point(18, 69);
-            DollarLabel2.Margin = new Padding(2, 0, 2, 0);
-            DollarLabel2.Name = "DollarLabel2";
-            DollarLabel2.Size = new Size(28, 32);
-            DollarLabel2.TabIndex = 1;
-            DollarLabel2.Text = "$";
-            // 
             // PlanPanel
             // 
+            PlanPanel.Anchor = AnchorStyles.None;
             PlanPanel.AutoScroll = true;
             PlanPanel.BackColor = SystemColors.ActiveCaption;
-            PlanPanel.Controls.Add(planCategoryEdit2);
-            PlanPanel.Controls.Add(planCategoryEdit1);
-            PlanPanel.Dock = DockStyle.Fill;
             PlanPanel.FlowDirection = FlowDirection.TopDown;
             PlanPanel.Location = new Point(0, 39);
             PlanPanel.Name = "PlanPanel";
@@ -201,11 +67,11 @@
             // 
             // PlanHeaderPanel
             // 
+            PlanHeaderPanel.Anchor = AnchorStyles.None;
             PlanHeaderPanel.BackColor = SystemColors.MenuHighlight;
             PlanHeaderPanel.BorderStyle = BorderStyle.FixedSingle;
             PlanHeaderPanel.Controls.Add(AddBudgetButton);
             PlanHeaderPanel.Controls.Add(BudgetsLabel);
-            PlanHeaderPanel.Dock = DockStyle.Top;
             PlanHeaderPanel.Location = new Point(0, 0);
             PlanHeaderPanel.Name = "PlanHeaderPanel";
             PlanHeaderPanel.Size = new Size(439, 39);
@@ -250,8 +116,8 @@
             // 
             // TransactionPanel
             // 
+            TransactionPanel.Anchor = AnchorStyles.None;
             TransactionPanel.BackColor = SystemColors.ActiveCaption;
-            TransactionPanel.Dock = DockStyle.Fill;
             TransactionPanel.Location = new Point(0, 40);
             TransactionPanel.Margin = new Padding(2);
             TransactionPanel.Name = "TransactionPanel";
@@ -272,6 +138,7 @@
             // 
             // TransactionsTitle
             // 
+            TransactionsTitle.Anchor = AnchorStyles.None;
             TransactionsTitle.AutoSize = true;
             TransactionsTitle.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             TransactionsTitle.ForeColor = SystemColors.Control;
@@ -287,16 +154,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(IncomeInfoPanel);
-            Controls.Add(SubscriptionInfoPanel);
             Name = "DashboardScreen";
             Size = new Size(987, 816);
             Load += DashboardScreen_Load;
-            SubscriptionInfoPanel.ResumeLayout(false);
-            SubscriptionInfoPanel.PerformLayout();
-            IncomeInfoPanel.ResumeLayout(false);
-            IncomeInfoPanel.PerformLayout();
-            PlanPanel.ResumeLayout(false);
             panel1.ResumeLayout(false);
             PlanHeaderPanel.ResumeLayout(false);
             PlanHeaderPanel.PerformLayout();
@@ -307,17 +167,6 @@
         }
 
         #endregion
-
-        private Panel SubscriptionInfoPanel;
-        private Label SubscriptionInfoLabel;
-        private Label SubscriptionTotal;
-        private Label DollarLabel1;
-        private ScottPlot.WinForms.FormsPlot SubscriptionPlot;
-        private Label IncomeTotal;
-        private Label IncomeInfoLabel;
-        private ScottPlot.WinForms.FormsPlot IncomePlot;
-        private Panel IncomeInfoPanel;
-        private Label DollarLabel2;
         private BudgetEdit planCategoryEdit2;
         private BudgetEdit planCategoryEdit1;
         private FlowLayoutPanel PlanPanel;

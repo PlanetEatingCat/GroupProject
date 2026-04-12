@@ -58,7 +58,7 @@ namespace BudgetPlanner
             // Initialize themes
             Themes.Initialize();
             var themeManager = provider.GetService<ThemeManager>();
-            themeManager.SetTheme("Deep");
+            themeManager.SetTheme("SnhuBlue");
 
             // Winforms initialization
             ApplicationConfiguration.Initialize();

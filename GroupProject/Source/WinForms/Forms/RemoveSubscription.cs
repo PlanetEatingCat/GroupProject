@@ -19,16 +19,29 @@ using System.Windows.Forms;
 
 namespace BudgetPlanner
 {
-    public partial class RemoveSubscription : Form
+    public partial class RemoveSubscription : ModernForm
     {
-        private readonly SessionManager m_SessionManager; 
+        private readonly SessionManager m_SessionManager;
+        private readonly EventDispatcher m_EventDispatcher;
 
-        public RemoveSubscription(SessionManager InSessionManager)
+
+        public RemoveSubscription(SessionManager InSessionManager, EventDispatcher InEventDispatcher, ThemeManager InThemeManager)
         {
             InitializeComponent();
 
             m_SessionManager = InSessionManager;
+            ApplyTheme(InThemeManager.GetCurrentTheme());
+
+            m_EventDispatcher = InEventDispatcher;
+
+            m_EventDispatcher.Subscribe<ThemeChangedEvent>(OnThemeChanged);
         }
+
+        private void OnThemeChanged(ThemeChangedEvent InEvent)
+        {
+            ApplyTheme(InEvent.NewTheme);
+        }
+
 
         private void ConfirmRemove_Click(object sender, EventArgs e)
         {
@@ -60,5 +73,25 @@ namespace BudgetPlanner
                 SubscriptionScreen.instance.GetEditSubscription().Enabled = true;
             }
         }
+        public override void ApplyTheme(Theme InTheme)
+        {
+            this.BackColor = InTheme.Background;
+
+            BaseMainPanel.BackColor = InTheme.Background;
+            TitleBarPanel.BackColor = InTheme.Surface;
+            RightMenuBarPanel.BackColor = InTheme.Surface;
+            MinButton.BackColor = InTheme.Surface;
+            MaxButton.BackColor = InTheme.Surface;
+            CloseButton.BackColor = InTheme.Surface;
+
+            SubRemoveText.BackColor = InTheme.Box; 
+            SubRemoveText.ForeColor = InTheme.Text;  
+            ConfirmRemove.BackColor = InTheme.Accent; 
+            ConfirmRemove.ForeColor = Color.White; 
+            label1.BackColor = InTheme.Surface; 
+            label1.ForeColor = InTheme.Text;
+
+       }
+
     }
 }

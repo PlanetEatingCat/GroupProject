@@ -35,6 +35,8 @@ namespace BudgetPlanner
             Dark.SoulAccent = Color.FromArgb(227, 132, 236);
             Dark.Extra = Color.FromArgb(255, 190, 75);
             Dark.Box = Color.FromArgb(74, 53, 124);
+            Dark.Text = Color.White;
+
 
             SnhuBlue = new Theme();
             SnhuBlue.Name = "SnhuBlue";
@@ -49,6 +51,8 @@ namespace BudgetPlanner
             SnhuBlue.SoulAccent = Color.FromArgb(227, 132, 236);
             SnhuBlue.Extra = Color.FromArgb(255, 190, 75);
             SnhuBlue.Box = Color.FromArgb(153, 180, 209);
+            SnhuBlue.Text = Color.Black;
+
 
 
             Deep = new Theme();
@@ -64,6 +68,7 @@ namespace BudgetPlanner
             Deep.SoulAccent = Color.FromArgb(227, 132, 236);
             Deep.Extra = Color.FromArgb(255, 190, 75);
             Deep.Box = Color.FromArgb(62, 64, 89);
+            Deep.Text = Color.White;
             // Dark.Background;
         }
 

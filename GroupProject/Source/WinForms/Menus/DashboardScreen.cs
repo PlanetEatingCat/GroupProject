@@ -85,7 +85,7 @@ namespace BudgetPlanner
 
         private void AddBudgetButton_Click(object InSender, EventArgs InEventArgs)
         {
-            var addBudgetForm = new AddBudgetForm(m_SessionManager, this);
+            var addBudgetForm = new AddBudgetForm(m_SessionManager, this, m_EventDispatcher, m_ThemeManager);
             addBudgetForm.ShowDialog();
         }
 
@@ -138,7 +138,7 @@ namespace BudgetPlanner
                 // Create new budget edit(s)  
                 foreach (var budget in budgetCategory.Value)
                 {
-                    var budgetWidget = new BudgetEdit(m_SessionManager, this);
+                    var budgetWidget = new BudgetEdit(m_SessionManager, this, m_EventDispatcher, m_ThemeManager);
                     budgetWidget.UpdateTheme(currentTheme);
                     budgetWidget.SetValue(budget.GetCurrentSpentAmount());
                     budgetWidget.SetMaxValue(budget.GetMaxSpentAmount());
@@ -158,30 +158,6 @@ namespace BudgetPlanner
             TransactionPanel.BackColor = InTheme.Surface;
             TransactionHeaderPanel.BackColor = InTheme.Surface;
             TransactionsTitle.BackColor = InTheme.Surface;
-
-            DollarLabel1.ForeColor = System.Drawing.Color.White;
-            DollarLabel1.BackColor = InTheme.Surface;
-
-            SubscriptionInfoPanel.BackColor = InTheme.Surface;
-            SubscriptionInfoLabel.BackColor = InTheme.Surface;
-            SubscriptionInfoLabel.ForeColor = System.Drawing.Color.White;
-            SubscriptionTotal.ForeColor = System.Drawing.Color.White;
-            SubscriptionTotal.BackColor = InTheme.Surface;
-
-            SubscriptionPlot.Plot.FigureBackground.Color = ScottPlot.Color.FromSDColor(InTheme.Surface);
-            SubscriptionPlot.Plot.DataBackground.Color = ScottPlot.Color.FromSDColor(InTheme.Surface);
-
-            DollarLabel2.ForeColor = System.Drawing.Color.White;
-            DollarLabel2.BackColor = InTheme.Surface;
-
-            IncomeInfoPanel.BackColor = InTheme.Surface;
-            IncomeInfoLabel.BackColor = InTheme.Surface;
-            IncomeInfoLabel.ForeColor = System.Drawing.Color.White;
-            IncomeTotal.ForeColor = System.Drawing.Color.White;
-            IncomeTotal.BackColor = InTheme.Surface;
-
-            IncomePlot.Plot.FigureBackground.Color = ScottPlot.Color.FromSDColor(InTheme.Surface);
-            IncomePlot.Plot.DataBackground.Color = ScottPlot.Color.FromSDColor(InTheme.Surface);
 
             foreach (var control in PlanPanel.Controls)
             {

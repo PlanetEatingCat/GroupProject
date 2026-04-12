@@ -41,6 +41,7 @@
             // 
             // IncomeLbl
             // 
+            IncomeLbl.Anchor = AnchorStyles.Top;
             IncomeLbl.AutoSize = true;
             IncomeLbl.Font = new Font("Segoe UI", 24F);
             IncomeLbl.Location = new Point(460, 99);
@@ -51,13 +52,16 @@
             // 
             // AmountTxtBx
             // 
+            AmountTxtBx.Anchor = AnchorStyles.None;
+            AmountTxtBx.BorderStyle = BorderStyle.None;
             AmountTxtBx.Location = new Point(237, 204);
             AmountTxtBx.Name = "AmountTxtBx";
-            AmountTxtBx.Size = new Size(125, 27);
+            AmountTxtBx.Size = new Size(125, 20);
             AmountTxtBx.TabIndex = 1;
             // 
             // IncomeLblSmall
             // 
+            IncomeLblSmall.Anchor = AnchorStyles.None;
             IncomeLblSmall.AutoSize = true;
             IncomeLblSmall.Location = new Point(273, 262);
             IncomeLblSmall.Name = "IncomeLblSmall";
@@ -68,13 +72,16 @@
             // 
             // NameTxtBx
             // 
+            NameTxtBx.Anchor = AnchorStyles.None;
+            NameTxtBx.BorderStyle = BorderStyle.None;
             NameTxtBx.Location = new Point(710, 204);
             NameTxtBx.Name = "NameTxtBx";
-            NameTxtBx.Size = new Size(125, 27);
+            NameTxtBx.Size = new Size(125, 20);
             NameTxtBx.TabIndex = 3;
             // 
             // NameLbl
             // 
+            NameLbl.Anchor = AnchorStyles.None;
             NameLbl.AutoSize = true;
             NameLbl.Location = new Point(746, 262);
             NameLbl.Name = "NameLbl";
@@ -84,6 +91,7 @@
             // 
             // FrequencyLbl
             // 
+            FrequencyLbl.Anchor = AnchorStyles.None;
             FrequencyLbl.AutoSize = true;
             FrequencyLbl.Location = new Point(499, 262);
             FrequencyLbl.Name = "FrequencyLbl";
@@ -93,16 +101,21 @@
             // 
             // ConfirmButton
             // 
+            ConfirmButton.Anchor = AnchorStyles.None;
+            ConfirmButton.BackColor = SystemColors.MenuHighlight;
+            ConfirmButton.FlatAppearance.BorderSize = 0;
+            ConfirmButton.FlatStyle = FlatStyle.Flat;
             ConfirmButton.Location = new Point(490, 333);
             ConfirmButton.Name = "ConfirmButton";
             ConfirmButton.Size = new Size(94, 29);
             ConfirmButton.TabIndex = 7;
             ConfirmButton.Text = "Confirm";
-            ConfirmButton.UseVisualStyleBackColor = true;
+            ConfirmButton.UseVisualStyleBackColor = false;
             ConfirmButton.Click += ConfirmButton_Click;
             // 
             // CurrentIncomeLbl
             // 
+            CurrentIncomeLbl.Anchor = AnchorStyles.None;
             CurrentIncomeLbl.AutoSize = true;
             CurrentIncomeLbl.Location = new Point(411, 409);
             CurrentIncomeLbl.Name = "CurrentIncomeLbl";
@@ -112,7 +125,9 @@
             // 
             // FrequencyComboBx
             // 
+            FrequencyComboBx.Anchor = AnchorStyles.None;
             FrequencyComboBx.AutoCompleteCustomSource.AddRange(new string[] { "Daily", "Monthly", "EveryTwoMonths", "Yearly" });
+            FrequencyComboBx.FlatStyle = FlatStyle.Flat;
             FrequencyComboBx.FormattingEnabled = true;
             FrequencyComboBx.Items.AddRange(new object[] { "Daily", "Monthly", "EveryTwoMonths", "Yearly" });
             FrequencyComboBx.Location = new Point(462, 204);

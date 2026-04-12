@@ -14,6 +14,8 @@ namespace BudgetPlanner {
     {
         private readonly SessionManager m_SessionManager;
         private readonly DashboardScreen m_DashboardScreen;
+        private readonly EventDispatcher m_EventDispatcher;
+        private readonly ThemeManager m_ThemeManager;
 
         private decimal m_CurrentValue = 0;
         private decimal m_MaxValue = 100;
@@ -26,12 +28,14 @@ namespace BudgetPlanner {
         
         }
 
-        public BudgetEdit(SessionManager InSessionManager, DashboardScreen InDashboardScreen)
+        public BudgetEdit(SessionManager InSessionManager, DashboardScreen InDashboardScreen, EventDispatcher InEventDispatcher, ThemeManager InThemeManager)
         {
             InitializeComponent();
 
             m_SessionManager = InSessionManager;
             m_DashboardScreen = InDashboardScreen;
+            m_ThemeManager = InThemeManager;
+            m_EventDispatcher = InEventDispatcher;
         }
 
 
@@ -103,7 +107,7 @@ namespace BudgetPlanner {
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            var editForm = new EditBudgetForm(m_SessionManager, this, m_DashboardScreen);
+            var editForm = new EditBudgetForm(m_SessionManager, this, m_DashboardScreen, m_EventDispatcher, m_ThemeManager);
             editForm.ShowDialog();
         }
     }

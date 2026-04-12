@@ -52,9 +52,6 @@
     <Compile Update="Source\WinForms\Menus\ExpenseScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Source\WinForms\Menus\SubscriptionManagerForm.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="Source\WinForms\Menus\ThemeScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
