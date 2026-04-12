@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: GoalsScreen.cs
 Purpose: Add, remove, and edit income
-Notes: WIP by Ella, Income does not loop with frequency yet and currently only occurs once.
+Notes: Authored by Ella
 ********************************************/
 
 using System;
@@ -20,6 +20,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace BudgetPlanner
 {
     public partial class IncomeScreen : UserControl
+        //EP Start
     {
         private SessionManager m_SessionManager;
         private readonly EventDispatcher m_EventDispatcher;
@@ -60,10 +61,12 @@ namespace BudgetPlanner
         public decimal amount;
         public string name;
         IncomeFrequency frequency;
+		public DateTime StartDate { get; set; }
+		public DateTime EndDate { get; set; }
 
 
 
-        bool nameflag = false;
+		bool nameflag = false;
         bool frequencyflag = false;
         bool amountflag = false;
 
@@ -120,7 +123,7 @@ namespace BudgetPlanner
             if (nameflag == true && frequencyflag == true && amountflag == true)
             {
                 IncomeSource income = new
-                IncomeSource(amount, frequency, name, m_SessionManager);
+                IncomeSource(amount, frequency, name, m_SessionManager, StartDate, EndDate);
                 CurrentIncomeLbl.Visible = true;
                 if (FrequencyComboBx.Text != "EveryTwoMonths")
                 {
@@ -132,6 +135,8 @@ namespace BudgetPlanner
                 }
             }
         }
+
+        //EP end
 
 
 
@@ -174,3 +179,4 @@ namespace BudgetPlanner
         }
     }
 }
+
