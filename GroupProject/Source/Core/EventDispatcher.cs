@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: EventDispatcher.cs
 Purpose: Event system
-Notes: 
+Notes: Authored by Daniel
 ********************************************/
 
 using System.Reflection;

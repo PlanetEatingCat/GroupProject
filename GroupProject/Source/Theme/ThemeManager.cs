@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: ThemeManager.cs
 Purpose: ThemeManager for the most exquisite app
-Notes: WIP
+Notes: Authored by Daniel
 ********************************************/
 
 using LiveChartsCore.SkiaSharpView;

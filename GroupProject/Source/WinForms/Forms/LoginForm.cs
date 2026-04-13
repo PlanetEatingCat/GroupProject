@@ -1,4 +1,10 @@
-﻿using BudgetPlanner;
+﻿/********************************************
+Name: LoginForm.cs
+Purpose: logging in
+Notes: Authored by Daniel.
+********************************************/
+
+using BudgetPlanner;
 using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;

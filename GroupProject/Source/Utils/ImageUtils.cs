@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: ImageUtils.cs
 Purpose: Utilities for dealing with embedded images
-Notes: 
+Notes: Authored by Daniel
 ********************************************/
 
 using System;

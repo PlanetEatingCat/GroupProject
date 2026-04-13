@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: TransactionView.cs
+Purpose: A special control for visualizing transactions in the home screen
+Notes: Authored by Daniel.
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

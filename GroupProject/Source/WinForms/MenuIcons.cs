@@ -1,4 +1,10 @@
-﻿using FontAwesome.Sharp;
+﻿/********************************************
+Name: MenuIcons.cs
+Purpose: Convenience 
+Notes: Authored by Daniel. 
+********************************************/
+
+using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -72,7 +72,12 @@ namespace BudgetPlanner
 
 				{
 					activeProfile.Deposit(m_Amount);
-				}
+
+					// DC
+                    Transactions temp = new Transactions(activeProfile, m_Amount, "Deposit", "Income");
+                    activeProfile.AddTransaction(temp);
+					//
+                }
 			}
 			else
 			{
@@ -111,9 +116,11 @@ namespace BudgetPlanner
 			{
 				activeProfile.Deposit(m_Amount);
 
-
-
-			}
+				// DC
+                Transactions temp = new Transactions(activeProfile, m_Amount, "Deposit", "Income");
+                activeProfile.AddTransaction(temp);
+				//
+            }
 
 
 		

@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: ClientApplication.cs
 Purpose: Default themes for the most exquisite app
-Notes: WIP.
+Notes: Authored by Daniel
 ********************************************/
 
 using BudgetPlanner;

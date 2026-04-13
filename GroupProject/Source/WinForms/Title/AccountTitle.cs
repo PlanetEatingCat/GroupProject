@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: RightMenuBar.cs
 Purpose: Menu bar in the right of the title bar
-Notes: Work in Progress. 
+Notes: Authored by Daniel
 ********************************************/
 using GroupProject.Source.WinForms.Menus;
 using System;

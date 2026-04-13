@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: ThemeScreen.cs
 Purpose: Create, select, and edit themes
-Notes: Work in Progress. 
+Notes: Authored by Daniel
 ********************************************/
 
 using BudgetPlanner;

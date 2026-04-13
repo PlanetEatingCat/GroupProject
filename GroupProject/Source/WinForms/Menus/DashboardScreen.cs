@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: DashboardScreen.cs
 Purpose: The darshboard to display important stats and info
-Notes: WIP. 
+Notes: Authored by Daniel
 ********************************************/
 
 using ScottPlot;

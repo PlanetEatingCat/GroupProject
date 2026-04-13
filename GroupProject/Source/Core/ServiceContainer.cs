@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: AppServices.cs
 Purpose: Dependency container for Dependencies Injection
-Notes: WIP. 
+Notes: Authored by Daniel
 References: https://medium.com/@bhargavkoya56/crafting-your-own-dependency-injection-container-in-c-a-developers-journey-bd255633dd5f
 ********************************************/
 

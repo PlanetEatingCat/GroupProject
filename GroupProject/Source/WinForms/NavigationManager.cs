@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: NavigationManager.cs
+Purpose: Switch between screens
+Notes: Authored by Daniel. 
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

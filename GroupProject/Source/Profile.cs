@@ -3,6 +3,7 @@ Name: class BankAccount
 Purpose: to encapsulate functionality of a bank account
 Notes: Everything that we need to save in a database or serialize can live here; 
 This is where the user data is stored at runtime
+Notes: Authored by everyone
 ********************************************/
 
 using System;

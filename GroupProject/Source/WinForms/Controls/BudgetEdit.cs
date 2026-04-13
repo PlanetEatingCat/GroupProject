@@ -1,4 +1,10 @@
-﻿using BudgetPlanner;
+﻿/********************************************
+Name: BudgetEdit.cs
+Purpose: Display user budgets
+Notes: Authored by Daniel
+********************************************/
+
+using BudgetPlanner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

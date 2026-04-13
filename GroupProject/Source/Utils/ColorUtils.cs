@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: ColorUtils.cs
+Purpose: Utilities for dealing with Colors
+Notes: Authored by Daniel
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

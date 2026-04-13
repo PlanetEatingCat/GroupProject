@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: Events.cs
+Purpose: Store Events 
+Notes: Authored by Daniel
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

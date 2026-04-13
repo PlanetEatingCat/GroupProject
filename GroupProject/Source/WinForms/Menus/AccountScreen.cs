@@ -1,4 +1,10 @@
-﻿using BudgetPlanner;
+﻿/********************************************
+Name: AccountScreen.cs
+Purpose: UNUSED for user settings
+Notes: WIP by Daniel.
+********************************************/
+
+using BudgetPlanner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

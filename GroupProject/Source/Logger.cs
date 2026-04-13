@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: Logger.cs
 Purpose: To log messages to the GUI
-Notes: WIP. 
+Notes: Authored by Daniel. 
 ********************************************/
 
 using System;

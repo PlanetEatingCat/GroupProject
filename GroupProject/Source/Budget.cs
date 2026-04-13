@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: Budget.cs
+Purpose: Store budget info
+Notes: Authored by Daniel. 
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

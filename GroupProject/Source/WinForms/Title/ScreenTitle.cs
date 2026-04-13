@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: LeftMenuBar.cs
 Purpose: Menu bar in the left of the title bar
-Notes: Work in Progress.
+Notes: Authored by Daniel
 ********************************************/
 using FontAwesome.Sharp;
 using System;

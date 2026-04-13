@@ -1,4 +1,9 @@
-﻿
+﻿/********************************************
+Name: BudgetCategory.cs
+Purpose: For separating budgets in home screen
+Notes: Authored by Daniel
+********************************************/
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: AddBudgetForm.cs
+Purpose: Add Budgets
+Notes: Authored by Daniel.
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

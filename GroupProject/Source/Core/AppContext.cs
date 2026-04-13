@@ -1,4 +1,10 @@
-﻿using System;
+﻿/********************************************
+Name: AppContext.cs
+Purpose: Decides which form to open and when to exit app
+Notes: Authored by Daniel (based on Microsoft example code)
+********************************************/
+
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.IO;

@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: CalendarWeekMask.cs
 Purpose: 
-Notes: WIP
+Notes: Notes: Authored by Daniel
 ********************************************/
 
 using System;

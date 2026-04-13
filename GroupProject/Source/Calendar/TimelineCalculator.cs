@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: CalendarEvent.cs
 Purpose: 
-Notes: WIP..
+Notes: Authored by Daniel
 ********************************************/
 
 using BudgetPlanner;

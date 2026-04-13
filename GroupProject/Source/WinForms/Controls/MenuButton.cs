@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: MenuButton.cs
 Purpose: A special button with an icon and active indicator 
-Notes: 
+Notes: Authored by Daniel.
 ********************************************/
 
 using FontAwesome.Sharp;

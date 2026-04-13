@@ -1,4 +1,10 @@
-﻿using BudgetPlanner;
+﻿/********************************************
+Name: DebugConsoleForm.cs
+Purpose: Debugging
+Notes: Authored by Daniel.
+********************************************/
+
+using BudgetPlanner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

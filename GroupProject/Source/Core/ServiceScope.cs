@@ -1,4 +1,11 @@
-﻿using System;
+﻿/********************************************
+Name: ServiceScope.cs
+Purpose: Dependency container for Dependencies Injection
+Notes: Authored by Daniel
+References: C#'s system & https://medium.com/@bhargavkoya56/crafting-your-own-dependency-injection-container-in-c-a-developers-journey-bd255633dd5f
+********************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;

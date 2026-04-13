@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: Theme.cs
 Purpose: Theme for the most exquisite app
-Notes: WIP
+Notes: Authored by Daniel
 ********************************************/
 
 using System;

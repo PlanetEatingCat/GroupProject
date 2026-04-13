@@ -1,7 +1,7 @@
 ﻿/********************************************
 Name: ThemeEdit.cs
 Purpose: A special control for editing the theme
-Notes:
+Notes: Authored by Daniel.
 ********************************************/
 
 using BudgetPlanner;
