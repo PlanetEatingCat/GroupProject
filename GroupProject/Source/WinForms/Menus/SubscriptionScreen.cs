@@ -147,7 +147,11 @@ namespace BudgetPlanner
         //-----------------------------------------------------------------------------------------------
 
         public void FixList()
-        {
+        { 
+            if (m_SessionManager.GetActiveProfile().GetSubscriptions() == null)
+            {
+                return;
+            }
             ListOfSubscriptions.Items.Clear();
             foreach (var subscription in m_SessionManager.GetActiveProfile().GetSubscriptions())
             {
