@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace BudgetPlanner
@@ -31,6 +32,14 @@ namespace BudgetPlanner
         public User(string InUsername, string InPassword, uint InAge)
         {
             m_ID = Guid.NewGuid();
+            SetUsername(InUsername);
+            SetPassword(InPassword);
+            SetAge(InAge);
+        }
+
+        public User(string InUsername, string InPassword, uint InAge, Guid InID)
+        {
+            m_ID = InID;
             SetUsername(InUsername);
             SetPassword(InPassword);
             SetAge(InAge);
@@ -64,6 +73,9 @@ namespace BudgetPlanner
 
             m_Age = InAge;
         }
+
+        public uint GetAge() { return m_Age; }
+        public Guid GetID() { return m_ID; }
 
         public void Print() 
         {

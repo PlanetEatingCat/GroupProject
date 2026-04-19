@@ -122,8 +122,12 @@ namespace BudgetPlanner
 
             if (nameflag == true && frequencyflag == true && amountflag == true)
             {
-                IncomeSource income = new
-                IncomeSource(amount, frequency, name, m_SessionManager, StartDate, EndDate);
+                IncomeSource income 
+                    = new IncomeSource(amount, frequency, name, StartDate, EndDate);
+
+                income.ApplyInitialDeposit(m_SessionManager);
+                m_SessionManager.GetActiveProfile().AddIncomeSource(income);
+
                 CurrentIncomeLbl.Visible = true;
                 if (FrequencyComboBx.Text != "EveryTwoMonths")
                 {

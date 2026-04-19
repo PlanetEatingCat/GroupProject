@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.AccessControl;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -73,13 +74,25 @@ namespace BudgetPlanner
 
         public decimal GetBalance() { return m_Balance; }
 
+        public int GetTransactionCount() { return m_TransactionCount; }
+
+        public void SetTransactionCount(int TransactionCount) { m_TransactionCount = TransactionCount; }
+
         public User GetUser() { return m_User; }
+
+        public void SetUser(User User) { m_User = User; }
 
         public List<Subscription> GetSubscriptions() { return m_Subscriptions; }
 
+        public void SetSubscriptions(List<Subscription> subscriptions) { m_Subscriptions = subscriptions; }
+
         public List<Budget> GetBudgets() { return m_Budgets; }
 
+        public void SetBudget(List<Budget> Budgets) {  m_Budgets = Budgets; }
+
         public List<IncomeSource> GetIncomeSources() { return m_IncomeSources; }
+
+        public void SetIncomeSources(List<IncomeSource> IncomeSources) { m_IncomeSources = IncomeSources; }
 
         public bool TryGetBudgetByName(string InName, out Budget OutBudget)
         {
@@ -142,10 +155,14 @@ namespace BudgetPlanner
             }
         }
 
-
         public List<Transactions> GetTransactions()
         {
             return m_Transactions;
+        }
+
+        public void SetTransactions(List<Transactions> transactions)
+        {
+            m_Transactions = transactions;
         }
 
         /* Deposit money into account */

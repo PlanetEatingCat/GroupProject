@@ -85,9 +85,9 @@ namespace BudgetPlanner
         {
             m_EventDispatcher.Publish(new LogInEvent(UsernameInput.Text, PasswordInput.Text, true));
 
-            UsernameInput.Text = PasswordInput.Text = "";
+            Save.LoadProfile(m_SessionManager, UsernameInput.Text.ToString());
 
-            // Logger.Info($"Sign in as '{user.GetUsername()}' successful!");
+            UsernameInput.Text = PasswordInput.Text = "";
 
         }
 

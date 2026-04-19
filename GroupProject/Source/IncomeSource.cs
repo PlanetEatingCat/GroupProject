@@ -4,13 +4,14 @@ Purpose:
 Notes: Authored by Ella 
 ********************************************/
 
+using BudgetPlanner;
 using System;
 using System.Collections.Generic;
 using System.Drawing.Text;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using BudgetPlanner;
 using Windows.Management;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -30,43 +31,43 @@ namespace BudgetPlanner
 	public class IncomeSource //: Profile
 	{
 		IncomeFrequency m_Frequency = IncomeFrequency.None;
-		decimal m_Amount;
-
-		string m_Name;
-		private readonly SessionManager m_SessionManager;
+        decimal m_Amount;
+        string m_Name;
 	
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+
 		private TimelineCalculator m_TimelineCalculator;
-		public DateTime StartDate { get; set; }
-		public DateTime EndDate { get; set; }
 
+		public IncomeFrequency GetFrequency() { return m_Frequency; }
+        public decimal GetAmount() { return m_Amount; }
+        public string GetName() { return m_Name; }
+        public DateTime GetStartDate() { return StartDate; }
+        public DateTime GetEndDate() { return EndDate; }
 
 	
-		public IncomeSource(SessionManager sessionManager)
+		public IncomeSource()
 		{
-			m_SessionManager = sessionManager;
 		}
 
-		public IncomeSource(decimal InAmount, IncomeFrequency InFrequency, string InName, SessionManager sessionManager, DateTime InStartDate, DateTime InEndDate)
+		public IncomeSource(decimal InAmount, IncomeFrequency InFrequency, string InName, DateTime InStartDate, DateTime InEndDate)
 		{
 
 			m_Amount = InAmount;
 			m_Frequency = InFrequency;
 			m_Name = InName;
-			m_SessionManager = sessionManager;
 			StartDate = InStartDate;
 			CalendarRepeatType repeatType = GetCalendarRepeatType(InFrequency);
 			m_TimelineCalculator = new TimelineCalculator(InName, StartDate, repeatType);
 			{
 				EndDate = EndDate;
-			}
-			;
-			ApplyInitialDeposit();
+			};
 		}
-		private void ApplyInitialDeposit()
+		public void ApplyInitialDeposit(SessionManager InSessionManager)
 		{
 		
 
-			var activeProfile = m_SessionManager.GetActiveProfile();
+			var activeProfile = InSessionManager.GetActiveProfile();
 			if (activeProfile != null)
 			{
 
@@ -74,7 +75,7 @@ namespace BudgetPlanner
 					activeProfile.Deposit(m_Amount);
 
 					// DC
-                    Transactions temp = new Transactions(activeProfile, m_Amount, "Deposit", "Income");
+                    Transactions temp = new Transactions(m_Amount, "Deposit", "Income");
                     activeProfile.AddTransaction(temp);
 					//
                 }
@@ -103,9 +104,9 @@ namespace BudgetPlanner
 			}
 
 		}
-		public void CheckAndApplyDeposit()
+		public void CheckAndApplyDeposit(SessionManager InSessionManager)
 		{
-			var activeProfile = m_SessionManager.GetActiveProfile();
+			var activeProfile = InSessionManager.GetActiveProfile();
 			if (activeProfile == null)
 			{
 
@@ -117,7 +118,7 @@ namespace BudgetPlanner
 				activeProfile.Deposit(m_Amount);
 
 				// DC
-                Transactions temp = new Transactions(activeProfile, m_Amount, "Deposit", "Income");
+                Transactions temp = new Transactions(m_Amount, "Deposit", "Income");
                 activeProfile.AddTransaction(temp);
 				//
             }

@@ -117,7 +117,7 @@ namespace BudgetPlanner
             Transactions.Items.Clear();
             foreach (var t in m_SessionManager.GetActiveProfile().GetTransactions())
             {
-                Transactions.Items.Add(t.Statement(t.m_Type));
+                Transactions.Items.Add(t.Statement(m_SessionManager.GetActiveProfile(), t.m_Type));
             }
         }
 
@@ -147,7 +147,7 @@ namespace BudgetPlanner
                             ExpenseType = ExpenseTypeComboBox.Text;
 
                             //Creates a transactions object and adds it to history
-                            Transactions temp = new Transactions(m_SessionManager.GetActiveProfile(), m_Amount, "Withdrawal", ExpenseType);
+                            Transactions temp = new Transactions(m_Amount, "Withdrawal", ExpenseType);
                             m_SessionManager.GetActiveProfile().AddTransaction(temp);
                             UpdateUI();
                         }
@@ -167,7 +167,7 @@ namespace BudgetPlanner
                     BalanceTxtBx.Text = tempBalance.ToString();
 
                     //Creates a transactions object and adds it to history
-                    Transactions temp = new Transactions(m_SessionManager.GetActiveProfile(), m_Amount, "Deposit");
+                    Transactions temp = new Transactions(m_Amount, "Deposit");
                     m_SessionManager.GetActiveProfile().AddTransaction(temp);
                     UpdateUI();
                 }

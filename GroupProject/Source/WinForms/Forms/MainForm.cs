@@ -19,6 +19,7 @@ namespace BudgetPlanner
         private readonly EventDispatcher m_EventDispatcher;
         private readonly ThemeManager m_ThemeManager;
         private readonly NavigationManager m_NavigationManager;
+        private readonly SessionManager m_SessionManager;
 
         //-----------------------------------------------------------------------------------------------
         // Variables
@@ -33,11 +34,11 @@ namespace BudgetPlanner
         private bool m_MenuCollapsed = false;
         private bool m_MenuBarActive = true;
 
-       
+
         // ---------------------------------------------------------------------------------------
         // [1] Dependencies: Passed in automatically through constructor
         // ---------------------------------------------------------------------------------------
-        public MainForm(EventDispatcher InEventDispatcher, ThemeManager InThemeManager, NavigationManager InNavigationManager)
+        public MainForm(EventDispatcher InEventDispatcher, ThemeManager InThemeManager, NavigationManager InNavigationManager, SessionManager InSessionManager)
         {
             ArgumentNullException.ThrowIfNull(InEventDispatcher);
             ArgumentNullException.ThrowIfNull(InThemeManager);
@@ -48,6 +49,8 @@ namespace BudgetPlanner
             m_EventDispatcher = InEventDispatcher;
             m_ThemeManager = InThemeManager;
             m_NavigationManager = InNavigationManager;
+            m_SessionManager = InSessionManager;
+
 
             // ---------------------------------------------------------------------------------------
             // [2] Event Dispatcher: for updating themes at the momement
@@ -56,7 +59,6 @@ namespace BudgetPlanner
             m_EventDispatcher.Subscribe<ScreenChangedEvent>(OnScreenChanged);
 
             ApplyTheme(InThemeManager.GetCurrentTheme());
-
             Logger.OnLogToGUI += Logger_OnLog;
 
             this.FormBorderStyle = FormBorderStyle.None;
@@ -176,8 +178,8 @@ namespace BudgetPlanner
 
         private void CalendarMenuButton_Click(object InSender, EventArgs InEventArgs)
         {
-          //  SetActiveMenuItem(CalendarMenuButton);
-          //  m_NavigationManager.GoTo<CalendarScreen>();
+            //  SetActiveMenuItem(CalendarMenuButton);
+            //  m_NavigationManager.GoTo<CalendarScreen>();
         }
 
         private void ThemeMenuButton_Click(object InSender, EventArgs InEventArgs)
@@ -278,7 +280,7 @@ namespace BudgetPlanner
             else if (!m_MenuBarActive)
             {
                 MenuPanel.Visible = true;
-                
+
                 foreach (Control control in MenuPanel.Controls)
                 {
                     control.Visible = true;
@@ -372,6 +374,13 @@ namespace BudgetPlanner
 
 
             SetTitleButtonTint(ColorUtils.GetContrastColor(InTheme.Background));
+        }
+
+        protected override void CloseButton_Click(object sender, EventArgs e)
+        {
+            Save Profile = new Save(m_SessionManager);
+            Profile.SaveProfile();
+            Close();
         }
     }
 }

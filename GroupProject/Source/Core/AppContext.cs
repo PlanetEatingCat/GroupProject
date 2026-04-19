@@ -105,9 +105,9 @@ namespace BudgetPlanner
 
         private void OnLogin(LogInEvent InEvent)
         {
-            User user = new User(InEvent.Username, InEvent.Password, 90);
+           // User user = new User(InEvent.Username, InEvent.Password, 90);
 
-            Profile profile = new Profile(user, 0);
+            Profile profile = new Profile(InEvent.Username, InEvent.Password, 0);
             m_SessionManager.Login(profile);
 
             m_MainForm.Show();
@@ -116,6 +116,9 @@ namespace BudgetPlanner
 
         private void OnLogOut(LogOutEvent InEvent)
         {
+            Save Profile = new Save(m_SessionManager);
+            Profile.SaveProfile();
+
             m_SessionManager.Logout();
 
             m_MainForm.Hide();

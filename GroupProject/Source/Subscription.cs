@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace BudgetPlanner
@@ -24,6 +25,7 @@ namespace BudgetPlanner
 
     public class Subscription
     {
+
         DeductionFrequency m_Frequency;
         decimal m_ChargeAmount;
         string m_name;

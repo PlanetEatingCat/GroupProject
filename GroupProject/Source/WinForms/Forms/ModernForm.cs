@@ -91,7 +91,7 @@ namespace BudgetPlanner
         // Title Buttons
         //-----------------------------------------------------------------------------------------------
 
-        private void CloseButton_Click(object sender, EventArgs e)
+        protected virtual void CloseButton_Click(object sender, EventArgs e)
         {
             Close();
         }
